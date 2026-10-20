@@ -1,0 +1,201 @@
+
+[hidden]{display:none!important}
+.readonly .edit-only{display:none!important}
+html:not(.readonly) .ro-note{display:none}
+.pdf a{font-family:var(--sc);letter-spacing:.08em;font-size:1.05rem}
+button.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.tree .node[data-pid]{cursor:pointer}
+.tree .node:focus{outline:none}
+.tree .badge circle{fill:var(--accent);stroke:var(--card);stroke-width:4}
+.tree .badge text{fill:var(--card);font-size:22px;font-weight:700;font-family:var(--serif)}
+.feed-sec{display:grid;gap:12px}
+.feed,.plist{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.feed{grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr))}
+.feed .empty,.feed .empty-cta,.feed .more{grid-column:1/-1}
+.feed .more{justify-self:center}
+.feed .e-text{display:-webkit-box;-webkit-line-clamp:8;-webkit-box-orient:vertical;overflow:hidden}
+.feed .e-text.open{display:block}
+.entry{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--gold);padding:12px 14px;display:grid;gap:6px;min-width:0}
+.entry .e-head{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.e-kind{font-family:var(--sc);letter-spacing:.08em;font-size:.95rem;color:var(--gold);font-weight:600}
+.e-kind.k-correction{color:var(--accent)}
+.e-who{font:600 1rem var(--serif);background:none;border:0;min-height:44px;padding:8px 0;display:inline-flex;align-items:center;color:var(--ink);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px;cursor:pointer}
+.e-name{font-weight:700;font-size:1.08rem}
+.e-meta,.e-foot{color:var(--muted);font-size:1rem}
+.e-meta,.p-meta{font-variant-numeric:lining-nums tabular-nums}
+.e-text{white-space:pre-wrap;overflow-wrap:anywhere}
+.e-foot{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-style:normal}
+.empty{color:var(--muted);font-style:normal}
+.empty-cta{grid-column:1/-1;display:grid;gap:12px;justify-items:start;padding:22px 24px;background:var(--paper);border:1px dashed var(--gold)}
+.ei-title{font:600 1.5rem/1.2 var(--serif);color:var(--accent)}
+.ei-text{color:var(--ink);max-width:60ch}
+/* Панель человека: прерываемый переход, на телефоне — шторка снизу */
+.panel{position:fixed;inset:0;z-index:40;display:flex;justify-content:flex-end}
+.panel-back{position:absolute;inset:0;background:rgba(20,16,8,.35);opacity:0;transition:opacity 240ms ease;touch-action:none}
+.panel-box{position:relative;width:min(520px,100%);height:100%;overflow-y:auto;overscroll-behavior:contain;background:var(--paper);border-left:2px solid var(--gold);
+ padding-block:max(24px,env(safe-area-inset-top,0px)) 120px;padding-left:24px;padding-right:max(24px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:8px;
+ transform:translateX(100%);transition:transform 320ms var(--ease-drawer)}
+.panel.open .panel-box{transform:none}
+.panel.open .panel-back{opacity:1}
+.panel:not(.open) .panel-box{transition-duration:200ms;transition-timing-function:var(--ease-out)}
+html:has(body.panel-open){overflow:hidden}
+@media (max-width:640px){
+ .panel{align-items:flex-end}
+ .panel-box{box-sizing:border-box;width:100%;height:auto;max-height:92dvh;border-left:0;border-top:2px solid var(--gold);border-radius:18px 18px 0 0;transform:translateY(100%);padding-bottom:calc(120px + env(safe-area-inset-bottom,0px))}
+}
+@media (prefers-reduced-motion:reduce){.panel-box,.panel-back{transition:none}}
+.panel-close{position:absolute;right:max(12px,env(safe-area-inset-right,0px));top:max(10px,env(safe-area-inset-top,0px));min-width:48px;min-height:48px;padding:0;display:grid;place-items:center;font-size:1.8rem;line-height:1}
+.p-sur{font-family:var(--sc);letter-spacing:.14em;color:var(--gold);font-weight:600}
+.p-name{font-family:var(--serif);font-weight:700;font-size:clamp(1.7rem,3.4vw,2.2rem);letter-spacing:0;line-height:1.15;padding-right:52px}
+.p-meta{color:var(--muted);font-style:italic;font-weight:500}
+.panel h4{font-family:var(--sc);letter-spacing:.1em;margin:16px 0 4px;color:var(--accent);font-size:1.05rem}
+.addform{display:grid;gap:6px}
+.addform label{font-size:1.05rem;color:var(--ink);font-weight:600;margin-top:4px}
+.addform .hint{color:var(--muted);font-weight:400;font-style:italic}
+.addform input,.addform select,.addform textarea{font:500 1.15rem/1.4 var(--serif);min-height:48px;padding:10px 12px;color:var(--ink);background:var(--card);border:1.5px solid var(--line);width:100%;box-sizing:border-box}
+.addform ::placeholder{color:var(--muted);opacity:1;font-style:italic}
+.addform input:focus,.addform select:focus,.addform textarea:focus{outline:2px solid var(--gold);outline-offset:0}
+.addform [aria-invalid="true"]{border-color:var(--accent)}
+.addform .pfields{display:none;gap:6px}
+.addform.is-person .pfields{display:grid}
+.addform .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.addform .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+#fSend{justify-self:stretch;min-height:56px;font-size:1.2rem;margin-top:16px;display:inline-flex;justify-content:center;align-items:center;gap:8px}
+#fSend[aria-busy="true"]{opacity:1;cursor:progress}
+#fSend[aria-busy="true"]::before{content:"";width:14px;height:14px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:spin 600ms linear infinite}
+#fSend.done{background:var(--m);border-color:var(--m)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.form-msg{min-height:1.4em;font-size:1rem}
+.form-msg.ok{color:var(--accent);font-weight:700;font-size:1.05rem}
+.form-msg.err{color:var(--accent)}
+body.panel-open{overflow:hidden}
+@media (max-width:520px){.addform .two{grid-template-columns:1fr}}
+.tree .node.added .card{stroke:var(--gold);stroke-dasharray:none}
+.tree .newtag{text-anchor:start;font-family:var(--sc);font-size:20px;letter-spacing:.1em;fill:var(--gold);font-weight:700}
+.tree .kin.dash{stroke-dasharray:10 8}
+.tree .kin.sibl{stroke:var(--line)}
+.add-cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px}
+.cta{display:inline-flex;align-items:center;gap:10px;font:700 1.08rem/1.2 var(--serif);color:var(--accent);min-height:52px;
+ background:var(--card);border:1.5px solid var(--gold);padding:8px 16px 8px 9px;cursor:pointer;transition:background .2s ease,border-color .2s ease,transform 140ms var(--ease-out)}
+.cta:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.cta-plus{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--accent);color:var(--on-accent);font-size:19px;line-height:1;font-weight:700}
+.cta-note{color:var(--muted);font-size:1rem}
+.e-unv,.e-ok{font-size:.9rem;font-weight:700;padding:1px 8px;border:1px solid currentColor}
+.e-unv{color:var(--muted)}.e-ok{color:var(--m)}
+.draft-note{color:var(--muted);font-size:1rem;margin:4px 0 0}
+.disclaimer{font-weight:500}
+/* Поиск: найденный человек и «Ваша линия» */
+.tree .node.found .card{stroke:var(--accent);stroke-width:8}
+@media (prefers-reduced-motion: no-preference){.tree .node.found{animation:found .9s var(--ease-in-out) .5s 2;transform-box:fill-box;transform-origin:center}}
+@keyframes found{50%{transform:scale(1.08)}}
+.tree.has-line .node:not(.anc):not(.found),.tree.has-line .kin:not(.lineage),.tree.has-line .wed{opacity:.3;transition:opacity .6s var(--ease-out)}
+.tree .kin.lineage{stroke:var(--accent);stroke-width:6}
+.tree .node.anc .card{stroke:var(--accent);stroke-width:5}
+@media (prefers-reduced-motion:no-preference){.tree .kin.lineage{stroke-dasharray:1;stroke-dashoffset:1;animation:draw .55s var(--ease-out) forwards;animation-delay:calc(.6s + var(--d)*.4s)}}
+.line-note{display:flex;flex-wrap:wrap;gap:12px;align-items:center;font-weight:600;color:var(--accent)}
+/* Новый человек после «Сохранить» */
+.tree .node.just-added .card{stroke:var(--accent);stroke-width:8}
+@media (prefers-reduced-motion:no-preference){.tree .node.just-added{animation:rise .7s var(--ease-out) .3s both,found .9s var(--ease-in-out) 1.1s 2;transform-box:fill-box;transform-origin:center}}
+
+/* карточка человека: подробности и родные */
+.p-bio{white-space:pre-wrap;font-size:18px;line-height:1.45;margin:10px 0 4px;padding:10px 12px;background:color-mix(in srgb,var(--gold) 7%,transparent);border-radius:6px}
+.p-rel{display:grid;gap:10px;margin:14px 0 6px;padding:12px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.p-rel-g{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
+.p-rel-h{flex-basis:100%;font-family:var(--sc);letter-spacing:.1em;font-size:14px;color:var(--gold)}
+.p-rel-a{font:inherit;font-size:18px;color:var(--accent);background:none;border:0;padding:6px 0;min-height:40px;text-align:left;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.p-rel-a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.p-name:focus{outline:none}
+.kbd-hint{display:none;font-size:15px;color:var(--muted);margin:8px 0 0}
+.tree-sec:has(#canvas .node:focus-visible) .kbd-hint{display:block}
+
+/* согласия в форме: строка про согласие человека — только для «нового родственника» */
+.addform .chk{display:flex;gap:10px;align-items:flex-start;font-size:16px;font-weight:400;margin:10px 0 0}
+.addform .chk input{width:22px;height:22px;margin-top:2px;flex:none}
+.addform .consent-subject{display:none}
+.addform.is-person .consent-subject{display:flex}
+.addform [aria-invalid="true"]{outline:3px solid var(--accent)}
+.legal-links{font-size:15px}.legal-links a{color:inherit}
+
+/* «Это я — скройте мои данные» */
+.its-me{margin:10px 0;border:1px solid var(--rule);border-radius:8px;padding:0 14px}
+.its-me summary{cursor:pointer;padding:12px 0;min-height:44px;color:var(--accent);font-weight:600}
+.its-me form{display:grid;gap:6px;padding-bottom:12px}
+.its-me .chk{display:flex;gap:10px;align-items:flex-start;font-size:16px}
+.its-me .chk input{width:22px;height:22px;flex:none}
+.its-me input:not([type]),.its-me textarea{font:inherit;padding:10px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink)}
+
+.p-photo{display:block;width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid var(--gold);margin:0 0 10px}
+.p-photo[hidden]{display:none}
+
+.addform .phfields{display:none}
+.addform.is-photo .phfields{display:block}
+.addform .phfields input[type=file]{display:block;margin:4px 0;max-width:100%}
+
+.p-facts{margin:10px 0 4px}
+.p-facts h4{margin:0 0 6px}
+.p-facts dl{margin:0;display:grid;grid-template-columns:minmax(0,auto) minmax(0,1fr);gap:4px 12px}
+.p-facts dt{color:var(--muted);font-size:.92em}
+.p-facts dd{margin:0}
+.p-facts .p-src{display:block;color:var(--muted);font-size:.85em;font-style:italic}
+@media (max-width:480px){.p-facts dl{grid-template-columns:minmax(0,1fr)}.p-facts dd{margin-bottom:6px}}
+
+/* «Запись отправлена» и «Мои записи» (P1-4) */
+.addform .sent-box{display:none}
+.addform.is-sent > :not(.sent-box){display:none !important}
+.addform.is-sent .sent-box{display:block;border:2px solid var(--accent);border-radius:10px;padding:14px 16px;background:var(--card)}
+.sent-box:focus{outline:2px solid var(--gold);outline-offset:2px}
+.sent-title{font-weight:700;font-size:1.15em;margin:0 0 6px;color:var(--accent)}
+.mine{margin:14px 0}
+.mine ul{list-style:none;margin:0;padding:0}
+.mine-item{border:1px solid var(--rule);border-radius:8px;padding:8px 10px;margin:6px 0;background:var(--card)}
+.mine-head{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center;font-size:.9em;color:var(--muted)}
+.mine-st{font-weight:700;padding:1px 8px;border-radius:999px;font-size:.92em}
+.mine-st.st-review{background:color-mix(in srgb,var(--gold) 18%,transparent);color:var(--ink)}
+.mine-st.st-ok{background:color-mix(in srgb,#2e7d4f 18%,transparent);color:#1f5c38}
+.mine-st.st-no{background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent)}
+.mine-text{margin:4px 0 0}
+.mine-comment{margin:4px 0 0;font-style:italic}
+
+/* форма дополнения для настоящих семей (P1-6) */
+#fText{min-height:110px;resize:vertical;overflow-y:auto}
+.draft-note{display:block;margin:6px 0;padding:6px 10px;border-radius:6px;background:color-mix(in srgb,var(--gold) 16%,transparent);font-size:.92em}
+.draft-note[hidden]{display:none}
+.fstep-n,.fnext{display:none}
+@media (max-width:600px){
+  .fstep-n{display:block;margin:4px 0 8px;font-size:.9em;color:var(--muted)}
+  .fnext{display:block;width:100%;margin-top:10px}
+  .addform .fstep2{display:none}
+  .addform.on-step2 .fstep1{display:none}
+  .addform.on-step2 .fstep2{display:block}
+}
+@media (min-width:601px){ #fBack{display:none} }
+
+/* «Поделиться карточкой» (P1-12) */
+.p-share-row{margin:6px 0 4px;display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}
+.p-share{font:inherit;font-size:.92em;border:1px solid var(--gold);background:var(--card);color:var(--ink);border-radius:999px;padding:5px 14px;cursor:pointer;min-height:36px}
+.p-share::before{content:"↗ "}
+.p-share[hidden]{display:none}
+.p-share-msg{font-size:.88em;color:var(--muted)}
+
+/* документы человека (P2-1) */
+.p-docs{margin:10px 0}.p-docs h4{margin:0 0 6px}
+.doc-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:10px}
+.doc-grid li{display:grid;gap:3px}
+.doc-grid a{display:grid;place-items:center;aspect-ratio:3/4;border:1px solid var(--rule);border-radius:6px;overflow:hidden;background:var(--paper)}
+.doc-grid img{width:100%;height:100%;object-fit:cover}
+.doc-pdf{font-weight:700;letter-spacing:.1em;color:var(--accent);font-size:1.1em}
+.doc-t{font-size:.9em;line-height:1.25}.doc-s{color:var(--muted);font-size:.8em;line-height:1.2}
+.addform.is-person .docfield,.addform.is-photo .docfield{display:none}
+.docfield input[type=file]{display:block;margin:4px 0;max-width:100%}
+
+/* голос и чтение вслух (P2-2) */
+.voicefield{margin:8px 0;padding:8px 10px;border:1px dashed var(--rule);border-radius:8px}
+.voicefield[hidden]{display:none}
+.addform.is-person .voicefield,.addform.is-photo .voicefield{display:none}
+.voice-btn{font:inherit;border:1px solid var(--accent);background:var(--card);color:var(--accent);border-radius:999px;padding:6px 14px;cursor:pointer;min-height:40px}
+.voice-t{margin-left:8px;font-size:.9em;color:var(--muted)}
+#vDone{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:6px}#vDone[hidden]{display:none}
+#vDone audio,.e-audio{max-width:100%;height:40px}
+.e-audio{display:block;margin:6px 0}
+.p-speak::before{content:none}
+.p-speak[hidden]{display:none}

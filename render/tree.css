@@ -1,0 +1,65 @@
+/* Карточки и линии древа, анимация появления, базовые токены темы «Архив» */
+@font-face{font-family:"Cormorant Fallback";src:local("Noto Serif"),local("Georgia"),local("Times New Roman");size-adjust:76%;ascent-override:121%;descent-override:38%;line-gap-override:0%}
+:root{
+ --paper:#f2ede3; --card:#fbf8f2; --ink:#0f1413; --muted:#3f3b34; --rule:#d2c8b4; --line:#6f6858;
+ --frame:#2e2b25; --gold:#86641f; --gold2:#d9bd78; --accent:#7a1f2b;
+ --serif:"Cormorant Garamond","Cormorant Fallback",Georgia,serif;
+ --sc:"Cormorant SC","Cormorant Fallback",Georgia,serif;
+ --on-accent:#fbf8f2; --border-ctl:var(--line); --focus-ring:color-mix(in srgb,var(--gold) 35%,transparent);
+ --accent-tint:color-mix(in srgb,var(--accent) 10%,transparent); --shadow-card:0 18px 40px -24px rgba(40,30,10,.35);
+ --ease-out:cubic-bezier(.23,1,.32,1); --ease-in-out:cubic-bezier(.77,0,.175,1); --ease-drawer:cubic-bezier(.32,.72,0,1);
+}
+.tree{display:block;width:100%;height:auto}
+.tree text{text-anchor:middle;font-family:var(--serif);font-variant-numeric:lining-nums}
+.tree .card{fill:var(--card);stroke:var(--frame);stroke-width:3.2}
+.tree .stripe{fill:var(--c)}
+.tree .sur{font-family:var(--sc);font-size:calc(26px*var(--k,1));letter-spacing:.12em;fill:var(--c);font-weight:700}
+.tree .name{font-size:calc(35px*var(--k,1));font-weight:700;fill:var(--ink)}
+.tree .date{font-size:calc(30px*var(--k,1));font-weight:500;fill:var(--ink);font-variant-numeric:lining-nums tabular-nums;letter-spacing:.04em}
+.tree .note{font-size:calc(26px*var(--k,1));font-weight:500;font-style:italic;fill:var(--muted)}
+.tree .sib{text-anchor:start;font-size:calc(30px*var(--k,1));font-weight:700;fill:var(--ink)}
+.tree .sibd{text-anchor:start;font-size:calc(24px*var(--k,1));font-weight:400;fill:var(--muted);font-variant-numeric:lining-nums}
+.tree .kin{fill:none;stroke:var(--line);stroke-width:2.6}
+.tree .wed{fill:none;stroke:var(--gold);stroke-width:3.6}
+.tree .wed.ex{stroke:var(--muted)}
+.tree .ring circle{fill:none;stroke:var(--gold);stroke-width:3.2}
+.tree .ring.ex circle{stroke:var(--muted)}
+.tree .exl{font-size:calc(22px*var(--k,1));font-style:italic;fill:var(--muted)}
+.tree .genl{font-family:var(--sc);font-size:calc(60px*var(--k,1));fill:var(--gold);text-anchor:middle;font-weight:600}
+.f-i{--c:var(--muted)}
+.f-i .card{stroke-dasharray:9 6}
+.f-i .stripe{fill:none}
+.emblem .sh-edge{stroke:var(--gold);stroke-width:3}
+@media (prefers-reduced-motion: no-preference){
+ .tree-play .tree .node{animation:rise .8s var(--ease-out) both;animation-delay:calc(.5s + var(--g)*.6s + var(--i)*6ms);transform-box:fill-box;transform-origin:center}
+ .tree-play .tree .kin,.tree-play .tree .wed{stroke-dasharray:1;stroke-dashoffset:1;animation:draw .9s ease-out forwards;animation-delay:calc(.3s + var(--g)*.6s)}
+ .tree-play .tree .wed.ex{stroke-dasharray:none;animation:fade .9s both;animation-delay:calc(.3s + var(--g)*.6s)}
+ .tree-play .tree .ring{animation:pop .5s cubic-bezier(.3,1.6,.5,1) both;animation-delay:calc(.9s + var(--g)*.6s);transform-box:fill-box;transform-origin:center}
+ .tree-play .tree .genl{animation:fade 1s both;animation-delay:calc(.3s + var(--g)*.6s)}
+ .reveal-on .tree-sec:not(.tree-play):not(.tree-done) .tree .node,.reveal-on .tree-sec:not(.tree-play):not(.tree-done) .tree .ring{opacity:0}
+ .lite.tree-play .tree .node{animation:fade .45s ease-out both;animation-delay:calc(.2s + var(--g)*.3s)}
+ .lite.tree-play .tree .kin,.lite.tree-play .tree .wed{animation-duration:.4s;animation-delay:calc(.1s + var(--g)*.3s)}
+ .play .emblem .sh-edge{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.4s ease-in-out forwards;animation-delay:calc(var(--e)*.15s)}
+ .play .emblem .sh-field,.play .emblem .charge{animation:fade .9s both;animation-delay:calc(.9s + var(--e)*.15s)}
+ .play .title-gold{animation:foil 2.6s var(--ease-in-out) .2s both}
+}
+@keyframes rise{from{opacity:0;transform:translateY(14px) scale(.96)}}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fade{from{opacity:0}}
+@keyframes pop{from{opacity:0;transform:scale(.2)}}
+@keyframes foil{from{background-position:120% 0}to{background-position:-20% 0}}
+
+.tree .photo-ring{fill:none;stroke:var(--gold);stroke-width:3}
+.tree .photo{pointer-events:none}
+
+/* заглушки и групповые карточки — приглушённо (P1-14) */
+.tree .node.stub .card{fill:color-mix(in srgb,var(--card) 70%,var(--paper));stroke-dasharray:7 6;stroke-opacity:.7}
+.tree .node.stub text{fill:var(--muted);font-style:italic}
+.tree .node.stub .stripe{opacity:.35}
+.tree .node.grp .card{fill:color-mix(in srgb,var(--card) 80%,var(--paper))}
+.tree .node.grp .stripe{opacity:.5}
+.tree .brn{font-size:calc(14px*var(--k,1));font-weight:700;letter-spacing:.12em;fill:var(--card);text-anchor:middle;font-family:var(--sc,serif)}
+.tree .numtag{font-size:calc(15px*var(--k,1));fill:var(--muted);font-variant-numeric:tabular-nums}
+.tree .mk .mk-bg{fill:var(--paper);stroke:var(--gold,#a8863b);stroke-width:1.6}.tree .mk .mk-ic{fill:var(--ink)}
+.tree .mk.mk-war .mk-ic{fill:#b8862b}.tree .mk.mk-fallen .mk-ic{fill:#8b1d1d}.tree .mk.mk-award .mk-ic{fill:#9a6b12}.tree .mk.mk-repr .mk-ic{fill:#4a4a4a}.tree .mk.mk-rehab .mk-ic{fill:#2f6b3a}
+.tree[data-mk="war"] .node:not(.mk-war),.tree[data-mk="fallen"] .node:not(.mk-fallen),.tree[data-mk="award"] .node:not(.mk-award),.tree[data-mk="repr"] .node:not(.mk-repr),.tree[data-mk="rehab"] .node:not(.mk-rehab),.tree[data-mk="other"] .node:not(.mk-other),.tree[data-mk] .kin,.tree[data-mk] .wed,.tree[data-mk] .ring{opacity:.2}

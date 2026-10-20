@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Родконструктор — онлайн-конструктор семейного древа и сайта рода</title>
+<meta name="description" content="Соберите семейное древо онлайн: импорт GEDCOM или ручной ввод, затем сайт семьи, постер А1–А3 для печати и презентация. Для генеалогов, студий и семей.">
+<link rel="canonical" href="https://aevkone.github.io/rodkonstruktor/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#f3eee4">
+<link rel="icon" href="/rodkonstruktor/favicon.ico" sizes="48x48">
+<link rel="icon" href="/rodkonstruktor/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/rodkonstruktor/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Родконструктор">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="https://aevkone.github.io/rodkonstruktor/">
+<meta property="og:title" content="Родконструктор — конструктор семейного древа и сайта рода">
+<meta property="og:description" content="Из одного древа — сайт семьи, постер для печати и презентация. Импорт GEDCOM, источники у каждого факта, приватность живых.">
+<meta property="og:image" content="https://aevkone.github.io/rodkonstruktor/landing/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Сайт семьи с интерактивным родословным древом">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Родконструктор — конструктор семейного древа и сайта рода">
+<meta name="twitter:description" content="Сайт семьи, постер и презентация из одного древа.">
+<meta name="twitter:image" content="https://aevkone.github.io/rodkonstruktor/landing/og.jpg">
+<link rel="preload" href="/rodkonstruktor/render/fonts/f7.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/rodkonstruktor/render/fonts/local.css">
+<link rel="stylesheet" href="/rodkonstruktor/render/fonts/g/onest.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Organization","@id":"https://aevkone.github.io/rodkonstruktor/#org","name":"Родконструктор","url":"https://aevkone.github.io/rodkonstruktor/","logo":"https://aevkone.github.io/rodkonstruktor/apple-touch-icon.png"},
+ {"@type":"WebSite","@id":"https://aevkone.github.io/rodkonstruktor/#website","url":"https://aevkone.github.io/rodkonstruktor/","name":"Родконструктор","inLanguage":"ru","publisher":{"@id":"https://aevkone.github.io/rodkonstruktor/#org"}},
+ {"@type":"SoftwareApplication","@id":"https://aevkone.github.io/rodkonstruktor/#app","name":"Родконструктор","applicationCategory":"LifestyleApplication","operatingSystem":"Web","inLanguage":"ru","url":"https://aevkone.github.io/rodkonstruktor/",
+  "description":"Онлайн-конструктор семейного древа для генеалогов, студий и семей: из одного древа получается сайт семьи, постер для печати и презентация. Тестовая версия.",
+  "featureList":["Импорт GEDCOM (MyHeritage, GRAMPS, «Древо Жизни») и ручной ввод, в том числе списком из Excel","Сайт семьи с интерактивным древом, поиском и дополнениями от родных","Постер А1–А3 в векторном PDF и SVG для печати","Презентация с автоматическим делением древа по ветвям","Отчёт клиенту: поколенная роспись по д'Абовилю или Соза и список источников","Скрытие дат живых людей, пароль на сайт, модерация записей родных","Источники и степень достоверности у каждого события"],
+  "audience":{"@type":"Audience","audienceType":"Генеалоги, студии генеалогических исследований, люди, составляющие родословную своей семьи"},
+  "screenshot":"https://aevkone.github.io/rodkonstruktor/landing/site.webp","publisher":{"@id":"https://aevkone.github.io/rodkonstruktor/#org"}},
+ {"@type":"WebPage","@id":"https://aevkone.github.io/rodkonstruktor/#webpage","url":"https://aevkone.github.io/rodkonstruktor/","name":"Родконструктор — онлайн-конструктор семейного древа и сайта рода","isPartOf":{"@id":"https://aevkone.github.io/rodkonstruktor/#website"},"about":{"@id":"https://aevkone.github.io/rodkonstruktor/#app"},"inLanguage":"ru"}
+]}
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Что такое Родконструктор?", "acceptedAnswer": {"@type": "Answer", "text": "Облачный конструктор семейных древ для генеалогов, студий и людей, которые составляют родословную своей семьи. Из одного древа сервис делает сайт семьи, постер для печати и презентацию."}}, {"@type": "Question", "name": "Сколько это стоит?", "acceptedAnswer": {"@type": "Answer", "text": "Сейчас оплаты нет: пробный режим бесплатный — 3 проекта и 1 помощник, все возможности доступны. Цены тарифов пока не объявлены, мы сообщим их заранее."}}, {"@type": "Question", "name": "Можно ли импортировать GEDCOM?", "acceptedAnswer": {"@type": "Answer", "text": "Да: GEDCOM из MyHeritage, GRAMPS, «Древа Жизни» и других программ. Можно ввести людей списком из Excel или текстом, а скачать — файл проекта, GEDCOM, CSV и копию сайта в ZIP."}}, {"@type": "Question", "name": "Какие форматы постера доступны?", "acceptedAnswer": {"@type": "Answer", "text": "А1, А2 и А3 в векторном PDF и SVG для типографии, со своим шрифтом и фоном. Заказа печати через сервис пока нет."}}, {"@type": "Question", "name": "Видны ли на сайте данные живых людей?", "acceptedAnswer": {"@type": "Answer", "text": "Годы рождения и точные даты событий живых на сайт не выводятся, пока составитель не откроет их с согласия человека. Сканы документов живых на сайт не выводятся."}}, {"@type": "Question", "name": "Находят ли сайты семей поисковики?", "acceptedAnswer": {"@type": "Answer", "text": "Нет: сайты семей закрыты от поисковых систем и открываются по ссылке. Доступ можно ограничить паролем или личными приглашениями для родных."}}, {"@type": "Question", "name": "Нужна ли родным регистрация?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Родные открывают ссылку, ищут себя и могут прислать воспоминание, исправление, фото или нового родственника. Записи публикуются после проверки составителем."}}, {"@type": "Question", "name": "Как скрыть свои данные в чужом древе?", "acceptedAnswer": {"@type": "Answer", "text": "Откройте свою карточку на сайте семьи и нажмите «Это я — скройте мои данные» или напишите оператору. Запрос придёт составителю первым в очереди."}}, {"@type": "Question", "name": "Где хранятся данные?", "acceptedAnswer": {"@type": "Answer", "text": "В тестовой версии — в облаке за пределами России. Перенос хранения в РФ рассматриваем, срок не называем."}}, {"@type": "Question", "name": "Что есть для студий?", "acceptedAnswer": {"@type": "Answer", "text": "Команда с ролями (исследователь, дизайнер, публикатор), план работ со статусами и сроками, шаблоны оформления, журнал правок, второй фактор входа и вебхуки в amoCRM и Bitrix24."}}, {"@type": "Question", "name": "Нужен ли пароль для входа?", "acceptedAnswer": {"@type": "Answer", "text": "Нет: вход по одноразовой ссылке или коду. В аккаунте есть список устройств и выход со всех сразу."}}, {"@type": "Question", "name": "Что будет с проектом при обновлениях?", "acceptedAnswer": {"@type": "Answer", "text": "Это тестовая версия: данные могут быть удалены при обновлениях. Удалённый проект 30 дней лежит в корзине, его можно восстановить."}}]}</script>
+<style>
+:root{
+  --paper:#f3eee4;--paper-2:#ece5d7;--card:#fbf8f2;--ink:#17130f;--ink-2:#3d3730;--muted:#6b645a;--line:rgba(60,45,25,.13);
+  --wine:#7a1f2b;--wine-2:#5e1520;--gold:#8a6a2a;
+  --serif:"Cormorant Garamond",Georgia,serif;--sans:Onest,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --ease:cubic-bezier(.32,.72,0,1);--ease-out:cubic-bezier(.16,1,.3,1);
+  --r-xl:28px;--r-lg:20px;--shadow:0 30px 60px -28px rgba(70,40,15,.35),0 10px 24px -14px rgba(70,40,15,.18)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;text-rendering:optimizeLegibility}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:3;opacity:.05;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:var(--wine);text-underline-offset:3px}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3{font-family:var(--serif);font-weight:500;color:var(--ink);text-wrap:balance;margin:0}
+h1{font-size:clamp(42px,6.6vw,86px);line-height:.99;letter-spacing:-.02em}
+h1 em,h2 em{font-style:italic;color:var(--wine)}
+h2{font-size:clamp(34px,4.8vw,60px);line-height:1.03;letter-spacing:-.015em}
+h3{font-size:26px;line-height:1.15;font-weight:600}
+p{margin:0 0 14px;text-wrap:pretty}
+.wrap{width:min(1200px,100%);margin:0 auto;padding:0 24px}
+.skip{position:absolute;left:12px;top:-60px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:10px;z-index:20}
+.skip:focus{top:12px}
+:focus-visible{outline:2px solid var(--wine);outline-offset:3px;border-radius:6px}
+.tag{display:inline-flex;align-items:center;gap:8px;font:600 12px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--gold);background:rgba(138,106,42,.09);border:1px solid rgba(138,106,42,.2);padding:7px 12px;border-radius:999px}
+.tag::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--wine)}
+.lead{font-size:clamp(18px,1.6vw,21px);line-height:1.55;color:var(--ink-2);max-width:56ch}
+.muted{color:var(--muted)}
+
+/* навигация-«остров» */
+.nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:10;display:flex;align-items:center;gap:6px;padding:6px 6px 6px 18px;
+  background:rgba(251,248,242,.8);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);
+  border:1px solid rgba(255,255,255,.7);box-shadow:0 10px 30px -14px rgba(70,40,15,.35),inset 0 1px 0 rgba(255,255,255,.8);border-radius:999px;width:max-content;max-width:calc(100% - 24px)}
+.logo{display:flex;align-items:center;gap:9px;font:600 21px/1 var(--serif);color:var(--ink);text-decoration:none;margin-right:10px;white-space:nowrap}
+.logo img{width:26px;height:26px}
+.nav .links{display:flex;gap:2px}
+.nav .links a{color:var(--ink-2);text-decoration:none;font-size:15px;padding:9px 12px;border-radius:999px;transition:background .3s var(--ease),color .3s}
+.nav .links a:hover{background:rgba(122,31,43,.07);color:var(--wine)}
+.nav .login{color:var(--ink);text-decoration:none;font-size:15px;padding:9px 12px}
+
+/* кнопки: «кнопка в кнопке» */
+.btn{--h:52px;display:inline-flex;align-items:center;gap:12px;height:var(--h);padding:0 6px 0 22px;border-radius:999px;font:600 16px/1 var(--sans);text-decoration:none;white-space:nowrap;
+  transition:transform .5s var(--ease),background .4s var(--ease),box-shadow .5s var(--ease)}
+.btn .ic{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;transition:transform .5s var(--ease)}
+.btn .ic svg{width:16px;height:16px}
+.btn:hover .ic{transform:translate(3px,-2px) scale(1.06)}
+.btn:active{transform:scale(.97)}
+.btn.primary{background:var(--wine);color:#fff;box-shadow:0 14px 30px -12px rgba(122,31,43,.65),inset 0 1px 0 rgba(255,255,255,.18)}
+.btn.primary:hover{background:var(--wine-2);box-shadow:0 18px 36px -12px rgba(122,31,43,.7)}
+.btn.primary .ic{background:rgba(255,255,255,.16)}
+.btn.small{--h:42px;font-size:15px;padding-left:16px}
+.btn.small .ic{width:32px;height:32px}
+.link-arrow{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--ink);text-decoration:none;padding:12px 4px;border-bottom:1.5px solid var(--line);transition:border-color .3s,color .3s}
+.link-arrow:hover{border-color:var(--wine);color:var(--wine)}
+.micro{font-size:14px;color:var(--muted);margin-top:14px}
+
+/* первый экран */
+.hero{position:relative;padding:150px 0 100px;min-height:100dvh;display:flex;align-items:center;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);gap:56px;align-items:center}
+.hero h1{margin:22px 0 22px}
+.hero .actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;margin-top:30px}
+.hero .note{margin-top:20px;font-size:14px;color:var(--muted);display:flex;gap:8px;align-items:flex-start}
+.hero .note::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--gold);margin-top:8px}
+.tree-bg{position:absolute;right:-6%;top:6%;width:min(760px,62vw);height:auto;z-index:0;pointer-events:none}
+.tree-bg path{fill:none;stroke:rgba(138,106,42,.42);stroke-width:1.4;stroke-linecap:round;stroke-dasharray:var(--len);stroke-dashoffset:var(--len)}
+.tree-bg circle{fill:var(--paper);stroke:rgba(122,31,43,.55);stroke-width:1.4;transform-box:fill-box;transform-origin:center;transform:scale(0);opacity:0}
+.go .tree-bg path{animation:draw 1.8s var(--ease-out) forwards;animation-delay:calc(var(--i) * 90ms + 200ms)}
+.go .tree-bg circle{animation:pop .7s var(--ease-out) forwards;animation-delay:calc(var(--i) * 90ms + 700ms)}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes pop{to{transform:scale(1);opacity:1}}
+.stage{position:relative;z-index:1}
+.bezel{padding:7px;border-radius:var(--r-xl);background:rgba(255,255,255,.45);border:1px solid rgba(255,255,255,.75);box-shadow:var(--shadow),inset 0 1px 0 rgba(255,255,255,.7)}
+.bezel>.core{border-radius:calc(var(--r-xl) - 7px);overflow:hidden;background:var(--card);box-shadow:inset 0 0 0 1px var(--line)}
+.stage .main{transform:rotate(-1.2deg)}
+.stage .phone{position:absolute;right:-16px;bottom:-46px;width:31%;border-radius:30px;padding:6px;background:#1a1612;box-shadow:0 30px 50px -20px rgba(30,15,5,.55);transform:rotate(3deg)}
+.stage .phone img{border-radius:24px}
+.stage .chip{position:absolute;left:-22px;bottom:16%;display:flex;gap:10px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:10px 14px;box-shadow:var(--shadow);font-size:14px;line-height:1.35;max-width:250px;animation:float 6s ease-in-out infinite}
+.stage .chip b{display:block;font-size:14px}
+.stage .chip i{flex:none;width:34px;height:34px;border-radius:10px;background:rgba(122,31,43,.09);display:grid;place-items:center;color:var(--wine);font-style:normal;font-size:18px}
+@keyframes float{50%{transform:translateY(-8px)}}
+
+/* секции */
+section{position:relative;padding:clamp(80px,11vw,150px) 0}
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:28px 60px;align-items:end;margin-bottom:56px}
+.head .tag{margin-bottom:18px}
+.alt{background:var(--paper-2)}
+
+/* коротко о сервисе */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:40px 64px;align-items:start}
+.about>div:first-child{position:sticky;top:110px}
+.about .def{font:500 clamp(24px,2.6vw,32px)/1.3 var(--serif);color:var(--ink)}
+.about .def b{color:var(--wine);font-weight:600}
+.facts{display:grid;grid-template-columns:170px minmax(0,1fr);margin:0;border-top:1px solid var(--line)}
+.facts dt,.facts dd{margin:0;padding:14px 0;border-bottom:1px solid var(--line)}
+.facts dt{font-weight:600;color:var(--ink)}
+.facts dd{color:var(--ink-2)}
+
+/* «три вещи» — асимметричная сетка */
+.bento{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:22px}
+.tile{position:relative;border-radius:var(--r-xl);background:var(--card);box-shadow:inset 0 0 0 1px var(--line);overflow:hidden;display:flex;flex-direction:column;transition:transform .7s var(--ease),box-shadow .7s var(--ease)}
+.tile:hover{transform:translateY(-4px);box-shadow:inset 0 0 0 1px var(--line),var(--shadow)}
+.tile .txt{padding:26px 28px 30px}
+.tile .txt p{color:var(--ink-2);margin:10px 0 0}
+.tile .pic{margin:0 18px;border-radius:16px 16px 0 0;overflow:hidden;box-shadow:0 0 0 1px var(--line);margin-top:auto}
+.tile .pic img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;transition:transform 1.2s var(--ease)}
+.tile:hover .pic img{transform:scale(1.03)}
+.t-site{grid-column:span 7;grid-row:span 2}
+.t-poster{grid-column:span 5}
+.t-report{grid-column:span 5}
+.t-report .list{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:8px}
+.t-report .list li{display:flex;gap:10px;font-size:15px;color:var(--ink-2)}
+.t-report .list li::before{content:"";flex:none;width:18px;height:1px;background:var(--gold);margin-top:12px}
+
+/* шаги */
+.steps{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;margin:0;padding:0;list-style:none}
+.steps::before{content:"";position:absolute;left:24px;right:24px;top:24px;height:1px;background:linear-gradient(90deg,var(--wine),var(--gold));transform-origin:left;transform:scaleX(0);transition:transform 1.6s var(--ease-out) .2s}
+.steps.in::before{transform:scaleX(1)}
+.steps li{position:relative;padding-top:70px}
+.steps li .n{position:absolute;top:0;left:0;width:49px;height:49px;border-radius:50%;display:grid;place-items:center;background:var(--paper-2);border:1px solid var(--wine);color:var(--wine);font:600 22px/1 var(--serif)}
+.steps li p{color:var(--ink-2);margin-top:8px}
+
+/* для кого */
+.who article{display:grid;grid-template-columns:180px minmax(0,1fr) minmax(0,1fr);gap:24px 40px;padding:34px 0;border-top:1px solid var(--line);align-items:start}
+.who article:last-of-type{border-bottom:1px solid var(--line)}
+.who .k{font:500 italic 22px/1.2 var(--serif);color:var(--wine)}
+.who h3{font-size:30px}
+.who p{color:var(--ink-2);margin:0}
+
+/* галерея «что внутри» */
+.gallery{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 24px 26px;margin:0 -24px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.gallery figure{flex:0 0 min(560px,82vw);margin:0;scroll-snap-align:start}
+.gallery figure.tall{flex-basis:min(250px,52vw)}
+.gallery figcaption{margin-top:14px;font-size:15px;color:var(--ink-2);max-width:46ch}
+.gallery figcaption b{display:block;font:600 20px/1.25 var(--serif);color:var(--ink)}
+.gallery .core img{width:100%}
+.gal-foot{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;margin-top:24px}
+
+/* родные */
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+.phones{position:relative;display:flex;gap:18px;justify-content:center;padding-bottom:40px}
+.phones .ph{width:44%;border-radius:30px;padding:6px;background:#1a1612;box-shadow:0 30px 50px -22px rgba(30,15,5,.5)}
+.phones .ph img{border-radius:24px}
+.phones .ph:nth-child(1){transform:rotate(-2deg)}
+.phones .ph:nth-child(2){transform:translateY(40px) rotate(2.5deg)}
+.checks{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:12px}
+.checks li{display:flex;gap:12px;color:var(--ink-2)}
+.checks li::before{content:"";flex:none;width:22px;height:22px;border-radius:50%;margin-top:2px;background:rgba(122,31,43,.1) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237a1f2b' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/14px no-repeat}
+
+/* приватность */
+.privacy{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.privacy>div{padding:28px;border-radius:var(--r-lg);background:var(--card);box-shadow:inset 0 0 0 1px var(--line)}
+.privacy>div p{color:var(--ink-2);margin:8px 0 0}
+.privacy .wide{grid-column:1/-1;background:transparent;box-shadow:inset 0 0 0 1px rgba(138,106,42,.35)}
+
+/* есть / нет */
+.now{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:22px}
+.now>div{border-radius:var(--r-lg);padding:30px}
+.now .yes{background:var(--ink);color:#f3eee4}
+.now .yes h3{color:#f3eee4}
+.now .yes p{color:rgba(243,238,228,.8)}
+.now .no{box-shadow:inset 0 0 0 1px var(--line);background:var(--card)}
+.now ul{margin:14px 0 0;padding-left:20px;color:var(--ink-2)}
+.now li{margin:6px 0}
+
+/* вопросы: ответы видны сразу */
+.faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 56px}
+.faq>div{padding:24px 0;border-top:1px solid var(--line)}
+.faq h3{font-size:23px;margin-bottom:8px}
+.faq p{color:var(--ink-2);margin:0}
+
+/* финал */
+.final .box{position:relative;overflow:hidden;text-align:center;border-radius:36px;padding:clamp(48px,7vw,96px) 24px;background:radial-gradient(120% 140% at 50% 0%,#8a2635 0%,var(--wine) 45%,#4a0f19 100%);color:#fff;box-shadow:var(--shadow)}
+.final h2{color:#fff;max-width:19ch;margin:0 auto;position:relative}
+.final .lead{color:rgba(255,255,255,.84);margin:20px auto 0;position:relative}
+.final .btn.primary{position:relative;background:#fff;color:var(--wine);margin-top:34px;box-shadow:0 18px 40px -14px rgba(0,0,0,.45)}
+.final .btn.primary .ic{background:rgba(122,31,43,.1)}
+.final .btn.primary:hover{background:#fff7ef}
+.final .micro{position:relative;color:rgba(255,255,255,.75)}
+.final a.sub{color:#fff}
+.final .rings{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.16}
+.final .rings circle{transform-origin:600px 560px;animation:ring 9s ease-in-out infinite}
+.final .rings circle:nth-child(2){animation-delay:-2s}.final .rings circle:nth-child(3){animation-delay:-4s}.final .rings circle:nth-child(4){animation-delay:-6s}
+@keyframes ring{50%{transform:scale(1.06);opacity:.5}}
+
+footer{padding:40px 0 calc(40px + env(safe-area-inset-bottom));color:var(--muted);font-size:15px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center}
+footer a{color:var(--ink-2)}
+footer .sp{flex:1}
+
+/* липкая кнопка на телефоне */
+.sticky{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:9;display:none;flex-direction:column;align-items:stretch;gap:4px;padding:8px;border-radius:24px;background:rgba(251,248,242,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 18px 40px -16px rgba(40,20,5,.45);border:1px solid rgba(255,255,255,.7);transform:translateY(140%);transition:transform .6s var(--ease)}
+.sticky.on{transform:none}
+.sticky .btn{justify-content:space-between}
+.sticky small{text-align:center;font-size:12px;color:var(--muted)}
+
+/* появление при прокрутке */
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease-out),transform .9s var(--ease-out);transition-delay:calc(var(--d,0) * 80ms)}
+.js .rv.in{opacity:1;transform:none}
+/* первый экран — сразу по загрузке, без ожидания прокрутки (быстрее для LCP) */
+.js .hero .rv{animation:rise .8s var(--ease-out) both;animation-delay:calc(var(--d,0) * 70ms);transition:none;opacity:1;transform:none}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}}
+@media (prefers-reduced-motion:reduce){
+  .js .rv,.js .hero .rv{opacity:1;transform:none;transition:none;animation:none}
+  .tree-bg path{stroke-dashoffset:0!important;animation:none!important}.tree-bg circle{transform:none!important;opacity:1!important;animation:none!important}
+  .steps::before{transform:none;transition:none}
+  .stage .chip,.final .rings circle{animation:none}
+  html{scroll-behavior:auto}
+}
+
+@media (max-width:960px){
+  .nav .links{display:none}
+  .hero{padding:118px 0 80px;min-height:auto}
+  .hero .wrap,.split,.head,.about{grid-template-columns:minmax(0,1fr)}
+  .stage{margin:10px 8px 50px}
+  .stage .chip{left:0}
+  .t-site,.t-poster,.t-report{grid-column:1/-1;grid-row:auto}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 22px}
+  .steps::before{display:none}
+  .who article{grid-template-columns:minmax(0,1fr);gap:10px}
+  .faq,.privacy,.now{grid-template-columns:minmax(0,1fr)}
+  .tree-bg{width:130vw;right:-45vw;top:1%;opacity:.45}
+}
+@media (max-width:640px){
+  .wrap{padding:0 18px}
+  .nav{padding-left:14px}.nav .login{display:none}.logo{font-size:19px}
+  .nav .btn{--h:40px;font-size:14px;padding-left:14px;padding-right:14px}.nav .btn .ic{display:none}
+  .nav .btn .long{display:none}
+  .steps{grid-template-columns:minmax(0,1fr)}
+  .stage .main,.stage .phone,.phones .ph{transform:none!important}
+  .stage .phone{width:36%;right:-6px;bottom:-30px}
+  .stage .chip{display:none}
+  .facts{grid-template-columns:minmax(0,1fr)}.facts dt{border-bottom:0;padding-bottom:0}
+  .sticky{display:flex}
+  footer{padding-bottom:130px}
+  .gallery{padding:6px 18px 22px;margin:0 -18px}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+<a class="skip" href="#main">К содержанию</a>
+
+<nav class="nav" aria-label="Главное меню">
+  <a class="logo" href="/rodkonstruktor/"><img src="/rodkonstruktor/favicon.svg" alt="" width="26" height="26">Родконструктор</a>
+  <span class="links"><a href="#three">Что получается</a><a href="#inside">Пример</a><a href="#privacy">Приватность</a><a href="#faq">Вопросы</a></span>
+  <a class="login" href="/rodkonstruktor/start.html">Войти</a>
+  <a class="btn primary small" href="/rodkonstruktor/start.html" data-cta="nav"><span>Попробовать<span class="long"> бесплатно</span></span><span class="ic" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 12L12 4M6 4h6v6"/></svg></span></a>
+</nav>
+
+<main id="main">
+<header class="hero" id="top">
+  <svg class="tree-bg" viewBox="0 0 760 640" aria-hidden="true"><g id="treeArt"></g></svg>
+  <div class="wrap">
+    <div>
+      <span class="tag rv">Для генеалогов, студий и семей</span>
+      <h1 class="rv" style="--d:1">Конструктор семейного древа: <em>сайт рода</em>, постер и&nbsp;презентация</h1>
+      <p class="lead rv" style="--d:2">Загрузите GEDCOM или соберите древо вручную, выберите стиль. Родные откроют сайт семьи по ссылке с телефона и допишут воспоминания, а вы решите, что оставить.</p>
+      <div class="actions rv" style="--d:3">
+        <a class="btn primary" href="/rodkonstruktor/start.html" data-cta="hero">Попробовать бесплатно<span class="ic" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 12L12 4M6 4h6v6"/></svg></span></a>
+        <a class="link-arrow" href="/rodkonstruktor/primer/" data-cta="hero-example">Посмотреть пример сайта семьи →</a>
+      </div>
+      <p class="micro rv" style="--d:4">Пробный режим бесплатный: 3 проекта, 1 помощник. Без карты. Вход по ссылке, пароль не нужен.</p>
+      <p class="note rv" style="--d:5">Тестовая версия, оплаты нет. Пример — вымышленная семья Соколовых, открывается без входа.</p>
+    </div>
+    <div class="stage rv" style="--d:2" id="stage">
+      <div class="bezel main"><div class="core"><img src="/rodkonstruktor/landing/site.webp" alt="Пример сайта семьи: обложка рода Соколовых, поиск по имени, число людей и поколений" width="1200" height="750" fetchpriority="high"></div></div>
+      <div class="phone"><img src="/rodkonstruktor/landing/phone.webp" alt="Семейное древо на экране телефона: поколения списком" width="400" height="860" loading="lazy"></div>
+      <div class="chip"><i aria-hidden="true">✦</i><span><b>Родные дописывают</b>воспоминания, даты и новых людей — вам на проверку</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap about">
+    <div>
+      <span class="tag rv">Коротко о сервисе</span>
+      <h2 class="rv" style="--d:1;margin-top:18px">Что такое <em>Родконструктор</em></h2>
+    </div>
+    <div>
+      <p class="def rv"><b>Родконструктор</b> — облачный конструктор семейных древ для генеалогов, студий и людей, которые составляют родословную своей семьи. Из одного древа сервис делает сайт семьи с интерактивным древом, постер А1–А3 для печати и презентацию.</p>
+      <dl class="facts rv" style="--d:1">
+        <dt>Что это</dt><dd>Веб-сервис: работает в браузере, ничего устанавливать не нужно.</dd>
+        <dt>Как начать</dt><dd>Импорт GEDCOM (MyHeritage, GRAMPS, «Древо Жизни») или ручной ввод, в том числе списком из Excel.</dd>
+        <dt>Что получается</dt><dd>Сайт семьи по своей ссылке, постер в векторном PDF и SVG, слайды, отчёт клиенту, копия сайта в ZIP.</dd>
+        <dt>Факты</dt><dd>У каждого события — источник и степень достоверности, даты по старому и новому стилю, нумерация д'Абовиля и Соза в отчёте.</dd>
+        <dt>Приватность</dt><dd>Даты живых людей на сайт не выводятся, сайт можно закрыть паролем, записи родных публикуются после проверки.</dd>
+        <dt>Стоимость</dt><dd>Пробный режим бесплатный: 3 проекта и 1 помощник. Цены тарифов не объявлены.</dd>
+        <dt>Статус</dt><dd>Тестовая версия: данные могут быть удалены при обновлениях. Хранение — в облаке вне России.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="three">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="tag rv">Что получается</span><h2 class="rv" style="--d:1">Из одного древа: <em>сайт семьи</em>, постер и презентация</h2></div>
+      <p class="lead rv" style="--d:2">Всё делается из одних и тех же данных и в одном стиле. Исправили дату — она поменялась везде.</p>
+    </div>
+    <div class="bento">
+      <article class="tile t-site rv">
+        <div class="txt"><h3>Сайт семьи</h3><p>Интерактивное древо, поиск по имени, карточки с датами, местами и источниками. Родные открывают его по ссылке — с телефона, без регистрации.</p></div>
+        <div class="pic"><img src="/rodkonstruktor/landing/person.webp" alt="Карточка человека на сайте семьи: события с датами, местами и источниками, «Историческая память»" width="1200" height="750" loading="lazy"></div>
+      </article>
+      <article class="tile t-poster rv" style="--d:1">
+        <div class="txt"><h3>Постер и презентация</h3><p>Постер А1–А3 в векторном PDF и SVG для типографии. Слайды 16:9 — древо само делится по ветвям, чтобы имена читались.</p></div>
+        <div class="pic"><img src="/rodkonstruktor/landing/poster.webp" alt="Слайд презентации с одной ветвью рода" width="1200" height="750" loading="lazy"></div>
+      </article>
+      <article class="tile t-report rv" style="--d:2">
+        <div class="txt"><h3>Отчёт клиенту</h3><p>Файлом Word или в PDF:</p>
+          <ul class="list"><li>поколенная роспись по д'Абовилю или Соза — Штрадоницу</li><li>события с источниками и достоверностью</li><li>находки и что запросить в архивах дальше</li></ul></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="head"><div><span class="tag rv">Как это работает</span><h2 class="rv" style="--d:1">Как создать семейное древо и сайт рода: <em>4 шага</em></h2></div></div>
+    <ol class="steps" id="steps">
+      <li class="rv"><span class="n" aria-hidden="true">1</span><h3>Древо</h3><p>GEDCOM из MyHeritage, GRAMPS, «Древа Жизни», список из Excel или ввод вручную.</p></li>
+      <li class="rv" style="--d:1"><span class="n" aria-hidden="true">2</span><h3>Стиль</h3><p>Пять тем, свои цвета и шрифты, цвета ветвей и гербы. Предпросмотр сразу.</p></li>
+      <li class="rv" style="--d:2"><span class="n" aria-hidden="true">3</span><h3>Публикация</h3><p>Своя ссылка, пароль или личные приглашения родным. Постер и слайды — в PDF.</p></li>
+      <li class="rv" style="--d:3"><span class="n" aria-hidden="true">4</span><h3>Родные дописывают</h3><p>Воспоминания, исправления и новые люди приходят вам на проверку.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="alt" id="who">
+  <div class="wrap">
+    <div class="head"><div><span class="tag rv">Для кого</span><h2 class="rv" style="--d:1">Для кого конструктор: <em>генеалоги, студии и семьи</em></h2></div></div>
+    <div class="who">
+      <article class="rv"><span class="k">Генеалогу</span><h3>Отдайте клиенту сайт, постер и отчёт вместо папки файлов</h3><p>Источник у каждого факта, даты по старому и новому стилю, сканы метрик. Клиент показывает работу всей семье, а вы получаете от родных новые сведения.</p></article>
+      <article class="rv"><span class="k">Студии</span><h3>Команда, роли и план работ</h3><p>Исследователь, дизайнер, публикатор — каждый в своей роли. Статусы и сроки проектов, шаблоны оформления, журнал правок, вебхуки в amoCRM и Bitrix24. В пробном режиме — 1 помощник.</p></article>
+      <article class="rv"><span class="k">Своей семье</span><h3>Простой режим без лишних настроек</h3><p>Импорт GEDCOM, ввод списком из Excel или текстом. Родные присылают фото и истории, а вы решаете, что войдёт в древо.</p></article>
+      <p class="micro rv" style="margin-top:26px"><a href="/rodkonstruktor/start.html" data-cta="who">Начать бесплатно</a> · <a href="/rodkonstruktor/primer/">посмотреть пример сайта семьи</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="inside">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="tag rv">Что внутри</span><h2 class="rv" style="--d:1">Посмотрите сами — <em>без входа</em></h2></div>
+      <p class="lead rv" style="--d:2">Все кадры — из примера вымышленной семьи Соколовых. Тот же пример можно открыть целиком.</p>
+    </div>
+    <div class="gallery rv" tabindex="0" role="region" aria-label="Кадры сервиса, листаются вбок">
+      <figure><div class="bezel"><div class="core"><img src="/rodkonstruktor/landing/person.webp" alt="Карточка человека: события, источники, награды" width="1200" height="750" loading="lazy"></div></div><figcaption><b>Карточка человека</b>События с датами, местами и источниками, «Историческая память»: участие в войне, награды, репрессии и реабилитация.</figcaption></figure>
+      <figure class="tall"><div class="bezel"><div class="core"><img src="/rodkonstruktor/landing/phone-form.webp" alt="Форма дополнения на телефоне: что вы знаете, согласие" width="400" height="860" loading="lazy"></div></div><figcaption><b>Форма для родных</b>Два шага на телефоне, голосовой рассказ, согласие человека.</figcaption></figure>
+      <figure><div class="bezel"><div class="core"><img src="/rodkonstruktor/landing/entries.webp" alt="Редактор: дополнения от родных на проверку" width="1200" height="750" loading="lazy"></div></div><figcaption><b>Дополнения на проверку</b>Одна главная кнопка на запись, предупреждение о невозможных годах.</figcaption></figure>
+      <figure><div class="bezel"><div class="core"><img src="/rodkonstruktor/landing/editor.webp" alt="Редактор стиля: темы, цвета ветвей и шрифты" width="1200" height="750" loading="lazy"></div></div><figcaption><b>Стиль под клиента</b>Темы, цвета ветвей с проверкой для дальтоников, гербы и шрифты.</figcaption></figure>
+      <figure><div class="bezel"><div class="core"><img src="/rodkonstruktor/landing/en.webp" alt="Английская версия сайта семьи" width="1200" height="750" loading="lazy"></div></div><figcaption><b>Английская версия</b>Для родных за границей — переключатель на сайте.</figcaption></figure>
+      <figure class="tall"><div class="bezel"><div class="core"><img src="/rodkonstruktor/landing/phone-lite.webp" alt="Облегчённый режим сайта для медленного интернета" width="400" height="860" loading="lazy"></div></div><figcaption><b>Медленный интернет</b>Облегчённый режим включается сам.</figcaption></figure>
+    </div>
+    <div class="gal-foot">
+      <a class="btn primary" href="/rodkonstruktor/primer/" data-cta="inside-example">Открыть пример сайта семьи<span class="ic" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 12L12 4M6 4h6v6"/></svg></span></a>
+      <a class="link-arrow" href="/rodkonstruktor/start.html" data-cta="inside">Или сразу создать своё древо →</a>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="family">
+  <div class="wrap split">
+    <div>
+      <span class="tag rv">Родные клиента</span>
+      <h2 class="rv" style="--d:1">Родным <em>не нужно регистрироваться</em></h2>
+      <p class="lead rv" style="--d:2">Открывают ссылку с телефона и находят себя через поиск. Дописать можно воспоминание, факт, исправление или нового родственника.</p>
+      <ul class="checks rv" style="--d:3">
+        <li>«Показать предков» и «Показать потомков» одним касанием</li>
+        <li>Крупный шрифт и чтение карточки вслух</li>
+        <li>Английская версия для родных за границей</li>
+        <li>До вашей проверки запись на сайте не появляется, о живых — всегда только после проверки</li>
+      </ul>
+    </div>
+    <div class="phones rv" style="--d:2">
+      <div class="ph"><img src="/rodkonstruktor/landing/phone.webp" alt="Список поколений на телефоне" width="400" height="860" loading="lazy"></div>
+      <div class="ph"><img src="/rodkonstruktor/landing/phone-form.webp" alt="Форма дополнения на телефоне" width="400" height="860" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section id="privacy">
+  <div class="wrap">
+    <div class="head"><div><span class="tag rv">Данные и приватность</span><h2 class="rv" style="--d:1">Живые люди — <em>под защитой</em></h2></div>
+      <p class="lead rv" style="--d:2">Мы не продаём данные, не показываем рекламу и не ставим сторонние счётчики.</p></div>
+    <div class="privacy">
+      <div class="rv"><h3>Годы живых скрыты</h3><p>Даты рождения и точные даты событий живых на сайт не выводятся, пока вы не откроете их с согласия человека.</p></div>
+      <div class="rv" style="--d:1"><h3>Пароль или личные ссылки</h3><p>Если в древе есть живые, при публикации нужно решить, ставить ли пароль. Личные ссылки родным можно отозвать.</p></div>
+      <div class="rv"><h3>Вы модерируете</h3><p>Записи родных идут вам на проверку. Человек может нажать «Это я — скройте мои данные».</p></div>
+      <div class="rv" style="--d:1"><h3>Данные можно забрать</h3><p>Файл проекта, GEDCOM, список людей в CSV и копия сайта в ZIP — в любой момент.</p></div>
+      <div class="wide rv"><h3>Где хранятся данные</h3><p>Сейчас — в облаке за пределами России. Перенос хранения в РФ рассматриваем, срок пока не называем. Подробности — в <a href="/rodkonstruktor/privacy.html">политике обработки персональных данных</a> (черновик на проверке юриста).</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="now">
+  <div class="wrap">
+    <div class="head"><div><span class="tag rv">Честно</span><h2 class="rv" style="--d:1">Что есть сейчас <em>и чего пока нет</em></h2></div></div>
+    <div class="now">
+      <div class="yes rv"><h3>Сейчас</h3><p>Бесплатный пробный режим: 3 проекта, 1 помощник, все возможности сервиса. Цен и оплаты пока нет — сообщим заранее.</p></div>
+      <div class="no rv" style="--d:1"><h3>Пока нет</h3><ul><li>оплаты и цен</li><li>своего домена для сайта семьи</li><li>заказа печати постера и книги</li><li>мобильного приложения и правки вдвоём в реальном времени</li><li>уведомлений на почту, ДНК и поиска по архивам</li><li>юридически проверенных документов</li></ul>
+      <p class="micro">Это тестовая версия: данные могут быть удалены при обновлениях. Не загружайте то, что не готовы потерять.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="head"><div><span class="tag rv">Вопросы</span><h2 class="rv" style="--d:1">Частые <em>вопросы</em></h2></div></div>
+    <div class="faq" id="faqList">
+      <div class="rv"><h3>Что такое Родконструктор?</h3><p>Облачный конструктор семейных древ для генеалогов, студий и людей, которые составляют родословную своей семьи. Из одного древа сервис делает сайт семьи, постер для печати и презентацию.</p></div>
+      <div class="rv"><h3>Сколько это стоит?</h3><p>Сейчас оплаты нет: пробный режим бесплатный — 3 проекта и 1 помощник, все возможности доступны. Цены тарифов пока не объявлены, мы сообщим их заранее.</p></div>
+      <div class="rv"><h3>Можно ли импортировать GEDCOM?</h3><p>Да: GEDCOM из MyHeritage, GRAMPS, «Древа Жизни» и других программ. Можно ввести людей списком из Excel или текстом, а скачать — файл проекта, GEDCOM, CSV и копию сайта в ZIP.</p></div>
+      <div class="rv"><h3>Какие форматы постера доступны?</h3><p>А1, А2 и А3 в векторном PDF и SVG для типографии, со своим шрифтом и фоном. Заказа печати через сервис пока нет.</p></div>
+      <div class="rv"><h3>Видны ли на сайте данные живых людей?</h3><p>Годы рождения и точные даты событий живых на сайт не выводятся, пока составитель не откроет их с согласия человека. Сканы документов живых на сайт не выводятся.</p></div>
+      <div class="rv"><h3>Находят ли сайты семей поисковики?</h3><p>Нет: сайты семей закрыты от поисковых систем и открываются по ссылке. Доступ можно ограничить паролем или личными приглашениями для родных.</p></div>
+      <div class="rv"><h3>Нужна ли родным регистрация?</h3><p>Нет. Родные открывают ссылку, ищут себя и могут прислать воспоминание, исправление, фото или нового родственника. Записи публикуются после проверки составителем.</p></div>
+      <div class="rv"><h3>Как скрыть свои данные в чужом древе?</h3><p>Откройте свою карточку на сайте семьи и нажмите «Это я — скройте мои данные» или напишите оператору. Запрос придёт составителю первым в очереди.</p></div>
+      <div class="rv"><h3>Где хранятся данные?</h3><p>В тестовой версии — в облаке за пределами России. Перенос хранения в РФ рассматриваем, срок не называем.</p></div>
+      <div class="rv"><h3>Что есть для студий?</h3><p>Команда с ролями (исследователь, дизайнер, публикатор), план работ со статусами и сроками, шаблоны оформления, журнал правок, второй фактор входа и вебхуки в amoCRM и Bitrix24.</p></div>
+      <div class="rv"><h3>Нужен ли пароль для входа?</h3><p>Нет: вход по одноразовой ссылке или коду. В аккаунте есть список устройств и выход со всех сразу.</p></div>
+      <div class="rv"><h3>Что будет с проектом при обновлениях?</h3><p>Это тестовая версия: данные могут быть удалены при обновлениях. Удалённый проект 30 дней лежит в корзине, его можно восстановить.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="start">
+  <div class="wrap">
+    <div class="box rv">
+      <svg class="rings" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#fff" stroke-width="1"><circle cx="600" cy="560" r="180"/><circle cx="600" cy="560" r="300"/><circle cx="600" cy="560" r="420"/><circle cx="600" cy="560" r="540"/></g></svg>
+      <h2>Соберите первое древо и посмотрите, <em style="color:#f6dfc0">как его увидит семья</em></h2>
+      <p class="lead">Пробный режим бесплатный, оплаты нет. Если сервис не подойдёт — проект можно скачать.</p>
+      <a class="btn primary" href="/rodkonstruktor/start.html" data-cta="final">Создать первое древо бесплатно<span class="ic" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 12L12 4M6 4h6v6"/></svg></span></a>
+      <p class="micro">Без карты · вход по ссылке, пароль не нужен · <a class="sub" href="/rodkonstruktor/primer/">сначала открыть пример</a></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="sticky" id="sticky" aria-hidden="true">
+  <a class="btn primary" href="/rodkonstruktor/start.html" data-cta="sticky" tabindex="-1">Попробовать бесплатно<span class="ic" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 12L12 4M6 4h6v6"/></svg></span></a>
+  <small>Без карты · вход по ссылке, без пароля</small>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>© Родконструктор · тестовая версия</span><span class="sp"></span>
+    <a href="/rodkonstruktor/privacy.html">Политика обработки персональных данных</a>
+    <a href="/rodkonstruktor/terms.html">Соглашение</a>
+    <a href="/rodkonstruktor/offer.html">Оферта</a>
+    <a href="/rodkonstruktor/consent.html">Тексты согласий</a>
+    <span class="muted">документы — черновики на проверке юриста</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var doc = document.documentElement, RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // древо в первом экране: ветви рисуются, узлы появляются по очереди (только оформление)
+  var g = document.getElementById('treeArt'), NS = 'http://www.w3.org/2000/svg', i = 0;
+  var nodes = [[380, 600], [200, 470], [560, 470], [110, 330], [290, 330], [470, 330], [650, 330], [60, 190], [160, 190], [240, 190], [340, 190], [420, 190], [520, 190], [600, 190], [700, 190], [110, 60], [290, 60], [470, 60], [650, 60]];
+  var links = [[0, 1], [0, 2], [1, 3], [1, 4], [2, 5], [2, 6], [3, 7], [3, 8], [4, 9], [4, 10], [5, 11], [5, 12], [6, 13], [6, 14], [7, 15], [8, 15], [9, 16], [10, 16], [11, 17], [12, 17], [13, 18], [14, 18]];
+  links.forEach(function (l) {
+    var a = nodes[l[0]], b = nodes[l[1]], my = (a[1] + b[1]) / 2, p = document.createElementNS(NS, 'path');
+    p.setAttribute('d', 'M' + a[0] + ' ' + a[1] + ' C' + a[0] + ' ' + my + ' ' + b[0] + ' ' + my + ' ' + b[0] + ' ' + b[1]);
+    g.appendChild(p); p.style.setProperty('--len', Math.ceil(p.getTotalLength())); p.style.setProperty('--i', Math.floor(i++ / 2));
+  });
+  nodes.forEach(function (n, k) { var c = document.createElementNS(NS, 'circle'); c.setAttribute('cx', n[0]); c.setAttribute('cy', n[1]); c.setAttribute('r', k ? 7 : 10); c.style.setProperty('--i', k < 1 ? 0 : k < 3 ? 1 : k < 7 ? 3 : k < 15 ? 6 : 9); g.appendChild(c); });
+  requestAnimationFrame(function () { doc.classList.add('go'); });
+
+  // появление блоков при прокрутке
+  var rv = [].slice.call(document.querySelectorAll('.rv:not(.hero .rv), #steps'));
+  // страховка: если наблюдатель не сработал (фоновая вкладка, старый браузер) — показать всё через 3 с
+  setTimeout(function () { rv.forEach(function (e) { if (e.getBoundingClientRect().top < innerHeight) e.classList.add('in'); }); }, 3000);
+  if (RM || !('IntersectionObserver' in window)) rv.forEach(function (e) { e.classList.add('in'); });
+  else { var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, {rootMargin: '0px 0px -8% 0px', threshold: .12}); rv.forEach(function (e) { io.observe(e); }); }
+
+  // кадр в первом экране слегка следует за курсором (только мышь)
+  var st = document.getElementById('stage');
+  if (!RM && matchMedia('(pointer:fine)').matches && st) {
+    var main = st.querySelector('.main'), ph = st.querySelector('.phone'), raf = 0, tx = 0, ty = 0;
+    addEventListener('pointermove', function (e) {
+      tx = e.clientX / innerWidth - .5; ty = e.clientY / innerHeight - .5;
+      if (!raf) raf = requestAnimationFrame(function () { raf = 0; main.style.transform = 'rotate(-1.2deg) translate(' + (tx * -10).toFixed(1) + 'px,' + (ty * -8).toFixed(1) + 'px)'; ph.style.transform = 'rotate(3deg) translate(' + (tx * 16).toFixed(1) + 'px,' + (ty * 12).toFixed(1) + 'px)'; });
+    }, {passive: true});
+  }
+
+  // липкая кнопка на телефоне: после первого экрана и до финального блока
+  var sticky = document.getElementById('sticky'), hero = document.getElementById('top'), fin = document.getElementById('start'), seen = {hero: true, fin: false};
+  if ('IntersectionObserver' in window) {
+    var so = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { seen[e.target === hero ? 'hero' : 'fin'] = e.isIntersecting; });
+      var on = !seen.hero && !seen.fin; sticky.classList.toggle('on', on); sticky.setAttribute('aria-hidden', String(!on)); sticky.querySelector('a').tabIndex = on ? 0 : -1;
+    });
+    so.observe(hero); so.observe(fin);
+  }
+})();
+</script>
+</body>
+</html>

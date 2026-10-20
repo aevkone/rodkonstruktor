@@ -1,0 +1,30 @@
+{
+ "playfair": [
+  "playfair-italic-400-cyrillic.woff2",
+  "playfair-italic-400-latin.woff2",
+  "playfair-normal-400-cyrillic.woff2",
+  "playfair-normal-400-latin.woff2"
+ ],
+ "lora": [
+  "lora-italic-400-cyrillic.woff2",
+  "lora-italic-400-latin.woff2",
+  "lora-normal-400-cyrillic.woff2",
+  "lora-normal-400-latin.woff2"
+ ],
+ "pt-serif": [
+  "pt-serif-italic-400-cyrillic.woff2",
+  "pt-serif-italic-400-latin.woff2",
+  "pt-serif-normal-400-cyrillic.woff2",
+  "pt-serif-normal-400-latin.woff2",
+  "pt-serif-normal-700-cyrillic.woff2",
+  "pt-serif-normal-700-latin.woff2"
+ ],
+ "onest": [
+  "onest-normal-400-cyrillic.woff2",
+  "onest-normal-400-latin.woff2"
+ ],
+ "manrope": [
+  "manrope-normal-400-cyrillic.woff2",
+  "manrope-normal-400-latin.woff2"
+ ]
+}

@@ -1,0 +1,13 @@
+:root{--paper:#f2ede3;--card:#fbf8f2;--ink:#0f1413;--muted:#3f3b34;--gold:#86641f;--accent:#7a1f2b;--rule:#d2c8b4}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#121615;--card:#1b201f;--ink:#f4efe4;--muted:#d8d0c1;--gold:#e6c57c;--accent:#e0a0a8;--rule:#4a524f;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:18px/1.6 Georgia,"Cormorant Garamond",serif}
+main{max-width:760px;margin:0 auto;padding:28px 16px 64px}
+.draft{background:#fff3cd;color:#5c4400;border:1px solid #e0c36a;border-radius:8px;padding:12px 16px;font:600 16px/1.4 system-ui,sans-serif;margin:0 0 20px}
+h1{font-size:34px;line-height:1.15;color:var(--accent);margin:0 0 6px}
+h2{font-size:22px;margin:30px 0 8px;color:var(--accent)}
+.meta{color:var(--muted);font-size:16px;margin:0 0 18px}
+li{margin:0 0 6px}
+.todo{background:#ffe9a8;color:#5c4400;padding:0 4px;border-radius:3px}
+a{color:var(--accent)}
+nav{font:16px system-ui,sans-serif;margin-bottom:18px}
