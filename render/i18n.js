@@ -57,7 +57,7 @@
     'Вношу сведения с согласия этого человека (или это я сам(а))': 'I add this with the person\'s consent (or it is me)', 'Черновик сохранён на этом устройстве.': 'Draft saved on this device.',
     'Сохранить': 'Save', 'Сохраняю': 'Saving', '✓ Сохранено': '✓ Saved', 'Дополнять древо можно на семейном сайте.': 'You can add to the tree on the family website.', 'Кто увидит вашу запись': 'Who will see your entry',
     'жив(а)': 'living', 'Перейти к древу': 'Skip to the tree', 'А+ Крупно': 'A+ Large', 'А− Обычно': 'A− Normal', 'О данных на этом сайте': 'About the data on this site',
-    'Политика обработки персональных данных': 'Privacy policy', 'Соглашение': 'Terms', 'Составитель древа:': 'Tree compiler:', 'Сделано в Родконструкторе': 'Made with Rodkonstruktor',
+    'Политика обработки персональных данных': 'Privacy policy', 'Соглашение': 'Terms', 'Составитель древа:': 'Tree compiler:', 'Сделано в «Летописи рода»': 'Made with Letopis Roda',
     'Читаемо': 'Readable', 'Крупно': 'Large', 'Очень крупно': 'Very large', 'вошли в род браком': 'joined by marriage', 'бывший брак': 'former marriage', 'брак': 'marriage', 'Дети:': 'Children:',
     'Воспоминание': 'Memory', 'Факт': 'Fact', 'Исправление': 'Correction', 'Новый родственник': 'New relative', 'Без привязки к человеку': 'Not linked to a person',
     'Нет интернета. Текст сохранён на телефоне — отправьте, когда появится связь': 'No internet. The text is saved on your phone — send it when you are back online',
