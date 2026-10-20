@@ -206,6 +206,24 @@ section{position:relative;padding:clamp(76px,10vw,140px) 0}
 .who .k{font:500 italic 22px/1.2 var(--serif);color:var(--wine)}
 .who h3{font-size:29px}
 .who p{color:var(--ink-2);margin:0}
+/* выгода для генеалога */
+#value .head{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px 56px;align-items:end}
+.val-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;margin-top:44px}
+.val-card{background:var(--paper-2);border:1px solid var(--line);border-radius:28px;padding:34px 36px}
+.val-card .k{display:block;font:500 italic 22px/1.2 var(--serif);color:var(--wine);margin-bottom:18px}
+.val-list{list-style:none;margin:0;padding:0}
+.val-list li{display:grid;grid-template-columns:minmax(150px,auto) minmax(0,1fr);gap:16px;align-items:baseline;padding:14px 0;border-top:1px solid var(--line)}
+.val-list b{font:600 30px/1.1 var(--serif);color:var(--ink);font-variant-numeric:lining-nums}
+.val-list span{color:var(--ink-2)}
+.val-src{font-size:14px;color:var(--muted);margin:16px 0 0}
+.val-card.dark{background:radial-gradient(120% 140% at 50% 0%,#8a2635 0%,var(--wine) 50%,#4a0f19 100%);border-color:transparent;color:#fff}
+.val-card.dark .k{color:#f6dfc0}
+.val-row{display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding:14px 0;border-top:1px solid rgba(255,255,255,.22)}
+.val-row b{font:600 30px/1.1 var(--serif);white-space:nowrap}
+.val-row.plus b{color:#f6dfc0}
+.val-card.dark p{color:rgba(255,255,255,.86);margin:18px 0 0}
+.val-card.dark .val-src{color:rgba(255,255,255,.7)}
+.val-card a{color:inherit}
 
 /* галерея «что внутри» */
 .gallery{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 24px 26px;margin:0 -24px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
@@ -331,6 +349,8 @@ footer a{color:var(--ink-2)}
   .steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 22px}
   .track{display:none}
   .who article{grid-template-columns:minmax(0,1fr);gap:10px}
+  #value .head,.val-grid{grid-template-columns:minmax(0,1fr)}
+  .val-card{padding:26px 22px}.val-list li{grid-template-columns:minmax(0,1fr);gap:4px}.val-row{flex-wrap:wrap}
   .faq,.privacy,.now{grid-template-columns:minmax(0,1fr)}
   footer .grid{grid-template-columns:minmax(0,1fr)}
 }
@@ -522,6 +542,37 @@ footer a{color:var(--ink-2)}
     <div class="cta-row rv">
       <a class="btn primary" href="/rodkonstruktor/start.html" data-cta="who">Попробовать бесплатно<span class="ic" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 12L12 4M6 4h6v6"/></svg></span></a>
       <a class="link-arrow" href="/rodkonstruktor/primer/">Посмотреть пример сайта семьи →</a>
+    </div>
+  </div>
+</section>
+
+<section id="value">
+  <div class="wrap">
+    <div class="head"><div><span class="tag rv">Выгода для генеалога</span><h2 class="rv" style="--d:1">Оформление — вторая половина <em>вашего чека</em></h2></div>
+      <p class="lead rv" style="--d:2">Клиент платит за поиск в архивах, а хранит и показывает родным — оформленный результат. Агентства продают оформление отдельно и дорого. С «Летописью рода» вы делаете его сами и добавляете к каждому заказу.</p></div>
+    <div class="val-grid">
+      <div class="val-card rv">
+        <span class="k">Цены рынка на оформление</span>
+        <ul class="val-list">
+          <li><b>35–100 тыс. ₽</b><span>оформленное родословное древо A1</span></li>
+          <li><b>48 тыс. ₽</b><span>семейный сайт с древом и документами</span></li>
+          <li><b>60–120 тыс. ₽</b><span>разработка фамильного герба</span></li>
+          <li><b>от 80 тыс. ₽</b><span>семейная книга</span></li>
+        </ul>
+        <p class="val-src">По открытым прайсам: <a href="https://geno.ru/poisk-predkov/price/" rel="nofollow noopener" target="_blank">МИГИ, прайс от 01.03.2026</a>, <a href="https://gerbzakaz.ru/portfolio" rel="nofollow noopener" target="_blank">gerbzakaz.ru</a>.</p>
+      </div>
+      <div class="val-card dark rv" style="--d:1">
+        <span class="k">Пример заказа на 4 линии</span>
+        <div class="val-row"><span>Исследование XX века</span><b>75–100 тыс. ₽</b></div>
+        <div class="val-row plus"><span>+ древо A1 и сайт семьи</span><b>+83–148 тыс. ₽</b></div>
+        <div class="val-row plus"><span>+ знаки фамилий рода</span><b>в том же сервисе</b></div>
+        <p>Без сервиса это оформление заказывают у дизайнера: 100–250 ₽ за персону, древо на 200 человек — 20–50 тыс. ₽ и недели на макет. Печать холста A1 в типографии стоит всего 2–4 тыс. ₽.</p>
+        <p class="val-src">Ориентиры рынка на октябрь 2026 года, а не обещание дохода: итог зависит от ваших клиентов и цен.</p>
+      </div>
+    </div>
+    <div class="cta-row rv">
+      <a class="btn primary" href="/rodkonstruktor/start.html" data-cta="value">Попробовать бесплатно<span class="ic" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 12L12 4M6 4h6v6"/></svg></span></a>
+      <a class="link-arrow" href="/rodkonstruktor/primer/">Посмотреть, что получит клиент →</a>
     </div>
   </div>
 </section>

@@ -1,2 +1,1275 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content"><meta name="robots" content="index, follow, max-image-preview:large"><title>Пример сайта семьи — демо-древо рода Соколовых | Летопись рода</title><meta property="og:title" content="Род Соколовых"><meta property="og:type" content="website"><meta property="og:site_name" content="Летопись рода"><meta property="og:description" content="56 человек, 6 поколений. Найдите себя и допишите, что знаете."><script>(function(){var c=navigator.connection||{},q=new URLSearchParams(location.search).get("lite"),s=null;try{s=localStorage.getItem("siteLite");}catch(e){}var slow=q==="1"||s==="1"||(s!=="0"&&q!=="0"&&(c.saveData||/^(slow-2g|2g|3g)$/.test(c.effectiveType||"")));window.FAMILY_SLOW=!!slow;if(slow)document.documentElement.classList.add("slow");var css=["/rodkonstruktor/render/fonts/local.css"];css.forEach(function(h){document.write('<link rel="stylesheet" href="'+h+'"'+(slow?' media="print" data-late="1"':'')+'>');});})();</script><noscript><link rel="stylesheet" href="/rodkonstruktor/render/fonts/local.css"></noscript><link rel="stylesheet" href="/rodkonstruktor/render/tree.css"><link rel="stylesheet" href="/rodkonstruktor/render/web.css"><link rel="stylesheet" href="/rodkonstruktor/render/collab.css"><style>:root{--paper:#f2ede3;--card:#fbf8f2;--ink:#0f1413;--muted:#3f3b34;--accent:#7a1f2b;--gold:#86641f;--line:#6f6858;--frame:#2e2b25;--rule:#d2c8b4;--gold2:#86641f;--on-accent:#ffffff;--serif:"Cormorant Garamond","Cormorant Fallback",Georgia,serif;--heading:"Cormorant Garamond","Cormorant Fallback",Georgia,serif;--sc:"Cormorant SC","Cormorant Fallback",Georgia,serif;color-scheme:light}
-.tree[data-br="a"] .node:not(.f-a),.tree[data-br="a"] .kin,.tree[data-br="a"] .wed{opacity:.22}.tree[data-br="b"] .node:not(.f-b),.tree[data-br="b"] .kin,.tree[data-br="b"] .wed{opacity:.22}.tree[data-br="c"] .node:not(.f-c),.tree[data-br="c"] .kin,.tree[data-br="c"] .wed{opacity:.22}.tree[data-br="d"] .node:not(.f-d),.tree[data-br="d"] .kin,.tree[data-br="d"] .wed{opacity:.22}.tree[data-br="e"] .node:not(.f-e),.tree[data-br="e"] .kin,.tree[data-br="e"] .wed{opacity:.22}.conf{font-size:.85em;font-style:italic;color:var(--muted)}.conf.c-high{color:var(--accent)}</style><script>try{window.FAMILY_LANG=new URLSearchParams(location.search).get("lang")||localStorage.getItem("siteLang")||"ru";}catch(e){window.FAMILY_LANG="ru";}</script><script>window.FAMILY_API="";window.FAMILY_GENEALOGIST="Демо-генеалог";window.FAMILY_FILES="";</script><meta name="description" content="Демонстрационный сайт семьи на «Летописи рода»: интерактивное древо вымышленного рода Соколовых, поиск, ветви, источники, исторические отметки, форма дополнений от родных."><link rel="canonical" href="https://aevkone.github.io/rodkonstruktor/primer/"><link rel="icon" href="/rodkonstruktor/favicon.svg" type="image/svg+xml"><meta property="og:type" content="website"><meta property="og:url" content="https://aevkone.github.io/rodkonstruktor/primer/"><meta property="og:image" content="https://aevkone.github.io/rodkonstruktor/landing/og.jpg"></head><body><div style="position:sticky;top:0;z-index:50;background:#7a1f2b;color:#fff;font:16px/1.35 Georgia,serif;padding:8px 14px;text-align:center">Пример: вымышленная семья Соколовых, только для чтения. <a href="/rodkonstruktor/" style="color:#fff;font-weight:bold">← Летопись рода</a> · <a href="/rodkonstruktor/start.html" style="color:#fff;font-weight:bold">Собрать своё древо</a></div><div class="page play" id="page"><a class="skip" href="#tree">Перейти к древу</a><button type="button" class="big-toggle" id="bigText" aria-pressed="false">А+ Крупно</button><div class="progress" id="progress" aria-hidden="true"></div><header class="hero"><div class="eyebrow">Семейный архив · XIX — XXI век</div><h1><span class="title-gold">Род Соколовых</span></h1><p class="sub">Все роды семьи Соколовых — в одном древе</p><p class="hero-by">Сайт семьи Соколовых · составитель — Демо-генеалог</p><p class="facts" id="facts"><span><b id="fPeople">56</b> человек</span><span><b id="fGens">6</b> поколений</span><span><b id="fFams">5</b> <span id="fFamsWord">фамилий</span></span></p><form class="finder" id="finder" role="search" autocomplete="off"><label for="findInput" class="finder-label">Найдите себя или родных</label><div class="finder-row"><input id="findInput" type="search" placeholder="Имя или фамилия" role="combobox" aria-expanded="false" aria-controls="findList" aria-autocomplete="list" aria-describedby="findStatus" enterkeyhint="search" autocapitalize="words"><button type="submit" class="find-btn">Найти</button></div><ul class="find-list" id="findList" role="listbox" hidden></ul><p id="findStatus" class="sr-only" role="status" aria-live="polite"></p></form><p class="hero-notme"><button type="button" class="link-btn" id="notMe">Меня нет в древе — добавить себя</button></p><p class="hero-note">Древо интерактивное: каждый может дописать, что знает. Записи проверяет генеалог — составитель древа.</p><ol class="steps"><li><b>Найдите</b> себя, родителей или бабушку с дедушкой</li><li><b>Нажмите</b> на карточку человека</li><li><b>Допишите</b>, что знаете: годы, имена, историю</li></ol></header><main id="main"><section class="block reveal tree-sec" id="tree"><div class="bar"><div class="block-head"><span class="block-no" aria-hidden="true"></span><h2>Древо</h2></div><div class="modes" role="group" aria-label="Вид древа"><button type="button" id="modeList" aria-pressed="false">Список</button><button type="button" id="modeScheme" aria-pressed="true">Схема</button></div><div class="ctl"><button type="button" id="zoomOut" aria-label="Уменьшить схему">−</button><span class="zoom-level" id="zoomLevel" aria-live="polite">Целиком</span><button type="button" id="zoomIn" aria-label="Увеличить схему">+</button><button type="button" id="lensbtn" aria-pressed="true">Лупа</button><button type="button" id="replay">Показать, как росло древо</button></div></div><div class="add-cta edit-only"><button type="button" id="addAny" class="cta"><span class="cta-plus" aria-hidden="true">+</span>Добавить новые сведения в древо</button><span class="cta-note">Человек, история, дата или исправление — запись появится после проверки генеалогом (составителем древа)</span></div><div class="lens-hint mouse-only"><span class="lh-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="20" cy="20" r="13"/><path d="M30 30 L43 43"/></svg></span><p><b>Режим лупы:</b> наведите курсор на древо — под ним появится увеличительное стекло, и любую карточку можно прочитать крупно.</p></div><div class="lens-hint touch-only"><span class="lh-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="6"/><circle cx="24" cy="24" r="15"/></svg></span><p><b>Коснитесь человека</b> — откроется его карточка. Схему можно листать пальцем, а кнопкой <b>−</b> увидеть её целиком. Включите <b>Лупу</b> и ведите пальцем — под ним появится увеличение.</p></div><p class="line-note" id="lineNote" hidden><span></span> <button type="button" id="lineOff">Показать всё древо</button></p><div class="scroll-wrap"><div class="scroller" id="scroller" tabindex="0" role="region" aria-label="Схема древа, листайте вбок стрелками"><div class="canvas" id="canvas"></div></div><div class="minimap" id="minimap" hidden aria-hidden="true"><div class="mm-in" id="mmIn"></div><div class="mm-view" id="mmView"></div></div></div><div class="tree-list" id="treeList" hidden></div><div class="mk-filter" role="group" aria-label="Историческая память"><span class="mk-title">Историческая память:</span><button type="button" class="mk-btn mk-war" data-mk="war" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.8 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.3l-6.1 3.5 1.6-6.8-5.2-4.6 6.9-.6z"/></svg>Участники войны <b>2</b></button><button type="button" class="mk-btn mk-award" data-mk="award" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10l-2.6 7H9.6zM12 10a6 6 0 1 1 0 12 6 6 0 0 1 0-12zm0 2.6l1 2.1 2.3.3-1.7 1.6.4 2.3-2-1.1-2 1.1.4-2.3-1.7-1.6 2.3-.3z"/></svg>Награждённые <b>2</b></button><button type="button" class="mk-btn mk-repr" data-mk="repr" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h18v2.4h-2.4v13.2H21V21H3v-2.4h2.4V5.4H3zm4.8 2.4v13.2h1.8V5.4zm3.3 0v13.2h1.8V5.4zm3.3 0v13.2h1.8V5.4z"/></svg>Репрессированные <b>1</b></button><button type="button" class="mk-btn mk-rehab" data-mk="rehab" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm4.6 6.2l-6 6-2.9-2.9-1.5 1.5 4.4 4.4 7.5-7.5z"/></svg>Реабилитированные <b>1</b></button><button type="button" class="mk-btn mk-other" data-mk="other" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4a8 8 0 1 1 0 16 8 8 0 0 1 0-16zm0 4.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z"/></svg>Другие отметки <b>1</b></button></div><div class="legend"><button type="button" class="lg-br f-a" data-br="a" aria-pressed="false" title="Показать только эту ветвь" style="--c:#7a1f2b">Соколовы</button><button type="button" class="lg-br f-b" data-br="b" aria-pressed="false" title="Показать только эту ветвь" style="--c:#23365c">Ветровы</button><button type="button" class="lg-br f-c" data-br="c" aria-pressed="false" title="Показать только эту ветвь" style="--c:#2f5d3a">Лебедевы</button><button type="button" class="lg-br f-d" data-br="d" aria-pressed="false" title="Показать только эту ветвь" style="--c:#6b4a1f">Орловы</button><button type="button" class="lg-br f-e" data-br="e" aria-pressed="false" title="Показать только эту ветвь" style="--c:#4a3b6b">Зимины</button><span class="f-i">пунктирная рамка — вошли в род браком</span><span class="lg-ring">два кольца — брак</span><span class="lg-ex">кольца с чертой — бывший брак</span><span class="lg-stub">бледная пунктирная — человек не установлен</span></div><p class="kbd-hint" aria-hidden="true">Tab — по людям, стрелки — по родству: ↑ родители, ↓ дети, ← → супруги и соседи, Enter — открыть</p><div class="lens" id="lens" hidden aria-hidden="true"><div class="lens-in" id="lensIn"></div></div></section><section class="block reveal contrib-sec"><div class="block-head"><span class="block-no" aria-hidden="true"></span><h2>Дополнить древо</h2></div><div class="contrib"><p>Каждый родственник может дописать воспоминание, факт или нового человека. Генеалог проверяет и добавляет в древо.</p></div></section><section class="block reveal fam-sec"><div class="block-head"><span class="block-no" aria-hidden="true"></span><h2>Фамилии рода</h2></div><div class="families"><article class="fam f-a" style="--e:0;--c:#7a1f2b"><div class="shield"><svg class="emblem" viewBox="0 0 120 148" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#7a1f2b"/><text x="60" y="92" text-anchor="middle" font-size="64" fill="#fbf8f2" font-family="var(--heading, serif)">С</text><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Соколовы</h3><div class="place">Тверь → Калуга → Москва</div><p class="first"><span>Первое упоминание</span>Демо-текст: здесь генеалог пишет о самом раннем найденном упоминании фамилии.</p><p class="mean">От прозвища Сокол — так называли зоркого, быстрого человека.</p></article><article class="fam f-b" style="--e:1;--c:#23365c"><div class="shield"><svg class="emblem" viewBox="0 0 120 148" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#23365c"/><text x="60" y="92" text-anchor="middle" font-size="64" fill="#fbf8f2" font-family="var(--heading, serif)">В</text><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Ветровы</h3><div class="place">Ярославль</div><p class="mean">От прозвища Ветер — непоседа, лёгкий на подъём.</p></article><article class="fam f-c" style="--e:2;--c:#2f5d3a"><div class="shield"><svg class="emblem" viewBox="0 0 120 148" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#2f5d3a"/><text x="60" y="92" text-anchor="middle" font-size="64" fill="#fbf8f2" font-family="var(--heading, serif)">Л</text><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Лебедевы</h3><div class="place">Вологда</div><p class="mean">Одна из самых частых «церковных» фамилий XIX века.</p></article><article class="fam f-d" style="--e:3;--c:#6b4a1f"><div class="shield"><svg class="emblem" viewBox="0 0 120 148" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#6b4a1f"/><text x="60" y="92" text-anchor="middle" font-size="64" fill="#fbf8f2" font-family="var(--heading, serif)">О</text><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Орловы</h3><div class="place">Казань</div><p class="mean">От прозвища Орёл; фамилия встречается по всей России.</p></article><article class="fam f-e" style="--e:4;--c:#4a3b6b"><div class="shield"><svg class="emblem" viewBox="0 0 120 148" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#4a3b6b"/><text x="60" y="92" text-anchor="middle" font-size="64" fill="#fbf8f2" font-family="var(--heading, serif)">З</text><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Зимины</h3><div class="place">Псков</div><p class="mean">От имени Зима — так называли рождённых зимой.</p></article></div></section><section class="block reveal arch" id="archive"><div class="block-head"><span class="block-no" aria-hidden="true"></span><h2>Что нашлось в архивах</h2></div><p>Демо-раздел: здесь генеалог перечисляет найденные документы с уровнем уверенности.</p><div class="tbl"><table><thead><tr><th>Что</th><th>Источник</th><th>Результат</th></tr></thead><tbody><tr><td>Метрическая книга, 1903</td><td>Демо-архив, ф. 1, оп. 1, д. 1</td><td>Запись о венчании Матвея Соколова. <span class="conf c-high">надёжно</span></td></tr><tr><td>Ревизская сказка, 1858</td><td>Демо-архив</td><td>Вероятный предок по линии Ветровых. <span class="conf c-medium">вероятно</span></td></tr></tbody></table></div></section><section class="block reveal arch next-sec"><div class="block-head"><span class="block-no" aria-hidden="true"></span><h2>Что запросить дальше</h2></div><ul class="next"><li><b>Запрос в областной архив ЗАГС</b> — Записи о рождении детей 1902–1906 годов.</li></ul></section><section class="block reveal feed-sec"><div class="block-head"><span class="block-no" aria-hidden="true"></span><h2>Дополнения родных</h2></div><p class="ro-note">Здесь появляется всё, что родственники добавляют на семейном сайте.</p><ul class="feed" id="feed"></ul></section><section class="block reveal privacy-sec"><div class="block-head"><span class="block-no" aria-hidden="true"></span><h2>Кто видит сайт</h2></div><p>Сайт открыт только тем, у кого есть ссылка. Годы рождения живых родственников скрыты.</p></section></main><div class="panel" id="panel" hidden role="dialog" aria-modal="true" aria-labelledby="pName"><div class="panel-back" id="panelBack"></div><div class="panel-box"><button type="button" class="panel-close" id="panelClose" aria-label="Закрыть">×</button><img class="p-photo" id="pPhoto" alt="" hidden><div class="p-sur" id="pSur"></div><h3 class="p-name" id="pName" tabindex="-1"></h3><div class="p-meta" id="pMeta"></div><p class="p-lines" id="pLines" hidden><button type="button" class="p-line" data-line="up">Показать предков</button><button type="button" class="p-line" data-line="down">Показать потомков</button></p><p class="p-share-row"><button type="button" class="p-share p-speak" id="pSpeak" hidden aria-pressed="false">🔊 Прочитать вслух</button><button type="button" class="p-share" id="pShare" hidden>Поделиться карточкой</button><span class="p-share-msg" id="pShareMsg" role="status" aria-live="polite"></span></p><div class="p-bio" id="pBio" hidden></div><div class="p-facts" id="pFacts" hidden></div><div class="p-marks" id="pMarks" hidden></div><div class="p-docs" id="pDocs" hidden></div><nav class="p-rel" id="pRel" aria-label="Родные"></nav><details class="its-me" id="itsMe" hidden><summary>Это я — скройте мои данные</summary><form id="meForm" novalidate><p>Отметьте, что скрыть на сайте. Запрос увидит только составитель древа, он ответит в течение 10 рабочих дней.</p><label class="chk"><input type="checkbox" name="hide" value="dates"><span>Годы жизни</span></label><label class="chk"><input type="checkbox" name="hide" value="note"><span>Занятие и место</span></label><label class="chk"><input type="checkbox" name="hide" value="card"><span>Всю карточку (останется только «жив(а)»)</span></label><label for="meContact">Контакт для ответа</label><input id="meContact" name="contact" maxlength="200" autocomplete="email" placeholder="почта или телефон"><label for="meText">Комментарий (по желанию)</label><textarea id="meText" name="text" rows="2" maxlength="1000"></textarea><label class="chk"><input type="checkbox" name="consentAuthor"><span>Согласен(на) на обработку моих данных по <a href="/rodkonstruktor/privacy.html" target="_blank" rel="noopener">политике</a></span></label><button type="submit" class="primary">Отправить запрос</button><p class="form-msg" id="meMsg" role="status" aria-live="polite"></p></form></details><h4>Дополнения</h4><ul class="plist" id="panelList"></ul><section class="mine" id="mine" hidden aria-labelledby="mineH"><h4 id="mineH">Мои записи</h4><ul id="mineList"></ul></section><details class="about-data" open><summary>Кто увидит вашу запись</summary><ul class="privacy"><li><b>Сайт открывается по ссылке.</b> Пароля нет: увидеть древо может любой, у кого есть ссылка.</li><li><b>Это демонстрационный сайт</b> — семья вымышленная, он открыт для всех и для поисковиков. Настоящие сайты семей всегда закрыты от поиска.</li><li><b>Годы рождения живых скрыты.</b></li><li><b>Записи родных уходят составителю на проверку</b> и появляются на сайте после неё.</li><li><b>За данные отвечает</b> Демо-генеалог. Чтобы исправить или убрать сведения о себе, откройте свою карточку и нажмите «Это я — скройте мои данные» или напишите составителю.</li></ul></details><form id="addForm" class="addform edit-only" novalidate><div class="sent-box" id="sentBox" role="status" tabindex="-1"><p class="sent-title">✓ Запись отправлена</p><p id="sentText"></p><button type="button" id="sentMore" class="primary">Добавить ещё</button></div><h4>Добавить</h4><div class="fstep fstep1"><p class="fstep-n">Шаг 1 из 2 — о ком запись</p><label for="fKind">Что вы добавляете</label><select id="fKind" name="kind"><option value="story">Воспоминание или история</option><option value="fact">Факт: даты, места, работа, награды</option><option value="correction">Исправление ошибки</option><option value="person">Нового родственника</option><option value="photo">Фотографию этого человека</option></select><div class="phfields"><label for="fPhotoR">Фотография</label><input type="file" id="fPhotoR" accept="image/jpeg,image/png"><small class="f-hint">Фото сначала увидит составитель древа; на сайте оно появится после проверки. Присылайте фото с согласия человека на снимке.</small></div><div class="pfields"><label for="fRel">Кем приходится этому человеку</label><select id="fRel" name="relation"><option value="">— выберите —</option><option>сын</option><option>дочь</option><option>муж</option><option>жена</option><option>отец</option><option>мать</option><option>брат</option><option>сестра</option><option>внук</option><option>внучка</option><option>другое</option></select><div class="p2field" hidden><label for="fParent2">Второй родитель</label><select id="fParent2" name="parent2"></select></div><label for="fName">Фамилия, имя, отчество</label><input id="fName" name="name" maxlength="120" autocomplete="off" autocapitalize="words" enterkeyhint="next"><div class="two"><div><label for="fDates">Годы жизни</label><input id="fDates" name="dates" maxlength="60" placeholder="1931–2010" aria-describedby="fDatesHint"><small class="f-hint" id="fDatesHint">У живых родственников год рождения не пишите.</small></div><div><label for="fPlace">Место жительства</label><input id="fPlace" name="place" maxlength="120" autocapitalize="words" enterkeyhint="next"></div></div><label for="fOcc">Род занятий</label><input id="fOcc" name="occupation" maxlength="120"></div><button type="button" class="fnext" id="fNext">Далее — что вы знаете</button></div><div class="fstep fstep2"><p class="fstep-n">Шаг 2 из 2 — что вы знаете <button type="button" class="link-btn" id="fBack">← назад</button></p><label for="fText">Что вы знаете <span class="hint">— и откуда: помню сам(а), рассказ бабушки, документ</span></label><textarea id="fText" name="text" rows="4" maxlength="20000"></textarea><small class="f-hint" id="fTextCount" aria-live="polite"></small><div class="voicefield" hidden><button type="button" class="voice-btn" id="vRec">🎙 Записать рассказ голосом</button><span class="voice-t" id="vTime" aria-live="polite"></span><div id="vDone" hidden><audio id="vPlay" controls preload="metadata"></audio><button type="button" class="link-btn" id="vDel">удалить запись</button></div><small class="f-hint">До 5 минут. Перед отправкой можно прослушать. Запись сначала услышит составитель древа.</small></div><div class="docfield"><label for="fDoc">Приложить скан документа <span class="hint">— по желанию: метрика, справка, письмо (PDF или фото, до 3 МБ)</span></label><input type="file" id="fDoc" accept="application/pdf,image/jpeg,image/png"></div><label for="fAuthor">Кто вы</label><input id="fAuthor" name="author" maxlength="80" placeholder="Например: Анна, внучка Павла" autocomplete="name" autocapitalize="words" enterkeyhint="next" aria-describedby="fAuthorHint"><small class="f-hint" id="fAuthorHint">Подпись будет видна рядом с записью. Телефон и почту здесь не пишите.</small><label for="fContact">Как с вами связаться <span class="hint">— по желанию</span></label><input id="fContact" name="contact" maxlength="200" autocomplete="email" placeholder="почта или телефон" aria-describedby="fContactHint"><small class="f-hint" id="fContactHint">Увидит только составитель древа — если захочет уточнить. На сайте не показывается.</small><label class="chk consent-subject"><input type="checkbox" name="consentSubject"><span>Вношу сведения с согласия этого человека (или это я сам(а))</span></label><label class="chk"><input type="checkbox" name="consentAuthor"><span>Согласен(на) на обработку моих данных по <a href="/rodkonstruktor/privacy.html" target="_blank" rel="noopener">политике</a></span></label><input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><p class="draft-note" id="draftNote" hidden>Черновик сохранён на этом устройстве.</p><button type="submit" id="fSend" class="primary">Сохранить</button><p class="form-msg" id="formMsg" role="status" aria-live="polite"></p></div></form><p class="ro-note">Дополнять древо можно на семейном сайте.</p></div></div><footer><details class="about-data"><summary>О данных на этом сайте</summary><ul class="privacy"><li><b>Сайт открывается по ссылке.</b> Пароля нет: увидеть древо может любой, у кого есть ссылка.</li><li><b>В поисковиках сайта нет</b> — он закрыт от Яндекса и Google.</li><li><b>Годы рождения живых скрыты.</b></li><li><b>Записи родных уходят составителю на проверку</b> и появляются на сайте после неё.</li><li><b>За данные отвечает</b> Демо-генеалог. Чтобы исправить или убрать сведения о себе, откройте свою карточку и нажмите «Это я — скройте мои данные» или напишите составителю.</li></ul></details><p class="legal-links"><a href="/rodkonstruktor/privacy.html">Политика обработки персональных данных</a> · <a href="/rodkonstruktor/terms.html">Соглашение</a></p><p>Составитель древа: Демо-генеалог. </p><p class="made-in"><a href="/rodkonstruktor/" target="_blank" rel="noopener">Сделано в «Летописи рода»</a></p></footer></div><script>window.FAMILY_BASE={"geom":{"U":392,"W":352,"H":180,"ROW":340,"X0":330,"Y0":40},"P":{"LAV":[0,4.5,"a",["Соколов","Константин","","переводчик"]],"YAK":[0,8.35,"b",["Ветров","Григорий","","инженер"]],"YAKW":[0,9.35,"i",["","жена Петра","",""]],"FED":[0,10.6,"c",["Лебедев","Кирилл","? – 1922","архитектор"]],"FEK":[0,11.6,"c",["Лебедева","Мария","? – 1912","инженер"]],"ISA":[0,13.5,"d",["Орлов","Олег","","бухгалтер"]],"SON":[0,14.5,"d",["Орлова","Галина","","механик"]],"IVA":[0,15.75,"e",["Зимин","Иван","","переводчик"]],"SOL":[0,16.75,"e",["Зимина","Прасковья","","бухгалтер"]],"LUB":[1,3.25,"i",["Беляева","Варвара","","столяр"]],"VAS":[1,4.5,"a",["Соколов","Тимофей Константинович","† 1906","портной"]],"MAR":[1,5.75,"i",["Крылова","Мария","† 1914","врач"]],"YAKC":[1,7.6,"b",["Ветровы","ещё сын и дочь","",""]],"ALS":[1,8.85,"b",["Ветров","Григорий Григориевич","1871 – 1920","переводчик"]],"NAT":[1,10.1,"c",["Лебедева","Ирина Кирилловна","1881 – 1951","инженер"]],"FEDC":[1,11.6,"c",["Лебедевы","ещё 2 сына и 5 дочерей","",""]],"NOI":[1,13.25,"d",["Орлов","Роман","","музыкант"]],"EVR":[1,14.25,"d",["Орлова","Галина Олеговна","","библиотекарь"]],"IOS":[1,15.75,"e",["Зимин","Семён Иванович","","столяр"]],"ROZ":[1,16.75,"i",["Гусева","Полина","","агроном"]],"ALX":[2,1,"a",["Соколов","Семён Тимофеевич","1902 – 19..","архитектор"]],"KLA":[2,2,"i",["Тихонова","Евдокия","","библиотекарь"]],"OLG":[2,3.4,"a",["Соколова","Дарья Тимофеевна","~1871 – 1946","столяр"]],"NIK":[2,8.1,"a",["Соколов","Павел Тимофеевич","1904 – 1993","фельдшер"]],"NIN":[2,9.1,"b",["Ветрова","Людмила Григориевна","1906 – 1991","учитель"]],"SIB":[2,10.95,"b",["Ветровы","сёстры и брат","",""]],"EMI":[2,13.75,"d",["Орлов","Павел Романович","1922 – 2001","агроном"]],"ZHA":[2,14.75,"e",["Зимина","Полина Семёновна","1925 – 2007","фельдшер"]],"VIK":[3,0,"a",["Соколов","Матвей Семёнович","1924 –","учитель · Пермь"]],"LEN":[3,1,"i",["Полякова","Алёна","","бухгалтер · Ярославль"]],"TAM":[3,2.2,"a",["Соколова","Анна Семёновна","1926 –","механик · Пермь"]],"TAMH":[3,3.2,"i",["","муж Ольги","",""]],"IRI":[3,5.6,"i",["Ершова","Анна","1934","механик · Вологда"]],"LEV":[3,6.85,"a",["Соколов","Илья Павлович","1934 – 2013","переводчик · Пермь"]],"RIT":[3,8.1,"i",["Фомина","Мария","","врач · Псков"]],"EVG":[3,12.25,"a",["Соколов","Матвей Павлович","","агроном · Псков"]],"MRZ":[3,13.25,"d",["Орлова","Ксения Павловна","","железнодорожник · Томск"]],"ALR":[4,0,"a",["Соколов","Кирилл Матвеевич","","архитектор · Ярославль"]],"YUD":[4,1,"a",["Соколова","Дарья Матвеевна","","портной · Томск"]],"LUD":[4,2.7,"a",["Савина","Полина Ивановна","","фельдшер · Казань"]],"VER":[4,5.6,"a",["Соколова","Татьяна Ильинична","","инженер · Томск"]],"GEO":[4,6.6,"i",["Голубев","Кирилл","","врач · Самара"]],"ARK":[4,8.1,"a",["Соколов","Григорий Ильич","","лесничий · Курск"]],"MRA":[4,9.1,"i",["Карпова","Евдокия","","врач · Тверь"]],"YUL":[4,11.25,"a",["Соколова","Евдокия Матвеевна","","библиотекарь · Ярославль"]],"DAN":[4,12.25,"i",["Жуков","Тимофей","","врач · Казань"]],"ANT":[4,13.75,"a",["Соколов","Иван Матвеевич","","архитектор · Курск"]],"KAT":[4,14.75,"i",["Морозова","Полина","","библиотекарь · Вологда"]],"ALI":[5,5.6,"a",["Голубева","Мария Кирилловна","","портной · Калуга"]],"LOL":[5,6.6,"a",["Голубева","Дарья Кирилловна","","столяр · Тверь"]],"ELE":[5,8.6,"a",["Соколова","Дарья Григориевна","","врач · Курск"]],"MRT":[5,11.25,"a",["Жуков","Андрей Тимофеевич","","Пермь"]],"ZOY":[5,12.25,"a",["Жукова","Светлана Тимофеевна","","Томск"]],"ART":[5,14.25,"a",["Соколов","Роман Иванович","","Вологда"]]},"C":[["LAV",null,["VAS"],""],["YAK","YAKW",["YAKC","ALS"],""],["FED","FEK",["NAT","FEDC"],""],["ISA","SON",["EVR"],""],["IVA","SOL",["IOS"],""],["LUB","VAS",["OLG"],""],["VAS","MAR",["ALX","NIK"],""],["ALS","NAT",["NIN","SIB"],""],["NOI","EVR",["EMI"],""],["IOS","ROZ",["ZHA"],""],["ALX","KLA",["VIK","TAM"],""],["NIK","NIN",["LEV","EVG"],""],["EMI","ZHA",["MRZ"],""],["VIK","LEN",["ALR","YUD"],""],["TAM","TAMH",["LUD"],""],["IRI","LEV",["VER"],""],["LEV","RIT",["ARK"],""],["EVG","MRZ",["YUL","ANT"],""],["VER","GEO",["ALI","LOL"],""],["ARK","MRA",["ELE"],""],["YUL","DAN",["MRT","ZOY"],""],["ANT","KAT",["ART"],"ex"]],"groups":{"SIB":{"list":[["Анна","1900 – 1975"],["Прасковья","1902 – 1986"],["Вера","1905 – 1989"],["Галина","1908 – 1996"],["Светлана","1911 – 1994"],["Варвара","1914 – 1956"],["Аркадий","1916 – 1989"]],"sur":"Ветровы","name":"сёстры и брат"}},"rowExtra":{"2":192},"branchNames":{"a":"Соколовы","b":"Ветровы","c":"Лебедевы","d":"Орловы","e":"Зимины"},"bios":{},"photos":{},"facts":{"ALS":[{"k":"Рождение","date":"1871 г.","place":"Москва","src":"демо-источник (вымышленный): перепись 1897 г.","conf":"ind"},{"k":"Смерть","date":"1920 г.","place":"Москва","src":"","conf":""}],"NAT":[{"k":"Рождение","date":"3 октября 1881 г.","place":"Санкт-Петербург","src":"демо-источник (вымышленный): метрическая книга","conf":"doc"},{"k":"Смерть","date":"1951 г.","place":"Ленинград","src":"","conf":""}],"OLG":[{"k":"Рождение","date":"около 1871 г.","place":"Калуга","src":"","conf":"oral"},{"k":"Смерть","date":"1946 г.","place":"Калуга","src":"","conf":""}],"NIK":[{"k":"Рождение","date":"21 мая 1904 г.","place":"Калуга","src":"демо-источник (вымышленный): метрическая книга Георгиевской церкви","conf":"doc"},{"k":"Смерть","date":"8 января 1993 г.","place":"Пермь","src":"демо-источник (вымышленный): со слов дочери","conf":"oral"}],"NIN":[{"k":"Рождение","date":"1 сентября 1906 г.","place":"Тверь","src":"","conf":""},{"k":"Смерть","date":"1991 г.","place":"Пермь","src":"демо-источник (вымышленный): надгробие","conf":"ind"}],"EMI":[{"k":"Рождение","date":"15 февраля 1922 г.","place":"Ярославль","src":"демо-источник (вымышленный): личное дело","conf":"doc"},{"k":"Смерть","date":"2001 г.","place":"Ярославль","src":"","conf":""}],"ZHA":[{"k":"Рождение","date":"30 июля 1925 г.","place":"Томск","src":"","conf":""},{"k":"Смерть","date":"2007 г.","place":"Томск","src":"","conf":""}],"LEV":[{"k":"Рождение","date":"12 марта 1934 г.","place":"Пермь","src":"демо-источник (вымышленный): метрическая книга, ГАПК, ф. 37, оп. 6, д. 112, л. 14","conf":"doc"},{"k":"Смерть","date":"2 ноября 2013 г.","place":"Пермь","src":"демо-источник (вымышленный): свидетельство о смерти","conf":"doc"},{"k":"Место жительства","text":"Пермь, ул. Сибирская (1950–2013)"},{"k":"Сословие, статус","text":"служащий"}]},"docs":{},"latin":{},"marks":{"ALX":[{"k":"repr","t":"арестован, ст. 58-10, 8 лет ИТЛ","src":"демо-источник (вымышленный): Книга памяти Пермской области","y":"1937"},{"k":"rehab","y":"1957"}],"NIK":[{"k":"war","t":"Великая Отечественная, военфельдшер 1941–1945","src":"демо-источник (вымышленный): ОБД «Память народа»"},{"k":"award","t":"медаль «За боевые заслуги»","src":"демо-источник (вымышленный): ОБД «Подвиг народа»","y":"1944"}],"NIN":[{"k":"other","t":"труженица тыла"}],"EMI":[{"k":"war","t":"Великая Отечественная, рядовой","src":"демо-источник (вымышленный): ОБД «Мемориал»"},{"k":"award","t":"орден Красной Звезды","y":"1945"}]},"markKinds":{"repr":{"label":"Репрессирован(а)","short":"Репрессированные","d":"M3 3h18v2.4h-2.4v13.2H21V21H3v-2.4h2.4V5.4H3zm4.8 2.4v13.2h1.8V5.4zm3.3 0v13.2h1.8V5.4zm3.3 0v13.2h1.8V5.4z"},"rehab":{"label":"Реабилитирован(а)","short":"Реабилитированные","d":"M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm4.6 6.2l-6 6-2.9-2.9-1.5 1.5 4.4 4.4 7.5-7.5z"},"war":{"label":"Участник войны","short":"Участники войны","d":"M12 2.5l2.8 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.3l-6.1 3.5 1.6-6.8-5.2-4.6 6.9-.6z"},"award":{"label":"Награда","short":"Награждённые","d":"M7 2h10l-2.6 7H9.6zM12 10a6 6 0 1 1 0 12 6 6 0 0 1 0-12zm0 2.6l1 2.1 2.3.3-1.7 1.6.4 2.3-2-1.1-2 1.1.4-2.3-1.7-1.6 2.3-.3z"},"other":{"label":"Другая отметка","short":"Другие отметки","d":"M12 4a8 8 0 1 1 0 16 8 8 0 0 1 0-16zm0 4.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z"}},"numbers":{},"showSources":true,"group":{"w":600,"h":372},"stubs":{"YAKW":1,"YAKC":1,"FEDC":1,"TAMH":1},"openDates":{},"colors":{"a":"#7a1f2b","b":"#23365c","c":"#2f5d3a","d":"#6b4a1f","e":"#4a3b6b"},"hideLivingDates":true,"livingBornAfter":1935,"orientation":"down","cardScale":1,"fields":null,"generationLabels":true,"living":{"LEN":1,"RIT":1,"EVG":1,"MRZ":1,"ALR":1,"YUD":1,"LUD":1,"VER":1,"GEO":1,"ARK":1,"MRA":1,"YUL":1,"DAN":1,"ANT":1,"KAT":1,"ALI":1,"LOL":1,"ELE":1,"MRT":1,"ZOY":1,"ART":1}};window.FAMILY_ENTRIES=[];</script><script src="/rodkonstruktor/render/engine.js"></script><script src="/rodkonstruktor/render/ui.js"></script><script src="/rodkonstruktor/render/photo.js"></script><script src="/rodkonstruktor/render/collab.js"></script><script src="/rodkonstruktor/render/i18n.js"></script></body></html>
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content"><link rel="preload" href="fonts/f7.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/f6.woff2" as="font" type="font/woff2" crossorigin><meta name="robots" content="index, follow, max-image-preview:large"><title>Пример сайта семьи — генеалогическое древо рода Соколовых | Летопись рода</title><meta name="description" content="Пример сайта семьи на «Летописи рода»: интерактивное генеалогическое древо вымышленного рода Соколовых, шесть поколений, 30 фамилий с гербами, дополнения от родных, архивные находки."><link rel="canonical" href="https://aevkone.github.io/rodkonstruktor/primer/"><meta property="og:site_name" content="Летопись рода"><meta property="og:title" content="Генеалогическое древо Соколовых — пример"><meta property="og:description" content="131 человек, 6 поколений, все роды нашей семьи. Найдите себя и допишите, что знаете."><meta property="og:image" content="https://aevkone.github.io/rodkonstruktor/landing/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" media="(prefers-color-scheme: light)" content="#f2ede3"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#121615"><meta name="color-scheme" content="light dark"><link rel="icon" href="favicon.svg" type="image/svg+xml"><script src="config.js"></script>
+<style>
+@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:400;src:url(fonts/f0.woff2) format("woff2"),url(fonts/f0.ttf) format("truetype");font-display:swap}
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:400;src:url(fonts/f1.woff2) format("woff2"),url(fonts/f1.ttf) format("truetype");font-display:swap}
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:500;src:url(fonts/f7.woff2) format("woff2"),url(fonts/f7.ttf) format("truetype");font-display:swap}
+@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:500;src:url(fonts/f8.woff2) format("woff2"),url(fonts/f8.ttf) format("truetype");font-display:swap}
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:600;src:url(fonts/f2.woff2) format("woff2"),url(fonts/f2.ttf) format("truetype");font-display:swap}
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:700;src:url(fonts/f5.woff2) format("woff2"),url(fonts/f5.ttf) format("truetype");font-display:swap}
+@font-face{font-family:"Cormorant SC";font-weight:500;src:url(fonts/f3.woff2) format("woff2"),url(fonts/f3.ttf) format("truetype");font-display:swap}
+@font-face{font-family:"Cormorant SC";font-weight:600;src:url(fonts/f4.woff2) format("woff2"),url(fonts/f4.ttf) format("truetype");font-display:swap}
+@font-face{font-family:"Cormorant SC";font-weight:700;src:url(fonts/f6.woff2) format("woff2"),url(fonts/f6.ttf) format("truetype");font-display:swap}
+
+@font-face{font-family:"Cormorant Fallback";src:local("Noto Serif"),local("Georgia"),local("Times New Roman");size-adjust:76%;ascent-override:121%;descent-override:38%;line-gap-override:0%}
+:root{
+ --paper:#f2ede3; --card:#fbf8f2; --ink:#0f1413; --muted:#3f3b34; --rule:#d2c8b4; --line:#6f6858;
+ --frame:#2e2b25; --gold:#86641f; --gold2:#d9bd78; --accent:#7a1f2b;
+ --k:#7a1f2b; --s:#23365c; --m:#2e5a43; --r:#3a3f44; --l:#6e530f;
+ --serif:"Cormorant Garamond","Cormorant Fallback",Georgia,serif;
+ --sc:"Cormorant SC","Cormorant Fallback",Georgia,serif;
+ --on-accent:#fbf8f2; --border-ctl:var(--line); --focus-ring:color-mix(in srgb,var(--gold) 35%,transparent);
+ --accent-tint:color-mix(in srgb,var(--accent) 10%,transparent); --shadow-card:0 18px 40px -24px rgba(40,30,10,.35);
+ --ease-out:cubic-bezier(.23,1,.32,1); --ease-in-out:cubic-bezier(.77,0,.175,1); --ease-drawer:cubic-bezier(.32,.72,0,1);
+}
+
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#121615;--card:#1b201f;--ink:#fffaf0;--muted:#d8d0c1;--rule:#4a524f;--line:#a39b8c;--frame:#e3dbca;--gold:#e6c57c;--gold2:#f0d99c;--accent:#e0a0a8;--on-accent:#121615;--border-ctl:#a39b8c;--shadow-card:0 18px 40px -24px rgba(0,0,0,.7);--k:#e0939c;--s:#9db3df;--m:#8fc7a9;--r:#c3c8cc;--l:#e2c47a;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#121615;--card:#1b201f;--ink:#fffaf0;--muted:#d8d0c1;--rule:#4a524f;--line:#a39b8c;--frame:#e3dbca;--gold:#e6c57c;--gold2:#f0d99c;--accent:#e0a0a8;--on-accent:#121615;--border-ctl:#a39b8c;--shadow-card:0 18px 40px -24px rgba(0,0,0,.7);--k:#e0939c;--s:#9db3df;--m:#8fc7a9;--r:#c3c8cc;--l:#e2c47a;color-scheme:dark}
+
+.tree{display:block;width:100%;height:auto}
+.tree text{text-anchor:middle;font-family:var(--serif);font-variant-numeric:lining-nums}
+.tree .card{fill:var(--card);stroke:var(--frame);stroke-width:3.2}
+.tree .stripe{fill:var(--c)}
+.tree .sur{font-family:var(--sc);font-size:26px;letter-spacing:.12em;fill:var(--c);font-weight:700}
+.tree .name{font-size:35px;font-weight:700;fill:var(--ink)}
+.tree .date{font-size:30px;font-weight:500;fill:var(--ink);font-variant-numeric:lining-nums tabular-nums;letter-spacing:.04em}
+.tree .note{font-size:26px;font-weight:500;font-style:italic;fill:var(--muted)}
+.tree .sib{text-anchor:start;font-size:30px;font-weight:700;fill:var(--ink)}
+.tree .sibd{text-anchor:start;font-size:24px;font-weight:400;fill:var(--muted);font-variant-numeric:lining-nums}
+.tree .kin{fill:none;stroke:var(--line);stroke-width:2.6}
+.tree .wed{fill:none;stroke:var(--gold);stroke-width:3.6}
+.tree .wed.ex{stroke:var(--muted)}
+.tree .ring circle{fill:none;stroke:var(--gold);stroke-width:3.2}
+.tree .ring.ex circle{stroke:var(--muted)}
+.tree .exl{font-size:22px;font-style:italic;fill:var(--muted)}
+.tree .genl{font-family:var(--sc);font-size:60px;fill:var(--gold);text-anchor:middle;font-weight:600}
+.f-k{--c:var(--k)}.f-s{--c:var(--s)}.f-m{--c:var(--m)}.f-r{--c:var(--r)}.f-l{--c:var(--l)}.f-i{--c:var(--muted)}
+.f-i .card{stroke-dasharray:9 6}
+.f-i .stripe{fill:none}
+.emblem .sh-edge{stroke:var(--gold);stroke-width:3}
+
+@media (prefers-reduced-motion: no-preference){
+ .tree-play .tree .node{animation:rise .8s var(--ease-out) both;animation-delay:calc(.5s + var(--g)*.6s + var(--i)*6ms);transform-box:fill-box;transform-origin:center}
+ .tree-play .tree .kin,.tree-play .tree .wed{stroke-dasharray:1;stroke-dashoffset:1;animation:draw .9s ease-out forwards;animation-delay:calc(.3s + var(--g)*.6s)}
+ .tree-play .tree .wed.ex{stroke-dasharray:none;animation:fade .9s both;animation-delay:calc(.3s + var(--g)*.6s)}
+ .tree-play .tree .ring{animation:pop .5s cubic-bezier(.3,1.6,.5,1) both;animation-delay:calc(.9s + var(--g)*.6s);transform-box:fill-box;transform-origin:center}
+ .tree-play .tree .genl{animation:fade 1s both;animation-delay:calc(.3s + var(--g)*.6s)}
+ .reveal-on .tree-sec:not(.tree-play):not(.tree-done) .tree .node,.reveal-on .tree-sec:not(.tree-play):not(.tree-done) .tree .ring{opacity:0}
+ .lite.tree-play .tree .node{animation:fade .45s ease-out both;animation-delay:calc(.2s + var(--g)*.3s)}
+ .lite.tree-play .tree .kin,.lite.tree-play .tree .wed{animation-duration:.4s;animation-delay:calc(.1s + var(--g)*.3s)}
+ .play .emblem .sh-edge{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.4s ease-in-out forwards;animation-delay:calc(var(--e)*.15s)}
+ .play .emblem .sh-field,.play .emblem .charge{animation:fade .9s both;animation-delay:calc(.9s + var(--e)*.15s)}
+ .play .title-gold{animation:foil 2.6s var(--ease-in-out) .2s both}
+}
+@keyframes rise{from{opacity:0;transform:translateY(14px) scale(.96)}}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fade{from{opacity:0}}
+@keyframes pop{from{opacity:0;transform:scale(.2)}}
+@keyframes foil{from{background-position:120% 0}to{background-position:-20% 0}}
+/* Layout: грамота на плотной бумаге — заглавие, пояс гербов, древо во всю ширину, справочные разделы узкой колонкой */
+html{-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font:500 20px/1.6 var(--serif);font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1;text-wrap:pretty}
+.page{max-width:1240px;margin:0 auto;padding-block:48px 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;grid-template-columns:minmax(0,1fr)}
+.page>main{display:grid;grid-template-columns:minmax(0,1fr);gap:40px;min-width:0}
+h1,h2,h3{font-weight:600;margin:0;line-height:1.1;text-wrap:balance}
+h2{font-family:var(--sc);font-size:clamp(1.8rem,3.4vw,2.5rem);font-weight:700;letter-spacing:.05em;color:var(--accent)}
+h3{font-family:var(--sc);font-size:1.35rem;letter-spacing:.05em}
+p{margin:0}
+.skip{position:absolute;left:16px;top:-80px;z-index:50;background:var(--accent);color:var(--on-accent);padding:12px 18px;font-weight:700}
+.skip:focus{top:12px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.eyebrow{font-family:var(--sc);letter-spacing:.24em;font-size:.95rem;color:var(--gold)}
+.hero{display:grid;gap:12px;justify-items:center;text-align:center;padding-block:24px 8px;border-block:1px solid var(--gold);position:relative}
+.hero::after{content:"";position:absolute;inset:5px 0;border-block:1px solid var(--rule);pointer-events:none}
+.hero h1{font-size:clamp(2.4rem,8vw,6.2rem);font-weight:600;letter-spacing:.01em}
+.title-gold{background:linear-gradient(100deg,var(--gold) 0%,var(--gold) 40%,var(--gold2) 50%,var(--gold) 60%,var(--gold) 100%);background-size:250% 100%;background-position:-20% 0;-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-family:var(--sc);letter-spacing:.12em;font-size:1.2rem}
+.families{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px}
+.fam{display:grid;gap:8px;align-content:start;justify-items:center;text-align:center;padding:20px 16px;background:var(--card);border:1px solid var(--rule);min-width:0}
+.shield{width:96px}
+.fam .place{font-style:italic;color:var(--muted);font-size:.95rem;font-weight:500}
+.fam p{font-size:1rem;line-height:1.5;text-align:left;justify-self:stretch;hyphens:auto;-webkit-hyphens:auto;max-width:42ch}
+.fam .first span{display:block;font-family:var(--sc);letter-spacing:.12em;font-size:.9rem;color:var(--gold)}
+.fam .mean{color:var(--ink)}
+.fam .arms{color:var(--muted);font-size:.95rem}
+.fam h3{color:var(--c,var(--ink))}
+.disclaimer{color:var(--muted);text-align:center;max-width:62ch;justify-self:center;margin-top:-32px;font-size:.95rem;font-weight:500;line-height:1.55}
+.tree-sec{display:grid;gap:16px}
+.bar{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:end}
+.ctl{display:flex;gap:8px;flex-wrap:wrap}
+button{font:600 1rem var(--serif);color:var(--ink);background:var(--card);border:1.5px solid var(--border-ctl);min-height:48px;padding:8px 16px;cursor:pointer}
+button[aria-pressed="true"]{border-color:var(--gold);color:var(--accent)}
+button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:1rem;color:var(--muted);margin-top:6px}
+.legend span::before{content:"";display:inline-block;width:14px;height:10px;margin-right:6px;background:var(--c);vertical-align:0}
+.legend .lg-ring::before{width:16px;height:9px;border-radius:9px;background:none;border:2px solid var(--gold)}
+.legend .lg-ex::before{width:18px;height:0;background:none;border-top:2px solid var(--muted);vertical-align:4px}
+.legend .f-i::before{background:var(--card);border:2px dashed var(--muted);width:12px;height:8px}
+.legend .f-r::before{background:var(--r);box-shadow:inset 0 0 0 2px var(--gold)}
+.scroller{overflow-x:auto;overscroll-behavior-x:contain;background:var(--card);border:1px solid var(--rule);outline:1px solid var(--gold);outline-offset:4px;padding:12px}
+.scroller:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+.canvas{width:100%}
+.canvas .tree{touch-action:pan-x pan-y pinch-zoom}
+.lens{position:fixed;left:0;top:0;z-index:20;width:min(380px,72vw,62vh);aspect-ratio:1;border-radius:50%;overflow:hidden;pointer-events:none;
+ background:var(--card);border:4px solid var(--gold);box-shadow:0 0 0 2px var(--card),var(--shadow-card)}
+.lens-in{position:absolute;left:0;top:0;transform-origin:0 0}
+.lens-in svg{display:block;height:auto;max-width:none}
+.lens .tree *{animation:none!important}
+.lens .tree path,.mm-in .tree path{stroke-dashoffset:0!important}
+.other ul,.next{margin:12px 0 0;padding-left:20px;display:grid;gap:6px;max-width:80ch}
+.arch{display:grid;gap:14px}
+.arch>p{max-width:75ch;color:var(--muted)}
+.tbl{overflow-x:auto;background:var(--card);border:1px solid var(--rule)}
+table{border-collapse:collapse;width:100%;font-size:1rem}
+table td{font-variant-numeric:lining-nums tabular-nums}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-family:var(--sc);letter-spacing:.1em;color:var(--gold);font-weight:600}
+tr:last-child td{border-bottom:0}
+a{color:var(--accent)}
+footer{color:var(--muted);font-size:1rem;border-top:1px solid var(--gold);padding-top:14px;line-height:1.55;max-width:62ch}
+.contrib{display:grid;gap:10px;max-width:80ch;background:var(--card);border:1px solid var(--gold);padding:16px 18px}
+.lens-hint{display:flex;gap:12px;align-items:center;border:0;border-left:3px solid var(--gold);background:transparent;padding:4px 0 4px 14px}
+.lens-hint p{font-size:1.1rem;font-weight:500;line-height:1.35;max-width:none}
+.lens-hint b{color:var(--accent)}
+.lens-hint.seen{display:none!important}
+.lh-icon{flex:none;width:34px;height:34px}
+.lh-icon svg{width:100%;height:100%;fill:none;stroke:var(--gold);stroke-width:4;stroke-linecap:round}
+
+/* Блоки разделов */
+.page{gap:40px}
+.block{position:relative;display:grid;grid-template-columns:minmax(0,1fr);gap:18px;background:var(--card);border:1px solid var(--rule);padding:clamp(20px,3.2vw,40px);
+ box-shadow:var(--shadow-card)}
+.block::before,.block::after{content:"";position:absolute;width:34px;height:34px;border:3px solid var(--gold);pointer-events:none}
+.block::before{left:-1px;top:-1px;border-right:0;border-bottom:0}
+.block::after{right:-1px;bottom:-1px;border-left:0;border-top:0}
+.block-head{display:flex;align-items:center;gap:14px;padding-bottom:12px;border-bottom:2px solid var(--gold);position:relative}
+.block-head h2{margin:0}
+.block-no{flex:none;width:14px;height:14px;transform:rotate(45deg);background:var(--gold);box-shadow:0 0 0 4px var(--card),0 0 0 6px var(--gold)}
+.tree-sec .bar{align-items:center}
+.tree-sec .bar .block-head{flex:1 1 320px;border-bottom:0;padding-bottom:0}
+.fam-sec .disclaimer{margin-top:0}
+.families .fam{border-color:var(--rule);background:var(--paper);border-top:3px solid var(--c,var(--gold))}
+.feed-sec .entry,.other ul,.next-sec .next{position:relative}
+.progress{position:fixed;left:0;top:env(safe-area-inset-top,0px);height:3px;width:100%;background:linear-gradient(90deg,var(--accent),var(--gold));transform:scaleX(0);transform-origin:0 50%;z-index:30}
+
+/* Справочные разделы — тише основных */
+.other,.arch,.privacy-sec{box-shadow:none;background:transparent;border-color:var(--rule)}
+.other::before,.other::after,.arch::before,.arch::after,.privacy-sec::before,.privacy-sec::after{display:none}
+.other h2,.arch h2,.privacy-sec h2{font-size:clamp(1.5rem,2.6vw,1.9rem)}
+.arch>p,.privacy,.other ul{color:var(--ink)}
+@media (max-width:640px){
+ .tbl table,.tbl tbody,.tbl tr,.tbl td{display:block;width:auto}
+ .tbl thead{display:none}
+ .tbl tr{padding:12px 14px;border-bottom:1px solid var(--rule)}
+ .tbl td{border:0;padding:2px 0}
+ .tbl td:first-child{font-weight:700;font-size:1.05rem}
+}
+
+/* Движение */
+@media (prefers-reduced-motion: no-preference){
+ html{scroll-behavior:smooth}
+ .reveal-on .reveal{opacity:0;transform:translateY(12px);transition:opacity 400ms ease,transform 500ms var(--ease-out)}
+ .reveal-on .reveal.in{opacity:1;transform:none}
+ .reveal-on .reveal .block-head{clip-path:inset(-14px 100% -14px -14px);transition:clip-path 600ms var(--ease-out) 120ms}
+ .reveal-on .reveal.in .block-head{clip-path:inset(-14px -14px -14px -14px)}
+ .reveal-on .reveal .block-no{transform:rotate(45deg) scale(.6);opacity:0;transition:transform 400ms var(--ease-out) 200ms,opacity 300ms ease 200ms}
+ .reveal-on .reveal.in .block-no{transform:rotate(45deg) scale(1);opacity:1}
+ .reveal-on .fam-sec .fam{opacity:0;transform:translateY(26px) scale(.97);transition:opacity .7s ease,transform .8s var(--ease-out),box-shadow .3s ease}
+ .reveal-on .fam-sec.in .fam{opacity:1;transform:none;transition-delay:calc(.1s + var(--e)*.06s),calc(.1s + var(--e)*.06s),0s}
+ .fam .shield svg{transition:transform .5s cubic-bezier(.3,1.4,.5,1)}
+ .hero::before{content:"";position:absolute;left:50%;top:-1px;width:100%;height:1px;background:var(--gold);transform:translateX(-50%) scaleX(0);animation:rule 1.4s var(--ease-in-out) .1s forwards}
+ .play .hero .sub,.play .hero .pdf{animation:fadeUp .9s ease both}
+ .play .hero .sub{animation-delay:.6s}.play .hero .pdf{animation-delay:1s}
+ .entry{animation:fadeUp .6s ease both}
+ .feed .entry:nth-child(2){animation-delay:.08s}.feed .entry:nth-child(3){animation-delay:.16s}.feed .entry:nth-child(n+4){animation-delay:.24s}
+ .lens:not([hidden]){animation:lensIn .22s cubic-bezier(.3,1.4,.5,1)}
+ .lens-hint .lh-icon svg{animation:peek 3.2s ease-in-out 2.5s 3}
+ .tree .ring circle{transform-box:fill-box;transform-origin:center}
+ .tree .node[data-pid] .card{transition:stroke-width .2s ease,stroke .2s ease}
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}}
+@keyframes lensIn{from{opacity:0;scale:.6}}
+@keyframes rule{to{transform:translateX(-50%) scaleX(1)}}
+@keyframes peek{0%,100%{transform:none}30%{transform:translate(-4px,-4px) scale(1.12)}60%{transform:translate(3px,2px) scale(1.04)}}
+
+/* Первый экран: цифры, поиск, шаги */
+.facts{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 22px;font-family:var(--sc);letter-spacing:.06em;font-size:1.15rem;color:var(--ink)}
+.facts b{font-family:var(--serif);font-size:1.6rem;color:var(--accent);margin-right:4px;font-variant-numeric:lining-nums tabular-nums;display:inline-block;min-width:1.2em;text-align:right}
+.ai-badge{display:inline-flex;align-items:center;text-align:center;text-wrap:balance;max-width:100%;min-height:44px;font-family:var(--sc);letter-spacing:.08em;font-weight:700;color:var(--gold);text-decoration:none;border:1px solid var(--gold);padding:6px 16px;border-radius:999px}
+.finder{position:relative;width:min(640px,100%);display:grid;gap:6px;text-align:left;margin-top:6px}
+.finder-label{font-family:var(--sc);letter-spacing:.1em;font-weight:700;color:var(--accent);font-size:1.05rem;text-align:center}
+.finder-row{display:flex;border:2px solid var(--gold);background:var(--card)}
+.finder input{flex:1;min-width:0;font:600 1.2rem var(--serif);color:var(--ink);background:transparent;border:0;padding:12px 14px}
+.finder input:focus{outline:none}
+.finder-row:focus-within{outline:3px solid var(--accent);outline-offset:2px;box-shadow:none}
+.find-btn{border:0;border-left:2px solid var(--gold);background:var(--accent);color:var(--on-accent);font:700 1.1rem var(--serif);padding:0 22px;min-height:52px}
+.find-list{position:absolute;left:0;right:0;top:100%;z-index:25;list-style:none;margin:4px 0 0;padding:4px;background:var(--card);border:1px solid var(--gold);box-shadow:0 16px 36px -12px rgba(30,20,8,.35);max-height:340px;overflow-y:auto}
+.find-list li{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;cursor:pointer;font-size:1.1rem}
+.find-list li[aria-selected="true"]{background:var(--paper);box-shadow:inset 3px 0 0 var(--accent)}
+.find-list li span{color:var(--muted);font-variant-numeric:lining-nums tabular-nums}
+.find-list li.none{color:var(--muted);cursor:default;font-style:italic}
+.steps{list-style:none;counter-reset:s;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 26px;margin:6px 0 0;padding:0;font-size:1.05rem}
+.steps li{counter-increment:s;position:relative;padding-left:40px;min-height:30px;text-align:left;line-height:1.4}
+.steps li::before{content:counter(s);position:absolute;left:0;top:-1px;display:grid;place-items:center;width:30px;height:30px;box-sizing:border-box;border-radius:50%;border:2px solid var(--gold);color:var(--accent);font-weight:700;font-family:var(--serif)}
+/* Масштаб и мини-карта */
+.zoom-level{min-width:7.5em;text-align:center;font-family:var(--sc);font-weight:700;color:var(--accent);align-self:center}
+#zoomIn,#zoomOut{min-width:48px;min-height:48px;padding:0;font-size:1.6rem;line-height:1;font-weight:700;display:inline-grid;place-items:center}
+button:disabled{opacity:1;color:var(--muted);border-style:dashed;background:transparent;cursor:not-allowed}
+.scroll-wrap{position:relative;min-width:0;max-width:100%}
+.minimap{position:absolute;right:10px;bottom:10px;width:min(260px,40%);background:var(--card);border:1px solid var(--gold);box-shadow:0 8px 24px -10px rgba(30,20,8,.4);cursor:pointer;z-index:5;padding:4px}
+.mm-in svg{display:block;width:100%;height:auto;pointer-events:none}
+.mm-in .tree *{animation:none!important}
+.mm-in text{display:none}
+.mm-view{position:absolute;top:4px;bottom:4px;border:2px solid var(--accent);background:var(--accent-tint)}
+@media (pointer:coarse){.minimap{right:auto;left:10px;width:min(200px,46%)}}
+/* Тач и мышь */
+.touch-only{display:none!important}
+@media (hover: none), (pointer: coarse){.mouse-only{display:none!important}.touch-only{display:flex!important}}
+/* Тактильный отклик: hover только у мыши, нажатие видно всем */
+button,a,.cta,.tree .node[data-pid],.find-list li,.minimap{touch-action:manipulation}
+button,.cta,.find-list li,.tree .node[data-pid],.minimap{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+button{transition:transform 140ms var(--ease-out),border-color 200ms ease,background-color 200ms ease,filter 200ms ease}
+button:not(:disabled):active,.cta:active{transform:scale(.97)}
+.find-btn:active,button.primary:active{filter:brightness(.92)}
+.find-list li:active{background:var(--paper)}
+.tree .node[data-pid]:active .card{stroke:var(--accent);stroke-width:6}
+.tree .node[data-pid]:focus-visible .card{stroke:var(--accent);stroke-width:14;paint-order:stroke}
+@media (hover:hover) and (pointer:fine){
+ button:not(:disabled):hover{border-color:var(--gold);transform:translateY(-1px)}
+ .fam:hover{box-shadow:0 18px 36px -18px rgba(40,30,10,.45)}
+ .fam:hover .shield svg{transform:rotate(-5deg) scale(1.08)}
+ .find-list li:hover{background:var(--paper)}
+ button.primary:hover,.find-btn:hover{filter:brightness(1.1)}
+ .tree .node[data-pid]:hover .card{stroke:var(--gold);stroke-width:5}
+ .cta:hover{background:var(--paper);border-color:var(--accent)}
+ .ai-badge:hover{background:var(--card);color:var(--accent)}
+}
+@media (prefers-reduced-motion:reduce){button:not(:disabled):active,.cta:active{transform:none}}
+/* Фамилии на телефоне — карусель */
+@media (max-width:640px){
+ .fam-sec .families{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:8px;margin-inline:-4px}
+ .fam-sec .fam{flex:0 0 82%;scroll-snap-align:center}
+ .steps{flex-direction:column;align-items:flex-start}
+ .eyebrow{letter-spacing:.14em;font-size:.85rem;text-wrap:balance}
+ .legend{display:grid;grid-template-columns:1fr 1fr;gap:4px 12px}
+}
+.byline{font-family:var(--sc);letter-spacing:.1em;color:var(--gold);font-weight:700}
+.privacy{margin:0;padding-left:20px;display:grid;gap:8px;max-width:80ch}
+
+
+.all-fams{font-size:1rem;color:var(--muted);margin:4px 0 0;line-height:1.6;max-width:none}
+.all-fams b{color:var(--ink);font-weight:600}
+#canvas{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}
+#canvas.lensing{touch-action:none}
+
+[hidden]{display:none!important}
+.readonly .edit-only{display:none!important}
+html:not(.readonly) .ro-note{display:none}
+.pdf a{font-family:var(--sc);letter-spacing:.08em;font-size:1.05rem}
+button.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.tree .node[data-pid]{cursor:pointer}
+.tree .node:focus{outline:none}
+.tree .badge circle{fill:var(--accent);stroke:var(--card);stroke-width:4}
+.tree .badge text{fill:var(--card);font-size:22px;font-weight:700;font-family:var(--serif)}
+.feed-sec{display:grid;gap:12px}
+.feed,.plist{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.feed{grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr))}
+.feed .empty,.feed .empty-cta,.feed .more{grid-column:1/-1}
+.feed .more{justify-self:center}
+.feed .e-text{display:-webkit-box;-webkit-line-clamp:8;-webkit-box-orient:vertical;overflow:hidden}
+.feed .e-text.open{display:block}
+.entry{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--gold);padding:12px 14px;display:grid;gap:6px;min-width:0}
+.entry .e-head{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.e-kind{font-family:var(--sc);letter-spacing:.08em;font-size:.95rem;color:var(--gold);font-weight:600}
+.e-kind.k-correction{color:var(--accent)}
+.e-who{font:600 1rem var(--serif);background:none;border:0;min-height:44px;padding:8px 0;display:inline-flex;align-items:center;color:var(--ink);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px;cursor:pointer}
+.e-name{font-weight:700;font-size:1.08rem}
+.e-meta,.e-foot{color:var(--muted);font-size:1rem}
+.e-meta,.p-meta{font-variant-numeric:lining-nums tabular-nums}
+.e-text{white-space:pre-wrap;overflow-wrap:anywhere}
+.e-foot{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-style:normal}
+.empty{color:var(--muted);font-style:normal}
+.empty-cta{grid-column:1/-1;display:grid;gap:12px;justify-items:start;padding:22px 24px;background:var(--paper);border:1px dashed var(--gold)}
+.ei-title{font:600 1.5rem/1.2 var(--serif);color:var(--accent)}
+.ei-text{color:var(--ink);max-width:60ch}
+/* Панель человека: прерываемый переход, на телефоне — шторка снизу */
+.panel{position:fixed;inset:0;z-index:40;display:flex;justify-content:flex-end}
+.panel-back{position:absolute;inset:0;background:rgba(20,16,8,.35);opacity:0;transition:opacity 240ms ease;touch-action:none}
+.panel-box{position:relative;width:min(520px,100%);height:100%;overflow-y:auto;overscroll-behavior:contain;background:var(--paper);border-left:2px solid var(--gold);
+ padding-block:max(24px,env(safe-area-inset-top,0px)) 120px;padding-left:24px;padding-right:max(24px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:8px;
+ transform:translateX(100%);transition:transform 320ms var(--ease-drawer)}
+.panel.open .panel-box{transform:none}
+.panel.open .panel-back{opacity:1}
+.panel:not(.open) .panel-box{transition-duration:200ms;transition-timing-function:var(--ease-out)}
+html:has(body.panel-open){overflow:hidden}
+@media (max-width:640px){
+ .panel{align-items:flex-end}
+ .panel-box{box-sizing:border-box;width:100%;height:auto;max-height:92dvh;border-left:0;border-top:2px solid var(--gold);border-radius:18px 18px 0 0;transform:translateY(100%);padding-bottom:calc(120px + env(safe-area-inset-bottom,0px))}
+}
+@media (prefers-reduced-motion:reduce){.panel-box,.panel-back{transition:none}}
+.panel-close{position:absolute;right:max(12px,env(safe-area-inset-right,0px));top:max(10px,env(safe-area-inset-top,0px));min-width:48px;min-height:48px;padding:0;display:grid;place-items:center;font-size:1.8rem;line-height:1}
+.p-sur{font-family:var(--sc);letter-spacing:.14em;color:var(--gold);font-weight:600}
+.p-name{font-family:var(--serif);font-weight:700;font-size:clamp(1.7rem,3.4vw,2.2rem);letter-spacing:0;line-height:1.15;padding-right:52px}
+.p-meta{color:var(--muted);font-style:italic;font-weight:500}
+.panel h4{font-family:var(--sc);letter-spacing:.1em;margin:16px 0 4px;color:var(--accent);font-size:1.05rem}
+.addform{display:grid;gap:6px}
+.addform label{font-size:1.05rem;color:var(--ink);font-weight:600;margin-top:4px}
+.addform .hint{color:var(--muted);font-weight:400;font-style:italic}
+.addform input,.addform select,.addform textarea{font:500 1.15rem/1.4 var(--serif);min-height:48px;padding:10px 12px;color:var(--ink);background:var(--card);border:1.5px solid var(--line);width:100%;box-sizing:border-box}
+.addform ::placeholder{color:var(--muted);opacity:1;font-style:italic}
+.addform input:focus,.addform select:focus,.addform textarea:focus{outline:2px solid var(--gold);outline-offset:0}
+.addform [aria-invalid="true"]{border-color:var(--accent)}
+.addform .pfields{display:none;gap:6px}
+.addform.is-person .pfields{display:grid}
+.addform .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.addform .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+#fSend{justify-self:stretch;min-height:56px;font-size:1.2rem;margin-top:16px;display:inline-flex;justify-content:center;align-items:center;gap:8px}
+#fSend[aria-busy="true"]{opacity:1;cursor:progress}
+#fSend[aria-busy="true"]::before{content:"";width:14px;height:14px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:spin 600ms linear infinite}
+#fSend.done{background:var(--m);border-color:var(--m)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.form-msg{min-height:1.4em;font-size:1rem}
+.form-msg.ok{color:var(--m);font-weight:700;font-size:1.05rem}
+.form-msg.err{color:var(--accent)}
+body.panel-open{overflow:hidden}
+@media (max-width:520px){.addform .two{grid-template-columns:1fr}}
+.tree .node.added .card{stroke:var(--gold);stroke-dasharray:none}
+.tree .newtag{text-anchor:start;font-family:var(--sc);font-size:20px;letter-spacing:.1em;fill:var(--gold);font-weight:700}
+.tree .kin.dash{stroke-dasharray:10 8}
+.tree .kin.sibl{stroke:var(--line)}
+.add-cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px}
+.cta{display:inline-flex;align-items:center;gap:10px;font:700 1.08rem/1.2 var(--serif);color:var(--accent);min-height:52px;
+ background:var(--card);border:1.5px solid var(--gold);padding:8px 16px 8px 9px;cursor:pointer;transition:background .2s ease,border-color .2s ease,transform 140ms var(--ease-out)}
+.cta:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.cta-plus{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--accent);color:var(--on-accent);font-size:19px;line-height:1;font-weight:700}
+.cta-note{color:var(--muted);font-size:1rem}
+.e-unv,.e-ok{font-size:.9rem;font-weight:700;padding:1px 8px;border:1px solid currentColor}
+.e-unv{color:var(--muted)}.e-ok{color:var(--m)}
+.draft-note{color:var(--muted);font-size:1rem;margin:4px 0 0}
+.disclaimer{font-weight:500}
+/* Поиск: найденный человек и «Ваша линия» */
+.tree .node.found .card{stroke:var(--accent);stroke-width:8}
+@media (prefers-reduced-motion: no-preference){.tree .node.found{animation:found .9s var(--ease-in-out) .5s 2;transform-box:fill-box;transform-origin:center}}
+@keyframes found{50%{transform:scale(1.08)}}
+.tree.has-line .node:not(.anc):not(.found),.tree.has-line .kin:not(.lineage),.tree.has-line .wed{opacity:.3;transition:opacity .6s var(--ease-out)}
+.tree .kin.lineage{stroke:var(--accent);stroke-width:6}
+.tree .node.anc .card{stroke:var(--accent);stroke-width:5}
+@media (prefers-reduced-motion:no-preference){.tree .kin.lineage{stroke-dasharray:1;stroke-dashoffset:1;animation:draw .55s var(--ease-out) forwards;animation-delay:calc(.6s + var(--d)*.4s)}}
+.line-note{display:flex;flex-wrap:wrap;gap:12px;align-items:center;font-weight:600;color:var(--accent)}
+/* Новый человек после «Сохранить» */
+.tree .node.just-added .card{stroke:var(--accent);stroke-width:8}
+@media (prefers-reduced-motion:no-preference){.tree .node.just-added{animation:rise .7s var(--ease-out) .3s both,found .9s var(--ease-in-out) 1.1s 2;transform-box:fill-box;transform-origin:center}}
+</style></head><body>
+<div class="demo-bar" style="position:sticky;top:0;z-index:60;background:#7a1f2b;color:#fff;font:16px/1.35 Georgia,serif;padding:8px 14px;text-align:center">Пример сайта семьи: род, люди, гербы и находки вымышлены. <a href="/rodkonstruktor/" style="color:#fff;font-weight:bold">← Летопись рода</a> · <a href="/rodkonstruktor/start.html" style="color:#fff;font-weight:bold">Собрать своё древо</a></div><div class="page play" id="page">
+<a class="skip" href="#tree">Перейти к древу</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<header class="hero">
+  <div class="eyebrow">Семейный архив · XIX – XXI век</div>
+  <h1><span class="title-gold">Генеалогическое древо</span></h1>
+  <p class="sub">Все роды нашей семьи — в одном древе</p>
+  <p class="facts" id="facts"><span><b id="fPeople">131</b> человек</span><span><b id="fGens">6</b> поколений</span><span><b>30</b> <span>фамилий</span></span></p>
+  <p><a class="ai-badge" href="#tree">✦ Древо интерактивное — каждый может дополнить его своей информацией</a></p>
+  <form class="finder" id="finder" role="search" autocomplete="off">
+    <label for="findInput" class="finder-label">Найдите себя или родных</label>
+    <div class="finder-row"><input id="findInput" type="search" placeholder="Начните вводить имя или фамилию" role="combobox" aria-expanded="false" aria-controls="findList" aria-autocomplete="list" aria-describedby="findStatus" enterkeyhint="search" autocapitalize="words"><button type="submit" class="find-btn">Найти</button></div>
+    <ul class="find-list" id="findList" role="listbox" hidden></ul>
+    <p id="findStatus" class="sr-only" role="status" aria-live="polite"></p>
+  </form>
+  <ol class="steps"><li><b>Найдите</b> себя, родителей или бабушку с дедушкой</li><li><b>Нажмите</b> на карточку человека</li><li><b>Допишите</b>, что знаете: годы, имена, историю</li></ol>
+  <p class="pdf"><a href="rod-sokolovyh-A1.pdf">Скачать постер A1 для печати (PDF)</a></p>
+</header>
+
+<main id="main">
+<section class="block reveal tree-sec" id="tree">
+  <div class="bar">
+    <div class="block-head"><span class="block-no" aria-hidden="true"></span><h2>Древо</h2></div>
+    <div class="ctl">
+      <button type="button" id="zoomOut" aria-label="Уменьшить схему">−</button>
+      <span class="zoom-level" id="zoomLevel" aria-live="polite">Целиком</span>
+      <button type="button" id="zoomIn" aria-label="Увеличить схему">+</button>
+      <button type="button" id="lensbtn" aria-pressed="true">Лупа</button>
+      <button type="button" id="replay">Проиграть заново</button>
+    </div>
+  </div>
+  <div class="add-cta edit-only"><button type="button" id="addAny" class="cta"><span class="cta-plus" aria-hidden="true">+</span>Добавить новые сведения в древо</button><span class="cta-note">Человек, история, дата или исправление — запись сразу увидят все родные</span></div>
+  <div class="lens-hint mouse-only"><span class="lh-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="20" cy="20" r="13"/><path d="M30 30 L43 43"/></svg></span><p><b>Режим лупы:</b> наведите курсор на древо — под ним появится увеличительное стекло, и любую карточку можно прочитать крупно.</p></div>
+  <div class="lens-hint touch-only"><span class="lh-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="6"/><circle cx="24" cy="24" r="15"/></svg></span><p><b>Лупа:</b> нажмите на древо и подержите палец — появится увеличительное стекло, ведите им по карточкам. <b>Коснитесь человека</b> — откроется его карточка. Листайте схему пальцем, кнопкой <b>−</b> увидите её целиком.</p></div>
+  <p class="line-note" id="lineNote" hidden><span></span> <button type="button" id="lineOff">Показать всё древо</button></p>
+  <div class="scroll-wrap"><div class="scroller" id="scroller" tabindex="0" role="region" aria-label="Схема древа, листайте вбок стрелками"><div class="canvas" id="canvas"></div></div>
+  <div class="minimap" id="minimap" hidden aria-hidden="true"><div class="mm-in" id="mmIn"></div><div class="mm-view" id="mmView"></div></div></div>
+  <div class="legend"><span class="f-k">Соколовы</span><span class="f-s">Ольшанские</span><span class="f-m">Пчелинцевы</span><span class="f-r">Светловы</span><span class="f-l">Дубровины</span><span class="f-s">ветви сестёр и брата Ираиды — справа</span><span class="f-i">вошли в род браком (пунктир)</span><span class="lg-ring">брак</span><span class="lg-ex">бывший брак</span></div>
+  <p class="all-fams"><b>Все фамилии древа (30):</b> Соколовы · Ольшанские · Пчелинцевы · Светловы · Дубровины · Ковалёвы · Звонарёвы · Каменевы · Сосновские · Грошевы · Ключарёвы · Виноградовы · Озеровы · Колесовы · Житниковы · Месяцевы · Писцовы · Рябинины · Конюховы · Рогачёвы · Корабельниковы · Городецкие · Липины · Зоревы · Солнцевы · Стрельцовы · Плотниковы · Жерновы · Рыбаковы · Часовщиковы</p>
+  <div class="lens" id="lens" hidden aria-hidden="true"><div class="lens-in" id="lensIn"></div></div>
+</section>
+
+<section class="block reveal fam-sec"><div class="block-head"><span class="block-no" aria-hidden="true"></span><h2>Фамилии рода и их знаки</h2></div>
+<div class="families"><article class="fam f-k" style="--e:0"><div class="shield"><svg class="emblem e-k" viewBox="0 0 120 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#7a1f2b"/><g class="charge"><path d="M60,40 C54,40 50,46 51,52 L30,46 C38,58 46,62 52,64 L46,96 L60,88 L74,96 L68,64 C74,62 82,58 90,46 L69,52 C70,46 66,40 60,40 Z" fill="var(--gold)"/><circle cx="57" cy="47" r="1.8" fill="#7a1f2b"/><path d="M60,44 l6,3 -6,2 Z" fill="#7a1f2b"/></g><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Соколовы</h3><div class="place">Кострома → Вологда → Нижний Новгород</div><p class="first"><span>Первое упоминание</span>Самая ранняя запись о семье — Афанасий Соколов, сапожник, в исповедной ведомости костромской церкви (пример).</p><p class="mean">От прозвища «Сокол» — так называли зоркого, быстрого человека.</p><p class="arms">Исторического герба у семьи нет. Знак: золотой сокол с распахнутыми крыльями.</p></article><article class="fam f-s" style="--e:1"><div class="shield"><svg class="emblem e-s" viewBox="0 0 120 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#23365c"/><g class="charge"><path d="M60,112 C60,90 58,70 62,40" stroke="var(--gold)" stroke-width="4" fill="none" stroke-linecap="round"/><ellipse cx="47" cy="70" rx="9" ry="15" transform="rotate(-40 47 70)" fill="#eef0ee"/><ellipse cx="75" cy="64" rx="9" ry="15" transform="rotate(40 75 64)" fill="#eef0ee"/><ellipse cx="49" cy="92" rx="9" ry="15" transform="rotate(-50 49 92)" fill="#eef0ee"/><ellipse cx="73" cy="88" rx="9" ry="15" transform="rotate(45 73 88)" fill="#eef0ee"/><rect x="54" y="34" width="6" height="16" rx="3" fill="var(--gold)"/><rect x="62" y="34" width="6" height="16" rx="3" fill="var(--gold)"/><rect x="70" y="34" width="6" height="16" rx="3" fill="var(--gold)"/></g><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Ольшанские</h3><div class="place">Ростов Великий</div><p class="first"><span>Первое упоминание</span>Никифор Ольшанский, ямщик, — в списке жителей Ростова (пример).</p><p class="mean">От места, где росла ольха: Ольшанка, Ольшаны.</p><p class="arms">Исторического герба у семьи нет. Знак: ольховая ветвь с серёжками.</p></article><article class="fam f-m" style="--e:2"><div class="shield"><svg class="emblem e-m" viewBox="0 0 120 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#2e5a43"/><g class="charge"><path d="M40,100 H80 Q84,70 60,42 Q36,70 40,100 Z" fill="var(--gold)"/><path d="M44,58 H76" stroke="#2e5a43" stroke-width="2.4"/><path d="M43,68 H77" stroke="#2e5a43" stroke-width="2.4"/><path d="M42,78 H78" stroke="#2e5a43" stroke-width="2.4"/><path d="M41,88 H79" stroke="#2e5a43" stroke-width="2.4"/><path d="M54,100 a6,6 0 0 1 12,0 Z" fill="#2e5a43"/><ellipse cx="26" cy="46" rx="4" ry="3" fill="#eef0ee"/><path d="M24,43 l-3,-4 M28,43 l3,-4" stroke="#eef0ee" stroke-width="1.4"/><ellipse cx="94" cy="52" rx="4" ry="3" fill="#eef0ee"/><path d="M92,49 l-3,-4 M96,49 l3,-4" stroke="#eef0ee" stroke-width="1.4"/><ellipse cx="92" cy="82" rx="4" ry="3" fill="#eef0ee"/><path d="M90,79 l-3,-4 M94,79 l3,-4" stroke="#eef0ee" stroke-width="1.4"/></g><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Пчелинцевы</h3><div class="place">Ростов Великий</div><p class="first"><span>Первое упоминание</span>Раннее упоминание не найдено.</p><p class="mean">От промысла бортников и пчеловодов.</p><p class="arms">Исторического герба у семьи нет. Знак: улей и три пчелы — большая семья Раисы Прохоровны.</p></article><article class="fam f-r" style="--e:3"><div class="shield"><svg class="emblem e-r" viewBox="0 0 120 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#1d2226"/><g class="charge"><rect x="50" y="56" width="20" height="50" rx="2" fill="#eef0ee"/><path d="M42,106 H78 V112 H42 Z" fill="var(--gold)"/><path d="M60,24 C52,36 54,46 60,52 C66,46 68,36 60,24 Z" fill="var(--gold)"/><path d="M60,52 V56" stroke="#1d2226" stroke-width="2"/><path d="M34.0,38.0 l-6.0,0.0" stroke="var(--gold)" stroke-width="2.4" stroke-linecap="round"/><path d="M41.6,19.6 l-4.2,-4.2" stroke="var(--gold)" stroke-width="2.4" stroke-linecap="round"/><path d="M60.0,12.0 l-0.0,-6.0" stroke="var(--gold)" stroke-width="2.4" stroke-linecap="round"/><path d="M78.4,19.6 l4.2,-4.2" stroke="var(--gold)" stroke-width="2.4" stroke-linecap="round"/><path d="M86.0,38.0 l6.0,-0.0" stroke="var(--gold)" stroke-width="2.4" stroke-linecap="round"/></g><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Светловы</h3><div class="place">Нижний Новгород</div><p class="first"><span>Первое упоминание</span>Раннее упоминание не найдено.</p><p class="mean">От прозвища «Светлый» — светловолосый или добрый нравом.</p><p class="arms">Исторического герба у семьи нет. Знак: горящая свеча — аптекарь и художник.</p></article><article class="fam f-l" style="--e:4"><div class="shield"><svg class="emblem e-l" viewBox="0 0 120 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#6e530f"/><g class="charge"><path d="M60,114 V50" stroke="var(--gold)" stroke-width="4" stroke-linecap="round"/><path d="M60,58 C40,52 34,40 40,30 C46,36 44,44 52,46 C50,38 54,30 60,26 C66,30 70,38 68,46 C76,44 74,36 80,30 C86,40 80,52 60,58 Z" fill="var(--gold)"/><ellipse cx="44" cy="84" rx="7" ry="9" fill="#eef0ee"/><path d="M37,80 h14 v-4 a7,5 0 0 0 -14,0 Z" fill="var(--gold)"/><ellipse cx="76" cy="84" rx="7" ry="9" fill="#eef0ee"/><path d="M69,80 h14 v-4 a7,5 0 0 0 -14,0 Z" fill="var(--gold)"/></g><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Дубровины</h3><div class="place">Нижний Новгород</div><p class="first"><span>Первое упоминание</span>Раннее упоминание не найдено.</p><p class="mean">От «дубрава» — дубовый лес.</p><p class="arms">Исторического герба у семьи нет. Знак: дубовая ветвь и два жёлудя.</p></article><article class="fam f-s" style="--e:5"><div class="shield"><svg class="emblem e-sp" viewBox="0 0 120 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#7a1f2b"/><g class="charge"><defs><clipPath id="c7a1f2b1d2226fess"><path d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z"/></clipPath></defs><path d="M0,74 H120 V148 H0 Z" fill="#1d2226" clip-path="url(#c7a1f2b1d2226fess)"/><path d="M30,80 H90 V88 C80,88 74,92 72,100 H80 V108 H40 V100 H48 C46,92 40,88 30,88 Z" fill="#eef0ee"/><path d="M90,80 L100,76 L90,88 Z" fill="#eef0ee"/><rect x="54" y="32" width="12" height="40" rx="2" fill="#5b3a1f" transform="rotate(-35 60 52)"/><rect x="40" y="26" width="34" height="14" rx="3" fill="var(--gold)" transform="rotate(-35 57 33)"/></g><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Ковалёвы</h3><div class="place">Нижний Новгород</div><p class="first"><span>Первое упоминание</span>—</p><p class="mean">От «коваль» — кузнец.</p><p class="arms">Исторического герба у семьи нет. Знак: молот над наковальней.</p></article><article class="fam f-s" style="--e:6"><div class="shield"><svg class="emblem e-sb" viewBox="0 0 120 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#23365c"/><g class="charge"><path d="M60,34 C44,34 40,50 40,70 C40,84 34,92 30,96 H90 C86,92 80,84 80,70 C80,50 76,34 60,34 Z" fill="var(--gold)"/><circle cx="60" cy="102" r="7" fill="var(--gold)"/><rect x="56" y="24" width="8" height="12" rx="3" fill="var(--gold)"/><path d="M42,78 H78" stroke="#23365c" stroke-width="2.4"/></g><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Звонарёвы</h3><div class="place">Нижний Новгород</div><p class="first"><span>Первое упоминание</span>—</p><p class="mean">От звонаря при церкви.</p><p class="arms">Исторического герба у семьи нет. Знак: колокол.</p></article><article class="fam f-s" style="--e:7"><div class="shield"><svg class="emblem e-sa" viewBox="0 0 120 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#2e5a43"/><g class="charge"><defs><clipPath id="c2e5a4323365cchief"><path d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z"/></clipPath></defs><path d="M0,0 H120 V40 H0 Z" fill="#23365c" clip-path="url(#c2e5a4323365cchief)"/><path d="M24,110 L40,74 L56,110 Z" fill="#eef0ee"/><path d="M64,110 L80,74 L96,110 Z" fill="#eef0ee"/><path d="M42,72 L60,34 L78,72 Z" fill="var(--gold)"/></g><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Каменевы</h3><div class="place">Пермь → Нижний Новгород</div><p class="first"><span>Первое упоминание</span>—</p><p class="mean">От «камень» — крепкий, надёжный.</p><p class="arms">Исторического герба у семьи нет. Знак: три камня горой — уральский край.</p></article><article class="fam f-s" style="--e:8"><div class="shield"><svg class="emblem e-sy" viewBox="0 0 120 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#2e5a43"/><g class="charge"><rect x="56" y="96" width="8" height="18" fill="#5b3a1f"/><path d="M30,100 L60,74 L90,100 Z" fill="#eef0ee"/><path d="M36,80 L60,54 L84,80 Z" fill="#eef0ee"/><path d="M43,60 L60,34 L77,60 Z" fill="#eef0ee"/><polygon points="60.0,23.0 61.8,27.6 66.7,27.8 62.9,30.9 64.1,35.7 60.0,33.0 55.9,35.7 57.1,30.9 53.3,27.8 58.2,27.6" fill="var(--gold)"/></g><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Сосновские</h3><div class="place">г. Ветлуга → Нижний Новгород</div><p class="first"><span>Первое упоминание</span>—</p><p class="mean">От сосновых лесов Ветлуги.</p><p class="arms">Исторического герба у семьи нет. Знак: сосна и звезда.</p></article><article class="fam f-s" style="--e:9"><div class="shield"><svg class="emblem e-sr" viewBox="0 0 120 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#7a1f2b"/><g class="charge"><circle cx="42" cy="54" r="15" fill="var(--gold)"/><circle cx="42" cy="54" r="10" fill="none" stroke="#7a1f2b" stroke-width="1.6"/><rect x="39" y="51" width="6" height="6" fill="#7a1f2b"/><circle cx="78" cy="54" r="15" fill="var(--gold)"/><circle cx="78" cy="54" r="10" fill="none" stroke="#7a1f2b" stroke-width="1.6"/><rect x="75" y="51" width="6" height="6" fill="#7a1f2b"/><circle cx="60" cy="88" r="15" fill="var(--gold)"/><circle cx="60" cy="88" r="10" fill="none" stroke="#7a1f2b" stroke-width="1.6"/><rect x="57" y="85" width="6" height="6" fill="#7a1f2b"/></g><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Грошевы</h3><div class="place">Нижегородская обл.</div><p class="first"><span>Первое упоминание</span>—</p><p class="mean">От «грош» — мелкая монета.</p><p class="arms">Исторического герба у семьи нет. Знак: три монеты.</p></article><article class="fam f-s" style="--e:10"><div class="shield"><svg class="emblem e-so" viewBox="0 0 120 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#23365c"/><g class="charge"><defs><clipPath id="c23365c7a1f2bpale"><path d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z"/></clipPath></defs><path d="M60,0 H120 V148 H60 Z" fill="#7a1f2b" clip-path="url(#c23365c7a1f2bpale)"/><g transform="rotate(-32 60 72)"><circle cx="60" cy="34" r="11" fill="none" stroke="var(--gold)" stroke-width="5"/><rect x="57" y="44" width="6" height="58" fill="var(--gold)"/><rect x="63" y="88" width="10" height="5" fill="var(--gold)"/><rect x="63" y="96" width="7" height="5" fill="var(--gold)"/></g><g transform="rotate(32 60 72)"><circle cx="60" cy="34" r="11" fill="none" stroke="var(--gold)" stroke-width="5"/><rect x="57" y="44" width="6" height="58" fill="var(--gold)"/><rect x="63" y="88" width="10" height="5" fill="var(--gold)"/><rect x="63" y="96" width="7" height="5" fill="var(--gold)"/></g></g><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Ключарёвы</h3><div class="place">Нижний Новгород</div><p class="first"><span>Первое упоминание</span>—</p><p class="mean">От ключаря — хранителя ключей.</p><p class="arms">Исторического герба у семьи нет. Знак: два ключа накрест.</p></article><article class="fam f-s" style="--e:11"><div class="shield"><svg class="emblem e-sc" viewBox="0 0 120 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#4b2a55"/><g class="charge"><path d="M60,32 C66,26 74,26 80,30" stroke="#2e5a43" stroke-width="3" fill="none"/><path d="M62,30 C70,22 82,24 86,34 C76,36 68,34 62,30 Z" fill="#2e5a43"/><circle cx="46" cy="46" r="7" fill="#eef0ee"/><circle cx="60" cy="44" r="7" fill="#eef0ee"/><circle cx="74" cy="46" r="7" fill="#eef0ee"/><circle cx="52" cy="58" r="7" fill="#eef0ee"/><circle cx="66" cy="58" r="7" fill="#eef0ee"/><circle cx="46" cy="70" r="7" fill="#eef0ee"/><circle cx="60" cy="70" r="7" fill="#eef0ee"/><circle cx="74" cy="70" r="7" fill="#eef0ee"/><circle cx="53" cy="82" r="7" fill="#eef0ee"/><circle cx="67" cy="82" r="7" fill="#eef0ee"/><circle cx="60" cy="94" r="7" fill="#eef0ee"/></g><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Виноградовы</h3><div class="place">Нижегородская обл.</div><p class="first"><span>Первое упоминание</span>—</p><p class="mean">Семинарская фамилия от слова «виноград».</p><p class="arms">Исторического герба у семьи нет. Знак: виноградная гроздь.</p></article><article class="fam f-s" style="--e:12"><div class="shield"><svg class="emblem e-sk" viewBox="0 0 120 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#2f5d87"/><g class="charge"><path d="M30,82 H90 L82,96 H38 Z" fill="var(--gold)"/><path d="M60,40 V82" stroke="var(--gold)" stroke-width="3"/><path d="M62,42 L84,78 H62 Z" fill="#eef0ee"/><path d="M20,108 q10,-6 20,0 t20,0 t20,0 t20,0 t20,0" stroke="#eef0ee" stroke-width="3" fill="none"/><path d="M20,120 q10,-6 20,0 t20,0 t20,0 t20,0 t20,0" stroke="#eef0ee" stroke-width="3" fill="none"/></g><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Озеровы</h3><div class="place">Нижний Новгород</div><p class="first"><span>Первое упоминание</span>—</p><p class="mean">От места у озера.</p><p class="arms">Исторического герба у семьи нет. Знак: лодка на волнах.</p></article><article class="fam f-s" style="--e:13"><div class="shield"><svg class="emblem e-sf" viewBox="0 0 120 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#7a1f2b"/><g class="charge"><defs><clipPath id="c7a1f2b23365cbend"><path d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z"/></clipPath></defs><path d="M0,0 L120,148 H0 Z" fill="#23365c" clip-path="url(#c7a1f2b23365cbend)"/><circle cx="60" cy="70" r="30" fill="none" stroke="var(--gold)" stroke-width="7"/><circle cx="60" cy="70" r="7" fill="var(--gold)"/><path d="M60,70 L90.0,70.0" stroke="var(--gold)" stroke-width="4"/><path d="M60,70 L81.2,91.2" stroke="var(--gold)" stroke-width="4"/><path d="M60,70 L60.0,100.0" stroke="var(--gold)" stroke-width="4"/><path d="M60,70 L38.8,91.2" stroke="var(--gold)" stroke-width="4"/><path d="M60,70 L30.0,70.0" stroke="var(--gold)" stroke-width="4"/><path d="M60,70 L38.8,48.8" stroke="var(--gold)" stroke-width="4"/><path d="M60,70 L60.0,40.0" stroke="var(--gold)" stroke-width="4"/><path d="M60,70 L81.2,48.8" stroke="var(--gold)" stroke-width="4"/></g><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Колесовы</h3><div class="place">Сортавала</div><p class="first"><span>Первое упоминание</span>—</p><p class="mean">От колёсника — мастера колёс.</p><p class="arms">Исторического герба у семьи нет. Знак: колесо.</p></article><article class="fam f-s" style="--e:14"><div class="shield"><svg class="emblem e-si" viewBox="0 0 120 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#2e5a43"/><g class="charge"><path d="M60,104 L38,40" stroke="var(--gold)" stroke-width="3"/><ellipse cx="38" cy="38" rx="5" ry="12" fill="var(--gold)" transform="rotate(-22 38 38)"/><path d="M60,104 L49,40" stroke="var(--gold)" stroke-width="3"/><ellipse cx="49" cy="38" rx="5" ry="12" fill="var(--gold)" transform="rotate(-11 49 38)"/><path d="M60,104 L60,40" stroke="var(--gold)" stroke-width="3"/><ellipse cx="60" cy="38" rx="5" ry="12" fill="var(--gold)" transform="rotate(0 60 38)"/><path d="M60,104 L71,40" stroke="var(--gold)" stroke-width="3"/><ellipse cx="71" cy="38" rx="5" ry="12" fill="var(--gold)" transform="rotate(11 71 38)"/><path d="M60,104 L82,40" stroke="var(--gold)" stroke-width="3"/><ellipse cx="82" cy="38" rx="5" ry="12" fill="var(--gold)" transform="rotate(22 82 38)"/><rect x="44" y="78" width="32" height="7" rx="3" fill="#7a1f2b"/></g><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Житниковы</h3><div class="place">Ярославль</div><p class="first"><span>Первое упоминание</span>—</p><p class="mean">От «жито» — хлеб, зерно.</p><p class="arms">Исторического герба у семьи нет. Знак: сноп колосьев.</p></article><article class="fam f-i" style="--e:15"><div class="shield"><svg class="emblem e-ifd" viewBox="0 0 120 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#23365c"/><g class="charge"><path d="M66,34 A34,34 0 1 0 66,106 A26,26 0 1 1 66,34 Z" fill="#eef0ee"/><polygon points="84.0,41.0 85.8,45.6 90.7,45.8 86.9,48.9 88.1,53.7 84.0,51.0 79.9,53.7 81.1,48.9 77.3,45.8 82.2,45.6" fill="var(--gold)"/><polygon points="88.0,73.0 89.2,76.4 92.8,76.5 89.9,78.6 90.9,82.0 88.0,80.0 85.1,82.0 86.1,78.6 83.2,76.5 86.8,76.4" fill="var(--gold)"/></g><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Месяцевы</h3><div class="place">Вологда</div><p class="first"><span>Первое упоминание</span>—</p><p class="mean">От прозвища «Месяц».</p><p class="arms">Исторического герба у семьи нет. Знак: полумесяц и две звезды.</p></article><article class="fam f-i" style="--e:16"><div class="shield"><svg class="emblem e-ish" viewBox="0 0 120 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#4b2a55"/><g class="charge"><path d="M34,108 L88,30 C96,42 90,66 70,80 L56,84 Z" fill="#eef0ee"/><path d="M34,108 L80,44" stroke="#1d2226" stroke-width="1.6"/><rect x="26" y="96" width="22" height="16" rx="3" fill="var(--gold)"/></g><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Писцовы</h3><div class="place">Нижний Новгород</div><p class="first"><span>Первое упоминание</span>—</p><p class="mean">От писца — переписчика бумаг.</p><p class="arms">Исторического герба у семьи нет. Знак: перо и чернильница.</p></article><article class="fam f-i" style="--e:17"><div class="shield"><svg class="emblem e-imo" viewBox="0 0 120 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#2e5a43"/><g class="charge"><path d="M60,30 V60" stroke="#2e5a43" stroke-width="3"/><path d="M60,36 l-14,-6" stroke="#2e5a43" stroke-width="4" stroke-linecap="round"/><path d="M60,36 l14,-6" stroke="#2e5a43" stroke-width="4" stroke-linecap="round"/><path d="M60,44 l-14,-6" stroke="#2e5a43" stroke-width="4" stroke-linecap="round"/><path d="M60,44 l14,-6" stroke="#2e5a43" stroke-width="4" stroke-linecap="round"/><path d="M60,52 l-14,-6" stroke="#2e5a43" stroke-width="4" stroke-linecap="round"/><path d="M60,52 l14,-6" stroke="#2e5a43" stroke-width="4" stroke-linecap="round"/><circle cx="50" cy="70" r="6.5" fill="#7a1f2b" stroke="var(--gold)" stroke-width="1.5"/><circle cx="62" cy="68" r="6.5" fill="#7a1f2b" stroke="var(--gold)" stroke-width="1.5"/><circle cx="74" cy="72" r="6.5" fill="#7a1f2b" stroke="var(--gold)" stroke-width="1.5"/><circle cx="44" cy="82" r="6.5" fill="#7a1f2b" stroke="var(--gold)" stroke-width="1.5"/><circle cx="56" cy="82" r="6.5" fill="#7a1f2b" stroke="var(--gold)" stroke-width="1.5"/><circle cx="68" cy="84" r="6.5" fill="#7a1f2b" stroke="var(--gold)" stroke-width="1.5"/><circle cx="80" cy="84" r="6.5" fill="#7a1f2b" stroke="var(--gold)" stroke-width="1.5"/><circle cx="50" cy="94" r="6.5" fill="#7a1f2b" stroke="var(--gold)" stroke-width="1.5"/><circle cx="62" cy="96" r="6.5" fill="#7a1f2b" stroke="var(--gold)" stroke-width="1.5"/><circle cx="74" cy="96" r="6.5" fill="#7a1f2b" stroke="var(--gold)" stroke-width="1.5"/><circle cx="58" cy="108" r="6.5" fill="#7a1f2b" stroke="var(--gold)" stroke-width="1.5"/></g><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Рябинины</h3><div class="place">Дзержинск</div><p class="first"><span>Первое упоминание</span>—</p><p class="mean">От рябины.</p><p class="arms">Исторического герба у семьи нет. Знак: гроздь рябины.</p></article><article class="fam f-i" style="--e:18"><div class="shield"><svg class="emblem e-ich" viewBox="0 0 120 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#7a1f2b"/><g class="charge"><path d="M38,104 V68 A22,22 0 0 1 82,68 V104" fill="none" stroke="#eef0ee" stroke-width="12" stroke-linecap="butt"/><circle cx="38" cy="76" r="2" fill="#23365c"/><circle cx="38" cy="92" r="2" fill="#23365c"/><circle cx="82" cy="76" r="2" fill="#23365c"/><circle cx="82" cy="92" r="2" fill="#23365c"/><circle cx="46" cy="56" r="2" fill="#23365c"/><circle cx="74" cy="56" r="2" fill="#23365c"/><polygon points="60.0,28.0 62.1,33.2 67.6,33.5 63.3,37.1 64.7,42.5 60.0,39.5 55.3,42.5 56.7,37.1 52.4,33.5 57.9,33.2" fill="var(--gold)"/></g><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Конюховы</h3><div class="place">Нижний Новгород → Бор</div><p class="first"><span>Первое упоминание</span>—</p><p class="mean">От конюха.</p><p class="arms">Исторического герба у семьи нет. Знак: подкова и звезда.</p></article><article class="fam f-i" style="--e:19"><div class="shield"><svg class="emblem e-ira" viewBox="0 0 120 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#2e5a43"/><g class="charge"><defs><clipPath id="c2e5a435b3a1fchevron"><path d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z"/></clipPath></defs><path d="M0,148 L60,70 L120,148 Z" fill="#5b3a1f" clip-path="url(#c2e5a435b3a1fchevron)"/><g transform="scale(1,1) translate(0,0)"><path d="M58,110 C56,86 48,70 34,56 M50,82 L30,78 M44,68 L36,44 M38,60 L22,52" stroke="var(--gold)" stroke-width="6" fill="none" stroke-linecap="round"/></g><g transform="scale(-1,1) translate(-120,0)"><path d="M58,110 C56,86 48,70 34,56 M50,82 L30,78 M44,68 L36,44 M38,60 L22,52" stroke="var(--gold)" stroke-width="6" fill="none" stroke-linecap="round"/></g></g><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Рогачёвы</h3><div class="place">Бор → Нижний Новгород, Прага</div><p class="first"><span>Первое упоминание</span>—</p><p class="mean">От прозвища «Рогач».</p><p class="arms">Исторического герба у семьи нет. Знак: оленьи рога.</p></article><article class="fam f-i" style="--e:20"><div class="shield"><svg class="emblem e-iko" viewBox="0 0 120 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#2f5d87"/><g class="charge"><path d="M26,90 H94 L84,106 H36 Z" fill="var(--gold)"/><path d="M60,30 V90" stroke="var(--gold)" stroke-width="3"/><path d="M58,36 C44,48 44,66 58,80 Z M62,34 C80,46 82,66 62,82 Z" fill="#eef0ee"/><path d="M60,30 l12,4 -12,4 Z" fill="#7a1f2b"/></g><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Корабельниковы</h3><div class="place">Арзамас</div><p class="first"><span>Первое упоминание</span>—</p><p class="mean">От корабельного мастера.</p><p class="arms">Исторического герба у семьи нет. Знак: парусник.</p></article><article class="fam f-i" style="--e:21"><div class="shield"><svg class="emblem e-ifo" viewBox="0 0 120 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#7a1f2b"/><g class="charge"><path d="M40,112 V52 H80 V112 Z" fill="#eef0ee"/><rect x="40" y="42" width="8" height="12" fill="#eef0ee"/><rect x="52" y="42" width="8" height="12" fill="#eef0ee"/><rect x="64" y="42" width="8" height="12" fill="#eef0ee"/><rect x="72" y="42" width="8" height="12" fill="#eef0ee"/><path d="M54,112 V90 a6,6 0 0 1 12,0 V112 Z" fill="#1d2226"/><rect x="56" y="64" width="8" height="12" rx="4" fill="#1d2226"/></g><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Городецкие</h3><div class="place">Германия</div><p class="first"><span>Первое упоминание</span>—</p><p class="mean">От города Городец.</p><p class="arms">Исторического герба у семьи нет. Знак: башня.</p></article><article class="fam f-i" style="--e:22"><div class="shield"><svg class="emblem e-ief" viewBox="0 0 120 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#2e5a43"/><g class="charge"><defs><clipPath id="c2e5a4323365cfess"><path d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z"/></clipPath></defs><path d="M0,74 H120 V148 H0 Z" fill="#23365c" clip-path="url(#c2e5a4323365cfess)"/><path d="M60,112 V84" stroke="var(--gold)" stroke-width="4"/><path d="M60,86 C30,72 30,40 50,36 C56,36 60,42 60,46 C60,42 64,36 70,36 C90,40 90,72 60,86 Z" fill="var(--gold)"/><path d="M60,84 V48 M60,66 L46,56 M60,66 L74,56" stroke="#2e5a43" stroke-width="2"/></g><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Липины</h3><div class="place">Нижний Новгород</div><p class="first"><span>Первое упоминание</span>—</p><p class="mean">От липы.</p><p class="arms">Исторического герба у семьи нет. Знак: липовый лист.</p></article><article class="fam f-i" style="--e:23"><div class="shield"><svg class="emblem e-ita" viewBox="0 0 120 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#23365c"/><g class="charge"><polygon points="60.0,36.0 65.0,58.0 84.0,46.0 72.0,65.0 94.0,70.0 72.0,75.0 84.0,94.0 65.0,82.0 60.0,104.0 55.0,82.0 36.0,94.0 48.0,75.0 26.0,70.0 48.0,65.0 36.0,46.0 55.0,58.0" fill="var(--gold)"/><polygon points="60.0,58.0 61.9,65.4 68.5,61.5 64.6,68.1 72.0,70.0 64.6,71.9 68.5,78.5 61.9,74.6 60.0,82.0 58.1,74.6 51.5,78.5 55.4,71.9 48.0,70.0 55.4,68.1 51.5,61.5 58.1,65.4" fill="#eef0ee"/></g><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Зоревы</h3><div class="place">Нижний Новгород</div><p class="first"><span>Первое упоминание</span>—</p><p class="mean">От «заря».</p><p class="arms">Исторического герба у семьи нет. Знак: утренняя звезда.</p></article><article class="fam f-i" style="--e:24"><div class="shield"><svg class="emblem e-ibe" viewBox="0 0 120 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#2f5d87"/><g class="charge"><circle cx="60" cy="66" r="18" fill="var(--gold)"/><path d="M82.0,66.0 L96.0,66.0" stroke="var(--gold)" stroke-width="4" stroke-linecap="round"/><path d="M80.3,74.4 L93.3,79.8" stroke="var(--gold)" stroke-width="4" stroke-linecap="round"/><path d="M75.6,81.6 L85.5,91.5" stroke="var(--gold)" stroke-width="4" stroke-linecap="round"/><path d="M68.4,86.3 L73.8,99.3" stroke="var(--gold)" stroke-width="4" stroke-linecap="round"/><path d="M60.0,88.0 L60.0,102.0" stroke="var(--gold)" stroke-width="4" stroke-linecap="round"/><path d="M51.6,86.3 L46.2,99.3" stroke="var(--gold)" stroke-width="4" stroke-linecap="round"/><path d="M44.4,81.6 L34.5,91.5" stroke="var(--gold)" stroke-width="4" stroke-linecap="round"/><path d="M39.7,74.4 L26.7,79.8" stroke="var(--gold)" stroke-width="4" stroke-linecap="round"/><path d="M38.0,66.0 L24.0,66.0" stroke="var(--gold)" stroke-width="4" stroke-linecap="round"/><path d="M39.7,57.6 L26.7,52.2" stroke="var(--gold)" stroke-width="4" stroke-linecap="round"/><path d="M44.4,50.4 L34.5,40.5" stroke="var(--gold)" stroke-width="4" stroke-linecap="round"/><path d="M51.6,45.7 L46.2,32.7" stroke="var(--gold)" stroke-width="4" stroke-linecap="round"/><path d="M60.0,44.0 L60.0,30.0" stroke="var(--gold)" stroke-width="4" stroke-linecap="round"/><path d="M68.4,45.7 L73.8,32.7" stroke="var(--gold)" stroke-width="4" stroke-linecap="round"/><path d="M75.6,50.4 L85.5,40.5" stroke="var(--gold)" stroke-width="4" stroke-linecap="round"/><path d="M80.3,57.6 L93.3,52.2" stroke="var(--gold)" stroke-width="4" stroke-linecap="round"/><circle cx="54" cy="62" r="2" fill="#7a1f2b"/><circle cx="66" cy="62" r="2" fill="#7a1f2b"/><path d="M53,72 q7,5 14,0" stroke="#7a1f2b" stroke-width="2" fill="none"/></g><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Солнцевы</h3><div class="place">Нижний Новгород</div><p class="first"><span>Первое упоминание</span>—</p><p class="mean">От прозвища «Солнце».</p><p class="arms">Исторического герба у семьи нет. Знак: солнце.</p></article><article class="fam f-i" style="--e:25"><div class="shield"><svg class="emblem e-ist" viewBox="0 0 120 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#7a1f2b"/><g class="charge"><g transform="rotate(-35 60 72)"><rect x="58" y="34" width="4" height="74" fill="var(--gold)"/><path d="M60,24 L68,38 H52 Z" fill="#eef0ee"/><path d="M60,104 l-8,8 M60,98 l-8,8 M60,104 l8,8 M60,98 l8,8" stroke="#eef0ee" stroke-width="2.4"/></g><g transform="rotate(0 60 72)"><rect x="58" y="34" width="4" height="74" fill="var(--gold)"/><path d="M60,24 L68,38 H52 Z" fill="#eef0ee"/><path d="M60,104 l-8,8 M60,98 l-8,8 M60,104 l8,8 M60,98 l8,8" stroke="#eef0ee" stroke-width="2.4"/></g><g transform="rotate(35 60 72)"><rect x="58" y="34" width="4" height="74" fill="var(--gold)"/><path d="M60,24 L68,38 H52 Z" fill="#eef0ee"/><path d="M60,104 l-8,8 M60,98 l-8,8 M60,104 l8,8 M60,98 l8,8" stroke="#eef0ee" stroke-width="2.4"/></g></g><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Стрельцовы</h3><div class="place">Пермь</div><p class="first"><span>Первое упоминание</span>—</p><p class="mean">От стрельцов — служилых людей.</p><p class="arms">Исторического герба у семьи нет. Знак: три стрелы.</p></article><article class="fam f-i" style="--e:26"><div class="shield"><svg class="emblem e-iis" viewBox="0 0 120 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#2e5a43"/><g class="charge"><defs><clipPath id="c2e5a4323365cpale"><path d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z"/></clipPath></defs><path d="M60,0 H120 V148 H60 Z" fill="#23365c" clip-path="url(#c2e5a4323365cpale)"/><rect x="56" y="30" width="8" height="82" rx="3" fill="#5b3a1f" stroke="var(--gold)" stroke-width="1.5"/><path d="M64,38 C84,36 94,48 92,66 C84,58 74,58 64,62 Z" fill="#eef0ee"/></g><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Плотниковы</h3><div class="place">Нижний Новгород</div><p class="first"><span>Первое упоминание</span>—</p><p class="mean">От плотника.</p><p class="arms">Исторического герба у семьи нет. Знак: топор.</p></article><article class="fam f-i" style="--e:27"><div class="shield"><svg class="emblem e-isu" viewBox="0 0 120 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#7a1f2b"/><g class="charge"><circle cx="60" cy="72" r="34" fill="#eef0ee"/><circle cx="60" cy="72" r="9" fill="#23365c"/><path d="M72.0,72.0 L91.0,79.9" stroke="#23365c" stroke-width="2"/><path d="M69.7,79.1 L80.4,96.6" stroke="#23365c" stroke-width="2"/><path d="M63.7,83.4 L62.1,103.9" stroke="#23365c" stroke-width="2"/><path d="M56.3,83.4 L42.9,99.0" stroke="#23365c" stroke-width="2"/><path d="M50.3,79.1 L30.3,83.8" stroke="#23365c" stroke-width="2"/><path d="M48.0,72.0 L29.0,64.1" stroke="#23365c" stroke-width="2"/><path d="M50.3,64.9 L39.6,47.4" stroke="#23365c" stroke-width="2"/><path d="M56.3,60.6 L57.9,40.1" stroke="#23365c" stroke-width="2"/><path d="M63.7,60.6 L77.1,45.0" stroke="#23365c" stroke-width="2"/><path d="M69.7,64.9 L89.7,60.2" stroke="#23365c" stroke-width="2"/></g><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Жерновы</h3><div class="place">Нижний Новгород</div><p class="first"><span>Первое упоминание</span>—</p><p class="mean">От жернова — мельничного камня.</p><p class="arms">Исторического герба у семьи нет. Знак: жернов.</p></article><article class="fam f-i" style="--e:28"><div class="shield"><svg class="emblem e-ipo" viewBox="0 0 120 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#23365c"/><g class="charge"><path d="M26,70 C40,50 70,48 88,70 C70,92 40,90 26,70 Z" fill="#eef0ee"/><path d="M86,70 L102,56 V84 Z" fill="#eef0ee"/><circle cx="40" cy="66" r="3" fill="#23365c"/><path d="M52,60 q4,10 0,20" stroke="#2f5d87" stroke-width="1.6" fill="none"/><path d="M62,60 q4,10 0,20" stroke="#2f5d87" stroke-width="1.6" fill="none"/><path d="M72,60 q4,10 0,20" stroke="#2f5d87" stroke-width="1.6" fill="none"/><circle cx="30" cy="46" r="3" fill="#eef0ee"/><circle cx="38" cy="38" r="3" fill="#eef0ee"/><circle cx="46" cy="32" r="3" fill="#eef0ee"/></g><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Рыбаковы</h3><div class="place">Нижний Новгород</div><p class="first"><span>Первое упоминание</span>—</p><p class="mean">От рыбака.</p><p class="arms">Исторического герба у семьи нет. Знак: рыба.</p></article><article class="fam f-i" style="--e:29"><div class="shield"><svg class="emblem e-ime" viewBox="0 0 120 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sh-field" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="#4b2a55"/><g class="charge"><rect x="38" y="28" width="44" height="8" rx="2" fill="var(--gold)"/><rect x="38" y="108" width="44" height="8" rx="2" fill="var(--gold)"/><path d="M44,36 H76 C76,56 64,64 64,72 C64,80 76,88 76,108 H44 C44,88 56,80 56,72 C56,64 44,56 44,36 Z" fill="#eef0ee"/><path d="M50,46 H70 C68,56 62,62 60,66 C58,62 52,56 50,46 Z M60,96 L72,104 H48 Z" fill="var(--gold)"/></g><path class="sh-edge" pathLength="1" d="M6,6 H114 V70 Q114,122 60,140 Q6,122 6,70 Z" fill="none"/></svg></div><h3>Часовщиковы</h3><div class="place"></div><p class="first"><span>Первое упоминание</span>—</p><p class="mean">От часовщика.</p><p class="arms">Исторического герба у семьи нет. Знак: песочные часы.</p></article></div>
+<p class="disclaimer">Это пример: семья, люди, находки и знаки на щитах вымышлены. На настоящем сайте семьи здесь будут ваши фамилии — знаки рисуются по смыслу фамилий и истории рода.</p></section>
+
+<section class="block reveal feed-sec">
+  <div class="block-head"><span class="block-no" aria-hidden="true"></span><h2>Дополнения от родных</h2></div>
+  <p class="ro-note">Здесь появляется всё, что родственники добавляют на семейном сайте.</p>
+  <ul class="feed" id="feed"></ul>
+</section>
+
+<section class="block reveal privacy-sec">
+  <div class="block-head"><span class="block-no" aria-hidden="true"></span><h2>Кто видит сайт и как исправить запись</h2></div>
+  <ul class="privacy">
+    <li><b>Это демонстрационный сайт</b> — семья вымышленная, он открыт для всех. Настоящие сайты семей видят только те, у кого есть ссылка, и в поисковиках их нет.</li>
+    <li><b>Добавить сведения может любой родственник</b> без регистрации. Запись сразу видна всем, у кого есть ссылка, с пометкой «не проверено», пока её не посмотрит владелец сайта.</li>
+    <li><b>Исправить или удалить запись</b> — свою или чужую — можно через владельца сайта: напишите тому, кто прислал вам ссылку.</li>
+    <li><b>Даты рождения живых родственников на сайте скрыты.</b> Пожалуйста, не добавляйте полные даты рождения детей, адреса и номера документов.</li>
+  </ul>
+</section>
+
+
+
+<section class="block reveal arch" id="archive">
+  <div class="block-head"><span class="block-no" aria-hidden="true"></span><h2>Что удалось найти в открытых архивах</h2></div>
+  <p class="byline">Отчёт ИИ-помощника, 18–19 октября 2026</p>
+  <p>Пример раздела: так на сайте семьи выглядит отчёт о поиске в открытых источниках. Все записи ниже вымышлены, ссылок на дела нет.</p>
+  <div class="tbl"><table><thead><tr><th>Кто</th><th>Где искали</th><th>Результат</th></tr></thead><tbody><tr><td>Ольшанский Никифор, ок. 1840 г. р.</td><td>Метрическая книга церкви Ростова Великого, 1871 (пример)</td><td>Запись о рождении сына Матвея. Отец — ямщик. <b>Совпадает с семейным преданием</b>.</td></tr><tr><td>Ольшанские Ростова</td><td>Списки жителей по улицам (пример)</td><td>В городе жили ещё две семьи Ольшанских. Родство пока не установлено.</td></tr><tr><td>Соколов Степан Афанасьевич</td><td>Метрическая книга, Вологда, 1909 (пример)</td><td>Запись о смерти, 41 год. Вдова — Ульяна Нестеровна.</td></tr><tr><td>Пчелинцева Раиса Прохоровна</td><td>Газета «Горьковская коммуна», 1946 (пример)</td><td>Заметка о многодетной матери, награждённой медалью.</td></tr><tr><td>Ольшанский Тихон Матвеевич, 1919</td><td>Базы «Память народа» и ОБД «Мемориал» (пример)</td><td>Наградной лист: медаль «За отвагу», 1944.</td></tr><tr><td>Рыбаков Леонид Олегович, 1911</td><td>Книга памяти (пример)</td><td>Сведения о судьбе в 1940 году. Нужно запросить дело.</td></tr><tr><td>Соколовы: Афанасий, Степан, Филипп</td><td>Открытые базы, веб-поиск (пример)</td><td>Не найдено. Есть только однофамильцы.</td></tr><tr><td>Светловы, Дубровины, Писцовы</td><td>Справочники «Весь Нижний Новгород» (пример)</td><td>Найдена аптека Светлова, 1913.</td></tr></tbody></table></div>
+</section>
+
+<section class="block reveal arch next-sec">
+  <div class="block-head"><span class="block-no" aria-hidden="true"></span><h2>Что запросить дальше</h2></div>
+  <div class="contrib"><p><b>Каждый может пополнить древо.</b> Ниже — архивы, где хранятся недостающие сведения о нашей семье: метрические книги, записи ЗАГС, военные документы. Любой из родных может сам отправить запрос в такой архив — по электронной почте или через Госуслуги, если вы прямой потомок.</p>
+  <p>Когда придёт ответ, откройте в древе карточку нужного человека и нажмите на неё. Выберите «Факт» или «Нового родственника», перепишите главное и укажите, откуда сведения: архив, номер фонда, описи и дела. Запись сразу увидят все.</p></div>
+  <ul class="next"><li><b>Вологда, рождения Матвея (1905) и Филиппа (1907).</b> Метрические книги до 1918 года хранятся в областном архиве: запрос по почте или в читальном зале (пример).</li><li><b>Ростов Великий, Ольшанские и Пчелинцевы.</b> Просмотреть метрические книги за 1870–1915 годы: венчание Матвея и Раисы, рождения детей (пример).</li><li><b>Кострома, Афанасий Соколов.</b> Исповедные ведомости и ревизские сказки — в областном архиве (пример).</li><li><b>Записи ЗАГС после 1918 года.</b> Браки Филиппа и Ираиды, Святослава, Германа и Эльвиры — через Госуслуги, «Повторные свидетельства и справки ЗАГС» (пример).</li><li><b>Военные годы:</b> Игнат Матвеевич (1927) и Тихон Матвеевич (1919). Искать на «Памяти народа» и в ОБД «Мемориал» по фамилии, имени и году рождения (пример).</li><li><b>Захар Макарович Дубровин, главный бухгалтер завода.</b> Личное дело — в архиве предприятия или городском архиве (пример).</li></ul>
+</section>
+</main>
+
+<div class="panel" id="panel" hidden role="dialog" aria-modal="true" aria-labelledby="pName">
+  <div class="panel-back" id="panelBack"></div>
+  <div class="panel-box">
+    <button type="button" class="panel-close" id="panelClose" aria-label="Закрыть">×</button>
+    <div class="p-sur" id="pSur"></div>
+    <h3 class="p-name" id="pName"></h3>
+    <div class="p-meta" id="pMeta"></div>
+    <h4>Дополнения</h4>
+    <ul class="plist" id="panelList"></ul>
+    <form id="addForm" class="addform edit-only" novalidate>
+      <h4>Добавить</h4>
+      <label for="fKind">Что вы добавляете</label>
+      <select id="fKind" name="kind"><option value="story">Воспоминание или история</option><option value="fact">Факт: даты, места, работа, награды</option><option value="correction">Исправление ошибки</option><option value="person">Нового родственника</option></select>
+      <div class="pfields">
+        <label for="fRel">Кем приходится этому человеку</label>
+        <select id="fRel" name="relation"><option>сын</option><option>дочь</option><option>муж</option><option>жена</option><option>отец</option><option>мать</option><option>брат</option><option>сестра</option><option>внук</option><option>внучка</option><option>другое</option></select>
+        <label for="fName">Фамилия, имя, отчество</label><input id="fName" name="name" maxlength="120" autocomplete="off" autocapitalize="words" enterkeyhint="next">
+        <div class="two"><div><label for="fDates">Годы жизни</label><input id="fDates" name="dates" maxlength="60" placeholder="1931 – 2010 (у живых год рождения не пишите)"></div>
+        <div><label for="fPlace">Где жил</label><input id="fPlace" name="place" maxlength="120" autocapitalize="words" enterkeyhint="next"></div></div>
+        <label for="fOcc">Род занятий</label><input id="fOcc" name="occupation" maxlength="120">
+      </div>
+      <label for="fText">Что вы знаете <span class="hint">— и откуда: помню сам, рассказ бабушки, документ</span></label><textarea id="fText" name="text" rows="4" maxlength="3000"></textarea>
+      <label for="fAuthor">Кто вы</label><input id="fAuthor" name="author" maxlength="80" placeholder="Юлия, внучка Николая" autocomplete="name" autocapitalize="words" enterkeyhint="next">
+      <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <p class="draft-note" id="draftNote" hidden>Черновик сохранён на этом устройстве.</p>
+      <button type="submit" id="fSend" class="primary">Сохранить</button>
+      <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+    </form>
+    <p class="ro-note">В примере дополнения отключены. На вашем сайте семьи родные смогут дописывать сведения прямо здесь.</p>
+  </div>
+</div>
+
+<footer>Пример «Летописи рода»: все люди, даты, места, гербы и находки вымышлены. Неуверенные прочтения отмечены знаком «?», как на настоящих сайтах семей.</footer>
+</div>
+<script>window.FAMILY_BASE={"geom": {"U": 392, "W": 352, "H": 180, "ROW": 340, "X0": 330, "Y0": 40}, "P": {"LAV": [0, 4.5, "k", ["Соколов", "Афанасий", "", "сапожник · Кострома"]], "YAK": [0, 8.35, "s", ["Ольшанский", "Никифор", "", "ямщик · Ростов Великий"]], "YAKW": [0, 9.35, "i", ["", "жена Никифора", "", "имя не указано"]], "FED": [0, 10.6, "m", ["Пчелинцев", "Прохор Ермолаевич", "? – 1925", "мельник"]], "FEK": [0, 11.6, "m", ["Пчелинцева", "Матрёна Ермолаевна", "? – 1915", ""]], "ISA": [0, 13.5, "r", ["", "Марк", "", ""]], "SON": [0, 14.5, "r", ["", "Маня", "", ""]], "IVA": [0, 15.75, "l", ["Дубровин", "Макар", "", ""]], "SOL": [0, 16.75, "l", ["Дубровина", "Маня", "", ""]], "LUB": [1, 3.25, "i", ["Соколова", "Акулина Макаровна", "", "первая жена?"]], "VAS": [1, 4.5, "k", ["Соколов", "Степан Афанасьевич", "† 1909", "сапожник · Вологда"]], "MAR": [1, 5.75, "i", ["Месяцева", "Ульяна Нестеровна", "† 1917", "крестьянка"]], "YAKS": [1, 6.85, "s", ["Ольшанский", "…ий Никифорович", "", "бондарь · имя на схеме оборвано"]], "YAKD": [1, 7.85, "s", ["Ольшанская", "Варвара Никифоровна", "", ""]], "ALS": [1, 8.85, "s", ["Ольшанский", "Матвей Никифорович", "1874 – 1923", "часовых дел мастер"]], "NAT": [1, 10.1, "m", ["Пчелинцева", "Раиса Прохоровна", "1884 – 1954", "мать-героиня"]], "FEDC": [1, 11.6, "m", ["Пчелинцевы", "ещё 3 сына и 4 дочери", "", "имена не указаны"]], "NOI": [1, 13.25, "r", ["Светлов", "Лазарь Давидович", "", "владелец аптеки"]], "EVR": [1, 14.25, "r", ["Светлова", "Ксения Марковна", "", "домохозяйка"]], "IOS": [1, 15.75, "l", ["Дубровин", "Захар Макарович", "", "главный бухгалтер завода"]], "ROZ": [1, 16.75, "i", ["Писцова-Дубровина", "Берта Захаровна", "", "домохозяйка"]], "ALX": [2, 1.0, "k", ["Соколов", "Матвей Степанович", "1905 – 19..", "крестьянин · Вологда"]], "KLA": [2, 2.0, "i", ["Соколова", "Прасковья", "", "ткачиха"]], "OLG": [2, 3.4, "k", ["Соколова", "Елизавета Степановна", "1874? – 1949", "крестьянка"]], "NIK": [2, 8.1, "k", ["Соколов", "Филипп Степанович", "1907 – 1996", "агроном"]], "NIN": [2, 9.1, "s", ["Ольшанская", "Ираида Матвеевна", "1909 – 1994", "агроном"]], "EMI": [2, 13.75, "r", ["Светлов", "Герман Наумович", "1925 – 2004", "в метрике — Лазаревич · художник"]], "ZHA": [2, 14.75, "l", ["Дубровина", "Эльвира Захаровна", "1928 – 2010", "библиотекарь"]], "VIK": [3, 0.0, "k", ["Соколов", "Игнат Матвеевич", "1927 –", "Самара"]], "LEN": [3, 1.0, "i", ["Соколова", "Галя", "", ""]], "TAM": [3, 2.2, "k", ["Соколова", "Нонна Матвеевна", "1929 –", ""]], "TAMH": [3, 3.2, "i", ["", "муж Нонны", "", "не указан"]], "IRI": [3, 5.6, "i", ["Конюхова", "Инесса Аполлоновна", "1937", "первая жена · инженер · Нижний Новгород"]], "LEV": [3, 6.85, "k", ["Соколов", "Святослав Филиппович", "1937 – 2016", "инженер"]], "RIT": [3, 8.1, "i", ["Рябинина", "Нюра Фроловна", "1940", "учительница · Дзержинск"]], "EVG": [3, 12.25, "k", ["Соколов", "Леонид Филиппович", "1953", "архитектор"]], "MRZ": [3, 13.25, "r", ["Светлова", "Алла Германовна", "1958", "преподаватель вуза"]], "ALR": [4, 0.0, "k", ["Соколов", "Константин Игнатович", "1952", "Самара"]], "YUD": [4, 1.0, "k", ["Соколова", "Тоня Игнатовна", "1956 –", "Самара"]], "LUD": [4, 2.7, "k", ["", "Тома", "", "дочь Нонны"]], "VER": [4, 5.6, "k", ["Конюхова", "Зинаида Святославовна", "1958", "Бор"]], "GEO": [4, 6.6, "i", ["Рогачёв", "Григорий", "1955", "инженер"]], "ARK": [4, 8.1, "k", ["Соколов", "Вадим Святославович", "1969", "инженер · Дзержинск"]], "MRA": [4, 9.1, "i", ["Соколова", "Алла", "1971", "инженер"]], "YUL": [4, 11.25, "k", ["Соколова", "Алёна Леонидовна", "1989", "врач · Германия"]], "DAN": [4, 12.25, "i", ["Городецкий", "Елисей Тихонович", "1992", "Германия"]], "ANT": [4, 13.75, "k", ["Соколов", "Тимофей Леонидович", "1991", "фермер · Арзамас"]], "KAT": [4, 14.75, "i", ["Корабельникова", "Евдокия Тихоновна", "1990", "бывшая жена · архитектор"]], "ALI": [5, 5.6, "k", ["Рогачёва", "Злата Григорьевна", "1980", "Прага"]], "LOL": [5, 6.6, "k", ["Рогачёва", "Милена Григорьевна", "1991", "Нижний Новгород"]], "ELE": [5, 8.6, "k", ["Соколова", "Полина Вадимовна", "1992", "Нижний Новгород"]], "MRT": [5, 11.25, "k", ["Городецкий", "Платон Елисеевич", "2019", "Германия"]], "ZOY": [5, 12.25, "k", ["Городецкая", "Ева Елисеевна", "2024", ""]], "ART": [5, 14.25, "k", ["Соколов", "Ярослав Тимофеевич", "07.05.2016", "Арзамас"]], "sEKA": [2, 19.7, "s", ["Ковалёва (Ольшанская)", "Евдокия Матвеевна", "1903 – 1988", "Нижний Новгород"]], "sPER": [2, 20.7, "i", ["Ковалёв", "Игнат Степанович", "1900 – 1985", "Нижний Новгород"]], "sYPE": [3, 18.2, "i", ["Ковалёва", "Тоня", "1935", "Нижний Новгород"]], "sNPE": [3, 19.2, "s", ["Ковалёв", "Филипп Игнатович", "1935", "Нижний Новгород"]], "sIBE": [3, 20.7, "s", ["Звонарёва (Ковалёва)", "Галина Игнатовна", "1933", "Нижний Новгород"]], "sSBE": [3, 21.7, "i", ["Звонарёв", "Тихон", "1931", "Нижний Новгород"]], "sOPE": [4, 18.2, "i", ["Ковалёва", "Елизавета", "1959", ""]], "sSPE": [4, 19.2, "s", ["Ковалёв", "Тихон Филиппович", "1959", ""]], "sABE": [4, 20.5, "i", ["Звонарёва", "Дарья", "1960", ""]], "sANB": [4, 21.5, "s", ["Звонарёв", "Глеб Тихонович", "1960", ""]], "sSVB": [4, 22.5, "i", ["Звонарёва", "Людмила", "1961", "жена Глеба?"]], "sYU2": [5, 18.7, "s", ["Ковалёва", "Алёна Тихоновна", "1984", ""]], "sPAB": [5, 21.0, "s", ["Звонарёв", "Арсений Глебович", "1987", ""]], "sVAL": [2, 25.2, "s", ["Ольшанская", "Серафима Матвеевна", "1905 – 1989", "Нижний Новгород"]], "sGES": [3, 24.7, "s", ["Ольшанский", "Григорий", "1929 – 1977", "Нижний Новгород"]], "sOTA": [3, 25.7, "i", ["Зорева", "Елизавета", "1930", "Нижний Новгород"]], "sELS": [4, 23.7, "s", ["Ольшанская", "Полина Григорьевна", "1956", ""]], "sAEF": [4, 24.7, "i", ["Липин", "Матвей", "1957", ""]], "sSES": [4, 25.8, "s", ["Ольшанский", "Тихон Григорьевич", "1951", ""]], "sNSE": [4, 26.8, "i", ["Ольшанская", "Раиса", "1958", ""]], "sGEF": [5, 24.2, "s", ["Липин", "Григорий Матвеевич", "1979", ""]], "sANS": [5, 25.8, "s", ["Ольшанская", "Василиса Тихоновна", "1985", ""]], "sLES": [5, 26.8, "s", ["Ольшанская", "Галя", "1976", "дочь Раисы"]], "sAN1": [2, 28.2, "s", ["Ольшанская", "Агафья", "1907 – 1914", "умерла 6 лет от дифтерии"]], "sLID": [2, 29.9, "s", ["Каменева (Ольшанская)", "Таисия Матвеевна", "1908 – 1992", "Пермь"]], "sALF": [2, 30.9, "i", ["Каменев", "Валентин Филиппович", "1907 – 1986", "Пермь"]], "sNAL": [3, 28.9, "s", ["Каменев", "Филипп Валентинович", "1933", "Нижний Новгород"]], "sSBR": [3, 29.9, "i", ["Солнцева", "Людмила", "1936", "Нижний Новгород"]], "sVAF": [3, 31.0, "s", ["Каменев", "Роман Валентинович", "1935", "Пермь"]], "sMSH": [3, 32.0, "i", ["Стрельцова", "Алла", "1939", "Пермь"]], "sAAL": [4, 28.9, "s", ["Каменев", "Константин Филиппович", "1963", ""]], "sNAD": [4, 29.9, "i", ["Каменева", "Лариса", "19?1", ""]], "sAND": [4, 31.5, "s", ["Каменев", "Глеб Романович", "", ""]], "sNTA": [5, 29.4, "s", ["Каменева", "Раиса Константиновна", "1985", ""]], "sELI": [2, 34.6, "s", ["Сосновская (Ольшанская)", "Феврония Матвеевна", "1911 – 1999", "г. Ветлуга"]], "sBAI": [2, 35.6, "i", ["Сосновский", "Филипп Миронович", "1909", "г. Ветлуга"]], "sVEB": [3, 33.1, "i", ["Сосновская", "Зинаида", "1935", "Нижний Новгород"]], "sLEB": [3, 34.1, "s", ["Сосновский", "Святослав Филиппович", "1934", "Нижний Новгород"]], "sNFI": [3, 35.7, "s", ["Колесова", "Раиса? Филипповна", "19?2", "Сортавала · имя прочитано не полностью"]], "sSFI": [3, 36.7, "i", ["Колесов", "Тихон", "1935", "Сортавала"]], "sELB": [4, 33.1, "i", ["Сосновская", "Полина", "1962", ""]], "sABA": [4, 34.1, "s", ["Сосновский", "Матвей Святославович", "1959", ""]], "sMBA": [4, 35.1, "s", ["Сосновский", "Денис Святославович", "1973", ""]], "sBFI": [4, 36.2, "s", ["Колесов", "Кондрат? Тихонович", "", "имя прочитано не полностью"]], "sNFG": [4, 37.2, "s", ["Колесов", "Филипп Тихонович", "1954?", ""]], "sEBA": [5, 33.6, "s", ["Сосновская", "Евдокия Матвеевна", "1983", ""]], "sEVG": [2, 39.7, "s", ["Грошева (Ольшанская)", "Ксения Матвеевна", "1914 – 1997", "Нижегородская обл."]], "sRUB": [2, 40.7, "i", ["Грошев", "Григорий Исаевич?", "1912", "Нижегородская обл."]], "sTPO": [3, 38.7, "s", ["Ключарёва (Грошева)", "Софья Григорьевна", "1940", "Нижний Новгород"]], "sKPO": [3, 39.7, "i", ["Ключарёв", "Всеволод", "1940", "Нижний Новгород"]], "sORU": [3, 40.9, "s", ["Грошева", "Елизавета Григорьевна", "1942", "Нижний Новгород"]], "sVIS": [3, 41.9, "i", ["Плотников", "Олег", "1944", "Нижний Новгород"]], "sAPO": [4, 38.2, "s", ["Ключарёва", "Дарья Всеволодовна", "1971", ""]], "sFSU": [4, 39.2, "i", ["Жернов", "Прохор", "1972", ""]], "sNPO": [4, 40.3, "s", ["Ключарёв", "Филипп Всеволодович", "1976", ""]], "sERU": [4, 41.4, "s", ["Грошева", "Ксения Олеговна", "1974", ""]], "sPOP": [2, 43.4, "i", ["Ключарёв", "Борислав Матвеевич", "19..", "Нижний Новгород"]], "sAN2": [2, 44.4, "s", ["Ольшанская", "Агафья Матвеевна", "1917 – 1959", "Нижний Новгород"]], "sPOR": [2, 45.4, "i", ["Рыбаков", "Леонид Олегович", "1911 – 1940", "Нижний Новгород"]], "sNKO": [3, 42.9, "s", ["Виноградова", "Раиса Леонидовна?", "1935", "Нижегородская обл."]], "sYKO": [3, 43.9, "i", ["Виноградов", "Богдан", "1937", "Нижегородская обл."]], "sASE": [3, 45.4, "s", ["Ольшанский", "Валентин Леонидович?", "1940", "Ярославль"]], "sLSE": [3, 46.4, "i", ["Ольшанская", "Таисия", "1939", "Ярославль"]], "sDKO": [4, 42.9, "s", ["Виноградов", "Савелий Богданович", "1964", ""]], "sAKO": [4, 43.9, "i", ["Виноградова-Часовщикова", "Регина", "1971", ""]], "sAS2": [4, 45.1, "s", ["Ольшанский", "Матвей Валентинович", "1963", ""]], "sYIL": [4, 46.2, "i", ["Житников", "Богдан", "1959", ""]], "sTIL": [4, 47.2, "s", ["Житникова (Ольшанская)", "Софья Валентиновна", "1966", ""]], "sEKO": [5, 43.4, "s", ["Виноградова", "Ксения Савельевна", "1991", ""]], "sAIL": [5, 46.2, "s", ["Житникова", "Варвара Богдановна", "1989", ""]], "sATI": [5, 47.2, "s", ["Житников", "Тимофей Богданович", "1991", ""]], "sSER": [2, 48.7, "s", ["Ольшанский", "Тихон Матвеевич", "1919 – 1992", "Нижний Новгород"]], "sLIV": [2, 49.7, "i", ["Ольшанская", "Таисия Макаровна", "1921", "Нижний Новгород"]], "sMKU": [3, 48.7, "s", ["Озерова", "Алла Тихоновна", "1949", "Нижний Новгород"]], "sEKU": [3, 49.7, "i", ["Озеров", "Леонид", "1951", "Нижний Новгород"]], "sAKU": [4, 48.2, "s", ["Озеров", "Глеб Леонидович", "1969", ""]], "sMAK": [4, 49.2, "i", ["Озерова", "Ульяна", "1971", ""]], "sSKU": [4, 50.3, "s", ["Озеров", "Тихон Леонидович", "1976", ""]], "sAKD": [5, 48.7, "s", ["Озерова", "Дарья Глебовна", "1990", ""]], "sTAN": [2, 51.8, "s", ["Ольшанская", "Софья («Сонечка»)", "1923 – 19..", "умерла в детстве?"]]}, "C": [["LAV", null, ["VAS"], ""], ["YAK", "YAKW", ["YAKS", "YAKD", "ALS"], ""], ["FED", "FEK", ["NAT", "FEDC"], ""], ["ISA", "SON", ["EVR"], ""], ["IVA", "SOL", ["IOS"], ""], ["LUB", "VAS", ["OLG"], ""], ["VAS", "MAR", ["ALX", "NIK"], ""], ["ALS", "NAT", ["sEKA", "sVAL", "sAN1", "sLID", "NIN", "sELI", "sEVG", "sAN2", "sSER", "sTAN"], ""], ["NOI", "EVR", ["EMI"], ""], ["IOS", "ROZ", ["ZHA"], ""], ["ALX", "KLA", ["VIK", "TAM"], ""], ["NIK", "NIN", ["LEV", "EVG"], ""], ["EMI", "ZHA", ["MRZ"], ""], ["VIK", "LEN", ["ALR", "YUD"], ""], ["TAM", "TAMH", ["LUD"], ""], ["IRI", "LEV", ["VER"], ""], ["LEV", "RIT", ["ARK"], ""], ["EVG", "MRZ", ["YUL", "ANT"], ""], ["VER", "GEO", ["ALI", "LOL"], ""], ["ARK", "MRA", ["ELE"], ""], ["YUL", "DAN", ["MRT", "ZOY"], ""], ["ANT", "KAT", ["ART"], "ex"], ["sEKA", "sPER", ["sNPE", "sIBE"], ""], ["sYPE", "sNPE", ["sSPE"], ""], ["sIBE", "sSBE", ["sANB"], ""], ["sOPE", "sSPE", ["sYU2"], ""], ["sABE", "sANB", ["sPAB"], ""], ["sANB", "sSVB", [], ""], ["sVAL", null, ["sGES"], ""], ["sGES", "sOTA", ["sELS", "sSES"], ""], ["sELS", "sAEF", ["sGEF"], ""], ["sSES", "sNSE", ["sANS"], ""], ["sNSE", null, ["sLES"], ""], ["sLID", "sALF", ["sNAL", "sVAF"], ""], ["sNAL", "sSBR", ["sAAL"], ""], ["sVAF", "sMSH", ["sAND"], ""], ["sAAL", "sNAD", ["sNTA"], ""], ["sELI", "sBAI", ["sLEB", "sNFI"], ""], ["sVEB", "sLEB", ["sABA", "sMBA"], ""], ["sNFI", "sSFI", ["sBFI", "sNFG"], ""], ["sELB", "sABA", ["sEBA"], ""], ["sEVG", "sRUB", ["sTPO", "sORU"], ""], ["sTPO", "sKPO", ["sAPO", "sNPO"], ""], ["sORU", "sVIS", ["sERU"], ""], ["sAPO", "sFSU", [], ""], ["sPOP", "sAN2", [], ""], ["sAN2", "sPOR", ["sNKO", "sASE"], ""], ["sNKO", "sYKO", ["sDKO"], ""], ["sASE", "sLSE", ["sAS2", "sTIL"], ""], ["sDKO", "sAKO", ["sEKO"], ""], ["sYIL", "sTIL", ["sAIL", "sATI"], ""], ["sSER", "sLIV", ["sMKU"], ""], ["sMKU", "sEKU", ["sAKU", "sSKU"], ""], ["sAKU", "sMAK", ["sAKD"], ""]], "sib": {"w": 600, "h": 372, "list": []}};window.FAMILY_ENTRIES=[{"id": "e1", "kind": "story", "person": "NAT", "text": "Бабушка Раиса рассказывала, что в голодный год все десять детей выжили — она меняла на хлеб своё приданое. Медаль «Мать-героиня» хранится у нас.", "author": "Алёна, правнучка", "created": 1760000000000, "verified": true}, {"id": "e2", "kind": "fact", "person": "ALS", "text": "Матвей Никифорович чинил часы на городской каланче в Ростове — об этом есть заметка в газете 1912 года.", "author": "Леонид Филиппович", "created": 1760300000000, "verified": true}, {"id": "e3", "kind": "story", "person": "NIK", "text": "Дед Филипп сажал лесополосы под Вологдой. Говорил: «Дерево переживёт нас всех — пусть и род так же».", "author": "Святослав, сын", "created": 1760600000000, "verified": false}, {"id": "e4", "kind": "correction", "person": "sEKA", "text": "Евдокия Матвеевна умерла в 1988 году, а не в 1987 — так на памятнике.", "author": "Ольга из Нижнего", "created": 1760900000000, "verified": true}, {"id": "e5", "kind": "fact", "person": "sSER", "text": "Тихон Матвеевич награждён медалью «За отвагу» в 1944 году, наградной лист найден на «Памяти народа».", "author": "Анна Озерова, внучка", "created": 1761200000000, "verified": false}];</script>
+<script>// Раскладка и отрисовка древа. Базовые люди стоят на заданных местах,
+// родственники, добавленные на сайте, встраиваются в общую схему автоматически.
+(function(){
+  var B = window.FAMILY_BASE;
+  var G = B.geom, U = G.U, W = G.W, H = G.H, ROW = G.ROW, X0 = G.X0, Y0 = G.Y0;
+  var ROMAN = ['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII'];
+  var IN_FAMILY = {'сын':1,'дочь':1,'брат':1,'сестра':1,'внук':1,'внучка':1};
+
+  // даты живых людей (год рождения без года смерти, после 1935) на открытом сайте не показываем
+  function showDates(){ return !!window.FAMILY_SHOW_DATES; }
+  // у этих людей год рождения показываем открыто — по просьбе владельца древа
+  var OPEN_DATES = {MRT:1, ZOY:1, YUL:1, EVG:1, MRZ:1, ANT:1};
+  function publicDates(d, id){
+    if (showDates() || OPEN_DATES[id] || !d) return d || '';
+    var years = String(d).match(/1[89]\d\d|20\d\d/g) || [];
+    if (/†/.test(d) || years.length >= 2) return d;
+    return years.length && +years[0] >= 1935 ? '' : d;
+  }
+  function esc(s){ return String(s == null ? '' : s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+  function splitName(full){
+    var w = String(full || '').trim().split(/\s+/);
+    if (w.length >= 3) return [w[0], w.slice(1).join(' ')];
+    if (w.length === 2 && /(ов|ев|ин|ын|ий|ой|ая|на|ова|ева|ина|ская|ский|ман|ич)$/i.test(w[0])) return [w[0], w[1]];
+    return ['', w.join(' ')];
+  }
+
+  function build(entries){
+    var P = {}, order = [];
+    Object.keys(B.P).forEach(function(id){
+      var p = B.P[id];
+      P[id] = {id:id, gen:p[0], x:p[1], fam:p[2], lines:p[3], w: id === 'SIB' ? B.sib.w : W, h: id === 'SIB' ? B.sib.h : H};
+      order.push(id);
+    });
+    var C = B.C.map(function(c){ return {a:c[0], b:c[1], kids:c[2].slice(), kind:c[3]}; });
+    var links = [];
+
+    function parentCouple(id){ for (var i = 0; i < C.length; i++) if (C[i].kids.indexOf(id) >= 0 && C[i].kind !== 'sib') return C[i]; return null; }
+    function ownCouples(id){ return C.filter(function(c){ return (c.a === id || c.b === id) && c.kind !== 'sib'; }); }
+    function rowNodes(gen){ return order.filter(function(id){ return P[id].gen === gen; }); }
+    function free(gen, x, w, skip){
+      var half = w / U / 2;
+      return rowNodes(gen).every(function(id){
+        if (id === skip) return true;
+        var q = P[id], qh = q.w / U / 2;
+        return x + half + 0.08 <= q.x - qh || x - half - 0.08 >= q.x + qh;
+      });
+    }
+    function place(gen, want){
+      for (var d = 0; d <= 12; d += 0.25) {
+        if (free(gen, want + d, W)) return want + d;
+        if (d && free(gen, want - d, W)) return want - d;
+      }
+      var xs = rowNodes(gen).map(function(id){ return P[id].x; });
+      return (xs.length ? Math.max.apply(null, xs) : want) + 1.1;
+    }
+
+    (entries || []).filter(function(e){ return e.kind === 'person' && e.name; })
+      .sort(function(a, b){ return (a.created || 0) - (b.created || 0); })
+      .forEach(function(e){
+        var anchor = P[e.person];
+        if (!anchor) return;
+        var id = 'e:' + e.id, rel = e.relation || 'другое', nm = splitName(e.name);
+        var note = [e.occupation, e.place].filter(Boolean).join(' · ');
+        var n = {id:id, added:true, author:e.author, fam: IN_FAMILY[rel] ? (anchor.fam === 'i' ? 'k' : anchor.fam) : 'i',
+                 lines:[nm[0], nm[1], e.dates || '', note], w:W, h:H, rel:rel};
+        var gen = anchor.gen, want = anchor.x + 1, pc;
+
+        if (rel === 'сын' || rel === 'дочь') {
+          gen = anchor.gen + 1;
+          var own = ownCouples(e.person), c = own[own.length - 1];
+          if (!c) { c = {a:e.person, b:null, kids:[], kind:''}; C.push(c); }
+          var mx = c.b ? (P[c.a].x + P[c.b].x) / 2 : P[c.a].x;
+          want = mx + c.kids.length * 0.5 - 0.25;
+          c.kids.push(id);
+        } else if (rel === 'муж' || rel === 'жена') {
+          C.push({a:e.person, b:id, kids:[], kind:''});
+        } else if (rel === 'отец' || rel === 'мать') {
+          gen = anchor.gen - 1;
+          pc = parentCouple(e.person);
+          if (pc && !pc.b) { pc.b = id; want = P[pc.a].x + 1; }
+          else if (!pc) { C.push({a:id, b:null, kids:[e.person], kind:''}); want = anchor.x; }
+          else { gen = anchor.gen; links.push({from:e.person, to:id, label:rel}); }
+        } else if (rel === 'брат' || rel === 'сестра') {
+          pc = parentCouple(e.person);
+          if (pc) pc.kids.push(id);
+          else {
+            var s = C.filter(function(c){ return c.kind === 'sib' && c.kids.indexOf(e.person) >= 0; })[0];
+            if (s) s.kids.push(id); else C.push({a:null, b:null, kids:[e.person, id], kind:'sib'});
+          }
+        } else if (rel === 'внук' || rel === 'внучка') {
+          gen = anchor.gen + 2; want = anchor.x;
+          links.push({from:e.person, to:id, label:rel, down:true});
+        } else {
+          links.push({from:e.person, to:id, label:'родственник'});
+        }
+        n.gen = gen;
+        n.x = place(gen, want);
+        P[id] = n; order.push(id);
+      });
+
+    // строки и колонки могли уйти в минус — сдвигаем всё
+    var minG = Math.min.apply(null, order.map(function(id){ return P[id].gen; }));
+    var minX = Math.min.apply(null, order.map(function(id){ return P[id].x - P[id].w / U / 2; }));
+    var dx = minX < -0.5 ? -0.5 - minX : 0;
+    order.forEach(function(id){ P[id].gen -= minG; P[id].x += dx; });
+    return {P:P, C:C, links:links, order:order};
+  }
+
+  function render(m){
+    var P = m.P;
+    function cx(id){ return X0 + P[id].x * U; }
+    function top(id){ return Y0 + P[id].gen * ROW; }
+    function marker(c){
+      if (!c.b) return [cx(c.a), top(c.a) + H];
+      return [(cx(c.a) + cx(c.b)) / 2, top(c.a) + H / 2];
+    }
+    // уровни шин детей, чтобы линии разных семей не сливались
+    var bands = {}, level = [];
+    m.C.forEach(function(c, i){
+      if (c.kind === 'sib' || !c.kids.length) return;
+      var g = P[c.a].gen, xs = c.kids.map(cx).concat([marker(c)[0]]);
+      (bands[g] = bands[g] || []).push([Math.min.apply(null, xs), Math.max.apply(null, xs), i]);
+    });
+    Object.keys(bands).forEach(function(g){
+      var placed = [];
+      bands[g].sort(function(a, b){ return a[0] - b[0]; }).forEach(function(s){
+        var lv = 0;
+        while (placed.some(function(p){ return p[2] === lv && !(s[1] < p[0] - 10 || s[0] > p[1] + 10); })) lv++;
+        placed.push([s[0], s[1], lv]); level[s[2]] = lv;
+      });
+    });
+
+    var links = [], rings = [];
+    m.C.forEach(function(c, i){
+      if (c.kind === 'sib') {
+        var ys = Math.min.apply(null, c.kids.map(top)) - 34, xs = c.kids.map(cx);
+        var gs = P[c.kids[0]].gen;
+        links.push('<path class="kin sibl" pathLength="1" style="--g:' + gs + '" d="M' + Math.min.apply(null, xs).toFixed(1) + ',' + ys + ' H' + Math.max.apply(null, xs).toFixed(1) + c.kids.map(function(k){ return ' M' + cx(k).toFixed(1) + ',' + ys + ' V' + top(k); }).join('') + '"/>');
+        return;
+      }
+      var mk = marker(c), mx = mk[0], my = mk[1], g = P[c.a].gen;
+      if (c.b) {
+        var l = Math.min(cx(c.a), cx(c.b)) + W / 2, r = Math.max(cx(c.a), cx(c.b)) - W / 2;
+        links.push('<path class="wed' + (c.kind === 'ex' ? ' ex' : '') + '" pathLength="1" style="--g:' + g + '" d="M' + l.toFixed(1) + ',' + my + ' H' + r.toFixed(1) + '"/>');
+        rings.push(c.kind === 'ex'
+          ? '<g class="ring ex" style="--g:' + g + '"><circle cx="' + (mx - 5).toFixed(1) + '" cy="' + my + '" r="9"/><circle cx="' + (mx + 9).toFixed(1) + '" cy="' + my + '" r="9"/><text class="exl" x="' + mx.toFixed(1) + '" y="' + (my - H / 2 - 12) + '">бывший брак</text></g>'
+          : '<g class="ring" style="--g:' + g + '"><circle cx="' + (mx - 6).toFixed(1) + '" cy="' + my + '" r="9"/><circle cx="' + (mx + 6).toFixed(1) + '" cy="' + my + '" r="9"/></g>');
+      }
+      var bus = Y0 + g * ROW + H + 50 + (level[i] || 0) * 24;
+      c.kids.forEach(function(k){
+        links.push('<path class="kin" data-kid="' + esc(k) + '" data-par="' + esc(c.a) + (c.b ? ' ' + esc(c.b) : '') + '" pathLength="1" style="--g:' + P[k].gen + '" d="M' + mx.toFixed(1) + ',' + (my + (c.b ? 9 : 0)) + ' V' + bus + ' H' + cx(k).toFixed(1) + ' V' + top(k) + '"/>');
+      });
+    });
+    m.links.forEach(function(L){
+      var a = L.from, b = L.to, d, lx, ly;
+      if (L.down) {
+        var mid = top(a) + H + (top(b) - top(a) - H) / 2;
+        d = 'M' + cx(a).toFixed(1) + ',' + (top(a) + H) + ' V' + mid + ' H' + cx(b).toFixed(1) + ' V' + top(b);
+        lx = (cx(a) + cx(b)) / 2; ly = mid - 10;
+      } else {
+        var y = top(a) + H / 2, l = Math.min(cx(a), cx(b)) + W / 2, r = Math.max(cx(a), cx(b)) - W / 2;
+        d = 'M' + l.toFixed(1) + ',' + y + ' H' + r.toFixed(1); lx = (l + r) / 2; ly = y - 14;
+      }
+      links.push('<path class="kin dash" pathLength="1" style="--g:' + P[b].gen + '" d="' + d + '"/><text class="exl" x="' + lx.toFixed(1) + '" y="' + ly + '">' + esc(L.label) + '</text>');
+    });
+
+    var nodes = m.order.map(function(id, idx){
+      var p = P[id], w = p.w, h = p.h, left = cx(id) - w / 2, y = top(id), c = cx(id);
+      var o = '<g class="node f-' + p.fam + (p.added ? ' added' : '') + '" data-pid="' + esc(id) + '" style="--g:' + p.gen + ';--i:' + idx + '">' +
+        '<rect class="card" x="' + left.toFixed(1) + '" y="' + y + '" width="' + w + '" height="' + h + '" rx="6"/>' +
+        '<rect class="stripe" x="' + left.toFixed(1) + '" y="' + y + '" width="' + w + '" height="9" rx="2"/>';
+      if (id === 'SIB') {
+        o += '<text aria-hidden="true" class="sur" x="' + c.toFixed(1) + '" y="' + (y + 48) + '">Ольшанские</text><text aria-hidden="true" class="note" x="' + c.toFixed(1) + '" y="' + (y + 82) + '">сёстры и брат Ираиды</text>';
+        B.sib.list.forEach(function(s, k){
+          var tx = left + 40 + (k % 2) * (w / 2), ty = y + 140 + Math.floor(k / 2) * 60;
+          o += '<text aria-hidden="true" class="sib" x="' + tx.toFixed(1) + '" y="' + ty + '">' + esc(s[0]) + '</text><text aria-hidden="true" class="sibd" x="' + tx.toFixed(1) + '" y="' + (ty + 28) + '">' + esc(s[1]) + '</text>';
+        });
+      } else {
+        var L = [p.lines[0], p.lines[1], publicDates(p.lines[2], p.id), p.lines[3]], ty = y + 46;
+        if (L[0]) o += '<text aria-hidden="true" class="sur fit" x="' + c.toFixed(1) + '" y="' + ty + '">' + esc(L[0]) + '</text>';
+        o += '<text aria-hidden="true" class="name fit" x="' + c.toFixed(1) + '" y="' + (ty + 40) + '">' + esc(L[1]) + '</text>';
+        if (L[2]) o += '<text aria-hidden="true" class="date fit" x="' + c.toFixed(1) + '" y="' + (ty + 76) + '">' + esc(L[2]) + '</text>';
+        if (L[3]) o += '<text aria-hidden="true" class="note fit" x="' + c.toFixed(1) + '" y="' + (ty + (L[2] ? 110 : 76)) + '">' + esc(L[3]) + '</text>';
+        if (p.added) o += '<text aria-hidden="true" class="newtag" x="' + (left + 14).toFixed(1) + '" y="' + (y + 34) + '">новое</text>';
+      }
+      return o + '</g>';
+    });
+
+    var maxG = Math.max.apply(null, m.order.map(function(id){ return P[id].gen; }));
+    var maxX = Math.max.apply(null, m.order.map(function(id){ return P[id].x + P[id].w / U / 2; }));
+    var gens = '';
+    for (var g = 0; g <= maxG; g++) gens += '<text class="genl" x="70" y="' + (Y0 + g * ROW + H / 2 + 18) + '">' + (ROMAN[g] || g + 1) + '</text>';
+    var wmax = Math.max(X0 + 17.6 * U, X0 + maxX * U + 60), hmax = Y0 + maxG * ROW + H + 60;
+    return '<svg class="tree" viewBox="0 0 ' + Math.round(wmax) + ' ' + hmax + '" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Генеалогическое древо: ' + m.order.length + ' карточек. Нажмите Tab, чтобы перейти по людям">' +
+      '<g class="gens" aria-hidden="true">' + gens + '</g><g class="links" aria-hidden="true">' + links.join('') + '</g><g class="rings" aria-hidden="true">' + rings.join('') + '</g><g class="nodes">' + nodes.join('') + '</g></svg>';
+  }
+
+  // длинные строки: сначала уменьшаем кегль (не больше чем до 80%), потом обрезаем с многоточием
+  function fit(svg){
+    // повторный вызов (после загрузки шрифтов) сначала сбрасывает прошлую подгонку
+    svg.querySelectorAll('text.fit').forEach(function(t){
+      t.style.removeProperty('font-size'); t.removeAttribute('textLength'); t.removeAttribute('lengthAdjust');
+      // меряем рамку текста: она шире «длины текста» на выносные элементы букв и совпадает с тем, что видно
+      var max = W - 56, full = t.textContent, len;
+      try { len = t.getBBox().width; } catch(e) { return; }
+      if (!len || len <= max) return;
+      var fs = parseFloat(getComputedStyle(t).fontSize), r = Math.max(.66, max / len);
+      t.style.fontSize = (fs * r).toFixed(1) + 'px';
+      var len2 = t.getBBox().width;
+      if (len2 <= max) return;
+      // имя в родословной не обрезаем: если и после уменьшения не влезает — слегка сжимаем по ширине
+      t.setAttribute('textLength', (t.getComputedTextLength() * max / len2).toFixed(1)); t.setAttribute('lengthAdjust', 'spacingAndGlyphs');
+    });
+  }
+
+  function people(m){
+    var out = {};
+    m.order.forEach(function(id){
+      var p = m.P[id];
+      if (id === 'SIB') out[id] = {sur:'Ольшанские', name:'сёстры и брат Ираиды', dates:'', note:B.sib.list.map(function(s){ return s[0] + ' ' + s[1]; }).join(', ')};
+      else out[id] = {sur:p.lines[0], name:p.lines[1], dates:publicDates(p.lines[2], id), note:[p.lines[3], p.added ? (p.rel + ' · добавил(а): ' + (p.author || '')) : ''].filter(Boolean).join(' · ')};
+    });
+    return out;
+  }
+
+  window.FamilyTree = {
+    fit: fit,
+    draw: function(host, entries){
+      var m = build(entries);
+      host.innerHTML = render(m);
+      var svg = host.querySelector('svg');
+      fit(svg);
+      window.FAMILY_PEOPLE = people(m);
+      var stub = {YAKW:1, FEDC:1, TAMH:1};
+      var n = m.order.filter(function(id){ return !stub[id]; }).length + B.sib.list.length;
+      var gens = Math.max.apply(null, m.order.map(function(id){ return m.P[id].gen; })) + 1;
+      window.FAMILY_STATS = {people: n, generations: gens};
+      return svg;
+    }
+  };
+})();
+</script>
+<script>(function(){
+  var $ = function(id){ return document.getElementById(id); };
+  var page = $('page'), c = $('canvas'), sc = $('scroller');
+  FamilyTree.draw(c, window.FAMILY_ENTRIES);
+
+  // цифры на первом экране: один раз плавно дорастают до значения
+  var counted = false;
+  function count(el, n){
+    if (!el) return;
+    if (counted || matchMedia('(prefers-reduced-motion: reduce)').matches) { el.textContent = n; return; }
+    var t0 = performance.now() + 400, D = 900;
+    (function step(t){ var k = Math.min(1, Math.max(0, (t - t0) / D)); el.textContent = Math.round(n * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); })(performance.now());
+  }
+  function facts(){ var s = window.FAMILY_STATS || {}; if (s.people) count($('fPeople'), s.people); if (s.generations) count($('fGens'), s.generations); counted = true; }
+  facts();
+
+  // сколько фамилий в древе: Соколов/Соколова → один род; новые фамилии от родных тоже считаются
+  function clans(){
+    var P = window.FAMILY_PEOPLE || {}, set = {};
+    Object.keys(P).forEach(function(id){
+      String(P[id].sur || '').split('-').forEach(function(w){
+        w = w.trim().toLowerCase(); if (!w || /\s/.test(w)) return;
+        var m = w.match(/^(.+?)(ский|ская|цкий|цкая|ин|ина|ын|ына|ов|ова|ев|ева|ёв|ёва)$/);
+        if (m) set[m[1] + m[2].replace(/а$/, '').replace('ская', 'ский').replace('цкая', 'цкий')] = 1;
+        else if (!/[аеёиоуыэюяй]$/.test(w)) set[w] = 1;
+      });
+    });
+    var n = Object.keys(set).length, el = $('fFams'), wd = $('fFamsWord');
+    if (el && n) el.textContent = n;
+    if (wd && n) { var a = n % 10, b = n % 100; wd.textContent = a === 1 && b !== 11 ? 'фамилия' : a >= 2 && a <= 4 && (b < 12 || b > 14) ? 'фамилии' : 'фамилий'; }
+  }
+
+  // масштаб схемы: целиком и три ступени увеличения (в долях ширины схемы)
+  var LEVELS = [0, .33, .5, .8], NAMES = ['Целиком', 'Крупнее', 'Крупно', 'Очень крупно'], level = 0;
+  var lastW = 0;
+  function levelPx(n){ var s = c.querySelector('svg'); return Math.round((s ? s.viewBox.baseVal.width : 7200) * LEVELS[n]); }
+  function setLevel(n, keepCenter){
+    n = Math.max(0, Math.min(LEVELS.length - 1, n));
+    var before = c.offsetWidth, mid = (sc.scrollLeft + sc.clientWidth / 2) / (before || 1);
+    level = n; lastW = 0;
+    c.style.width = n ? levelPx(n) + 'px' : '';
+    c.classList.toggle('big', n > 0);
+    $('zoomLevel').textContent = NAMES[n];
+    $('zoomOut').disabled = n === 0; $('zoomIn').disabled = n === LEVELS.length - 1;
+    if (keepCenter !== false) sc.scrollLeft = mid * c.offsetWidth - sc.clientWidth / 2;
+    try { localStorage.setItem('zoomLevel', String(n)); } catch(e) {}
+    mini();
+  }
+  $('zoomIn').onclick = function(){ setLevel(level + 1); };
+  $('zoomOut').onclick = function(){ setLevel(level - 1); };
+
+  // мини-карта: где мы сейчас на большой схеме
+  var mm = $('minimap'), mmIn = $('mmIn'), mmView = $('mmView');
+  function mini(){
+    mm.hidden = level === 0;
+    if (mm.hidden) return;
+    var w = c.offsetWidth || 1;
+    mmView.style.left = (sc.scrollLeft / w * 100) + '%';
+    mmView.style.width = Math.min(100, sc.clientWidth / w * 100) + '%';
+  }
+  sc.addEventListener('scroll', mini, {passive: true});
+  mm.addEventListener('click', function(e){
+    var r = mm.getBoundingClientRect(), f = (e.clientX - r.left) / r.width;
+    sc.scrollTo({left: f * c.offsetWidth - sc.clientWidth / 2, behavior: 'smooth'});
+  });
+
+  // копии схемы в лупе и мини-карте скрыты от экранного диктора и от Tab
+  function quiet(copy){ copy.setAttribute('aria-hidden', 'true'); copy.querySelectorAll('[tabindex]').forEach(function(n){ n.removeAttribute('tabindex'); }); }
+
+  // лупа — только для мыши
+  var lens = $('lens'), lin = $('lensIn'), lb = $('lensbtn'), copy = null, on = true;
+  function src(){ return c.querySelector('svg'); }
+  var lastFound = null, lineOn = false;
+  window.refreshLens = function(){
+    if (lastFound) { var f = c.querySelector('.node[data-pid="' + lastFound + '"]'); if (f) { f.classList.add('found'); if (lineOn && !f.closest('svg').classList.contains('has-line')) lineage(lastFound); } }
+    lin.textContent = ''; copy = src().cloneNode(true); quiet(copy); lin.appendChild(copy); lastW = 0;
+    mmIn.textContent = ''; var m = src().cloneNode(true); m.removeAttribute('id'); quiet(m); mmIn.appendChild(m);
+    if (level && Math.abs(c.offsetWidth - levelPx(level)) > 1) setLevel(level, true); // ширина схемы изменилась после перерисовки
+    facts();
+    clans();
+  };
+  window.refreshLens();
+  lb.onclick = function(){ on = !on; lb.setAttribute('aria-pressed', on); if (!on) lens.hidden = true;
+    try { localStorage.setItem('lens', on ? '1' : '0'); } catch(e) {} };
+  try { if (localStorage.getItem('lens') === '0') lb.onclick(); } catch(e) {}
+
+  // подсказка лупы исчезает после первого использования
+  function hideLensHint(){ document.querySelectorAll('.lens-hint.mouse-only').forEach(function(h){ h.classList.add('seen'); }); }
+  try { if (localStorage.getItem('lensSeen')) hideLensHint(); } catch(e) {}
+
+  // лупа: одно обновление на кадр, ширину копии меняем только при смене масштаба
+  var pend = null, raf = 0;
+  function move(e){
+    if (!on || !copy || e.pointerType !== 'mouse') return;
+    if (!move.seen) { move.seen = 1; try { localStorage.setItem('lensSeen', '1'); } catch(er) {} setTimeout(hideLensHint, 4000); }
+    pend = e; if (!raf) raf = requestAnimationFrame(frame);
+  }
+  function frame(){
+    raf = 0; var e = pend; if (!e) return;
+    showAt(e.clientX, e.clientY, false);
+  }
+  // touch: лупа стоит над пальцем, чтобы палец не закрывал увеличенное место
+  function showAt(cx, cy, touch){
+    var s = src(), r = s.getBoundingClientRect(), x = cx - r.left, y = cy - r.top;
+    if (x < 0 || y < 0 || x > r.width || y > r.height) { lens.hidden = true; return; }
+    var vb = s.viewBox.baseVal.width, z = Math.max(touch ? 1.8 : 1.3, (level ? 1.1 : .7) * vb / r.width);
+    lens.hidden = false; var R = lens.offsetWidth / 2, w = Math.round(r.width * z);
+    if (w !== lastW) { copy.style.width = w + 'px'; lastW = w; }
+    var lx = cx - R, ly = cy - R;
+    if (touch) {
+      // над пальцем; если не влезает — под ним; на низком экране (телефон боком) — сбоку от пальца
+      ly = cy - 2 * R - 36;
+      if (ly < 8) ly = cy + 48;
+      if (ly + 2 * R > innerHeight - 8) { ly = cy - R; lx = cx > innerWidth / 2 ? cx - 2 * R - 48 : cx + 48; }
+      lx = Math.max(8, Math.min(innerWidth - 2 * R - 8, lx));
+      ly = Math.max(8, Math.min(innerHeight - 2 * R - 8, ly));
+    }
+    lens.style.transform = 'translate(' + lx + 'px,' + ly + 'px)';
+    lin.style.transform = 'translate(' + (R - x * z) + 'px,' + (R - y * z) + 'px)';
+  }
+  c.addEventListener('pointermove', move);
+  c.addEventListener('pointerleave', function(e){ if (e.pointerType === 'mouse') { pend = null; lens.hidden = true; } });
+  c.addEventListener('pointerdown', function(e){ if (e.pointerType === 'mouse') { pend = null; lens.hidden = true; } });
+
+  // лупа пальцем: нажать и подержать на схеме, затем вести палец; обычное листание не мешает
+  var hold = 0, t0 = null, tLens = false, skipClick = false;
+  function tEnd(){ clearTimeout(hold); t0 = null; if (tLens) { tLens = false; lens.hidden = true; c.classList.remove('lensing'); } }
+  c.addEventListener('touchstart', function(e){
+    tEnd();
+    if (!on || !copy || e.touches.length !== 1) return;
+    var t = e.touches[0]; t0 = {x: t.clientX, y: t.clientY};
+    hold = setTimeout(function(){
+      if (!t0) return;
+      tLens = true; skipClick = true; c.classList.add('lensing'); showAt(t0.x, t0.y, true);
+      if (!move.seen) { move.seen = 1; try { localStorage.setItem('lensSeen', '1'); } catch(er) {} }
+      try { if (navigator.vibrate) navigator.vibrate(8); } catch(er) {}
+    }, 300);
+  }, {passive: true});
+  c.addEventListener('touchmove', function(e){
+    var t = e.touches[0];
+    if (tLens) { if (e.cancelable) e.preventDefault(); showAt(t.clientX, t.clientY, true); return; }
+    if (t0 && Math.abs(t.clientX - t0.x) + Math.abs(t.clientY - t0.y) > 10) { clearTimeout(hold); t0 = null; }
+  }, {passive: false});
+  c.addEventListener('touchend', tEnd);
+  c.addEventListener('touchcancel', tEnd);
+  // после лупы касание не открывает карточку и не вызывает меню «копировать»
+  c.addEventListener('click', function(e){ if (skipClick) { skipClick = false; e.stopPropagation(); e.preventDefault(); } }, true);
+  c.addEventListener('touchstart', function(){ skipClick = false; }, {passive: true, capture: true});
+  c.addEventListener('contextmenu', function(e){ if (tLens || skipClick) e.preventDefault(); });
+
+
+  // на телефоне по умолчанию «Крупно», если масштаб ещё не выбирали
+  var coarse = matchMedia('(pointer: coarse)').matches, def = coarse ? 2 : 0;
+  try { var saved = localStorage.getItem('zoomLevel'); setLevel(saved !== null ? +saved : def, false); } catch(e) { setLevel(def, false); }
+  if (coarse && level > 0) { var first = c.querySelector('.node[data-pid]'); if (first) { var fr = first.getBoundingClientRect(), sr0 = sc.getBoundingClientRect(); sc.scrollLeft += fr.left - sr0.left - 24; mini(); } }
+
+  // «Ваша линия»: от найденного человека вверх к предкам
+  function lineage(pid){
+    var svg = c.querySelector('svg'); if (!svg) return;
+    svg.querySelectorAll('.lineage,.anc').forEach(function(n){ n.classList.remove('lineage', 'anc'); n.style.removeProperty('--d'); });
+    var q = [[pid, 0]], seen = {}, depth = 0, top = pid; seen[pid] = 1;
+    while (q.length) {
+      var it = q.shift();
+      svg.querySelectorAll('path.kin[data-kid="' + it[0] + '"]').forEach(function(p){
+        p.classList.add('lineage'); p.style.setProperty('--d', it[1]);
+        (p.getAttribute('data-par') || '').split(' ').forEach(function(a){
+          if (a && !seen[a]) {
+            seen[a] = 1; q.push([a, it[1] + 1]);
+            if (it[1] + 1 > depth) { depth = it[1] + 1; top = a; }
+            var n = svg.querySelector('.node[data-pid="' + a + '"]'); if (n) { n.classList.add('anc'); n.style.setProperty('--d', it[1] + 1); }
+          }
+        });
+      });
+    }
+    svg.classList.toggle('has-line', depth > 0);
+    var note = $('lineNote');
+    if (note) {
+      note.hidden = !depth;
+      var P = (window.FAMILY_PEOPLE || {})[top] || {};
+      note.querySelector('span').textContent = 'Ваша линия: ' + depth + ' поколен' + (depth === 1 ? 'ие' : depth < 5 ? 'ия' : 'ий') + ', самый ранний предок — ' + ((P.sur ? P.sur + ' ' : '') + (P.name || '')).trim();
+    }
+  }
+  $('lineOff').onclick = function(){ lineOn = false; var s = c.querySelector('svg'); if (s) s.classList.remove('has-line'); $('lineNote').hidden = true; window.refreshLens(); };
+
+  // перелёт к человеку: увеличить, плавно прокрутить, подсветить, открыть карточку
+  var focusTimer, RM = matchMedia('(prefers-reduced-motion: reduce)').matches, BH = RM ? 'auto' : 'smooth';
+  window.familyFocus = function(pid, opts){
+    clearTimeout(focusTimer);
+    if (level < 2) setLevel(2, false);
+    requestAnimationFrame(function(){
+      var g = c.querySelector('.node[data-pid="' + pid + '"]'); if (!g) return;
+      var r = g.getBoundingClientRect(), sr = sc.getBoundingClientRect();
+      sc.scrollTo({left: sc.scrollLeft + (r.left + r.width / 2) - (sr.left + sr.width / 2), behavior: BH});
+      window.scrollTo({top: window.scrollY + r.top - innerHeight / 2 + r.height / 2, behavior: BH});
+      c.querySelectorAll('.node.found').forEach(function(n){ n.classList.remove('found'); });
+      g.classList.add('found'); lastFound = pid; lineOn = true; lineage(pid); window.refreshLens();
+      if (opts && opts.noOpen) return;
+      focusTimer = setTimeout(function(){ if (window.familyOpen) window.familyOpen(pid); }, RM ? 600 : 2400);
+      sc.addEventListener('pointerdown', function(){ clearTimeout(focusTimer); }, {once: true, passive: true});
+    });
+  };
+
+  // поиск по имени
+  var inp = $('findInput'), list = $('findList'), hits = [], cur = -1;
+  function norm(s){ return String(s || '').toLowerCase().replace(/ё/g, 'е'); }
+  function search(q){
+    var words = norm(q).split(/\s+/).filter(Boolean), P = window.FAMILY_PEOPLE || {}, out = [];
+    if (!words.length) return out;
+    Object.keys(P).forEach(function(id){
+      var p = P[id], hay = norm([p.sur, p.name, id === 'SIB' ? p.note : ''].join(' '));
+      if (words.every(function(w){ return hay.indexOf(w) >= 0; })) out.push(id);
+    });
+    return out;
+  }
+  function show(){
+    var P = window.FAMILY_PEOPLE || {};
+    var all = search(inp.value); hits = all.slice(0, 8); cur = hits.length ? 0 : -1; list.textContent = '';
+    inp.removeAttribute('aria-activedescendant');
+    if (!inp.value.trim()) { list.hidden = true; inp.setAttribute('aria-expanded', 'false'); $('findStatus').textContent = ''; return; }
+    if (!hits.length) { var e = document.createElement('li'); e.className = 'none'; e.textContent = 'Никого не нашли. Попробуйте только фамилию или только имя.'; list.appendChild(e); }
+    hits.forEach(function(id, i){
+      var p = P[id], li = document.createElement('li');
+      li.setAttribute('role', 'option'); li.id = 'hit' + i; li.setAttribute('aria-selected', i === cur);
+      var b = document.createElement('b'); b.textContent = ((p.sur ? p.sur + ' ' : '') + p.name).trim(); li.appendChild(b);
+      if (p.dates) { var d = document.createElement('span'); d.textContent = p.dates; li.appendChild(d); }
+      li.addEventListener('pointerdown', function(ev){ ev.preventDefault(); });
+      li.addEventListener('mousedown', function(ev){ ev.preventDefault(); });
+      li.addEventListener('click', function(){ pick(id); });
+      list.appendChild(li);
+    });
+    if (all.length > 8) { var m = document.createElement('li'); m.className = 'none'; m.textContent = 'Найдено ' + all.length + ', показаны первые 8. Добавьте имя или отчество'; list.appendChild(m); }
+    list.hidden = false;
+    inp.setAttribute('aria-expanded', String(!list.hidden));
+    if (cur >= 0) inp.setAttribute('aria-activedescendant', 'hit' + cur);
+    $('findStatus').textContent = all.length ? 'Найдено: ' + all.length : 'Никого не нашли';
+  }
+  function hideList(){ list.hidden = true; inp.setAttribute('aria-expanded', 'false'); inp.removeAttribute('aria-activedescendant'); }
+  function pick(id){ hideList(); inp.blur(); window.familyFocus(id); }
+  inp.addEventListener('input', show);
+  inp.addEventListener('focus', function(){ if (inp.value) show(); });
+  inp.addEventListener('blur', function(){ setTimeout(hideList, 150); });
+  inp.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') { hideList(); return; }
+    if (list.hidden || !hits.length) return;
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault(); cur = (cur + (e.key === 'ArrowDown' ? 1 : -1) + hits.length) % hits.length;
+      [].forEach.call(list.children, function(li, i){ if (li.id) li.setAttribute('aria-selected', i === cur); });
+      inp.setAttribute('aria-activedescendant', 'hit' + cur); var a = $('hit' + cur); if (a) a.scrollIntoView({block: 'nearest'});
+    }
+  });
+  $('finder').addEventListener('submit', function(e){ e.preventDefault(); if (!hits.length) show(); if (hits.length) pick(hits[Math.max(0, cur)]); else inp.focus(); });
+
+  // полоса прочитанного и появление блоков
+  var bar = $('progress');
+  function prog(){ var h = document.documentElement, m = h.scrollHeight - h.clientHeight; bar.style.transform = 'scaleX(' + (m > 0 ? h.scrollTop / m : 0) + ')'; }
+  addEventListener('scroll', prog, {passive: true}); prog();
+  var blocks = [].slice.call(document.querySelectorAll('.reveal'));
+  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.classList.add('reveal-on');
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold: .05, rootMargin: '0px 0px 10% 0px'});
+    blocks.forEach(function(b){ io.observe(b); });
+    setTimeout(function(){ blocks.forEach(function(b){ b.classList.add('in'); }); }, 2500);
+  } else blocks.forEach(function(b){ b.classList.add('in'); });
+
+  // вступление древа: играет, когда схема на экране и шрифты загружены
+  var treeSec = $('tree');
+  var lite = matchMedia('(pointer: coarse)').matches && ((navigator.deviceMemory || 4) <= 3 || (navigator.hardwareConcurrency || 8) <= 4);
+  if (lite) treeSec.classList.add('lite');
+  function playTree(){ treeSec.classList.remove('tree-play', 'tree-done'); void treeSec.offsetWidth; treeSec.classList.add('tree-play'); }
+  (document.fonts ? document.fonts.ready : Promise.resolve()).then(function(){ setTimeout(function(){
+    if (!('IntersectionObserver' in window)) return playTree();
+    var to = new IntersectionObserver(function(es){ if (es[0].isIntersecting) { to.disconnect(); playTree(); } }, {threshold: .2});
+    to.observe(sc);
+  }, 0); });
+  $('replay').onclick = function(){ page.classList.remove('play'); void page.offsetWidth; page.classList.add('play'); playTree(); };
+})();
+</script>
+<script>(function(){
+  var API = (window.FAMILY_API || '').trim();
+  var KIND = {story:'Воспоминание', fact:'Факт', correction:'Исправление', person:'Новый родственник'};
+  var entries = [];
+  var current = '';
+
+  var $ = function(id){ return document.getElementById(id); };
+  var panel = $('panel'), list = $('panelList'), form = $('addForm'), msg = $('formMsg');
+  var feed = $('feed'), ro = !API;
+  var FEED_STEP = 20, feedShown = FEED_STEP;
+
+  document.documentElement.classList.toggle('readonly', ro);
+
+  function el(tag, cls, text){ var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function fmt(ts){ try { return new Date(ts).toLocaleDateString('ru-RU', {day:'numeric', month:'long', year:'numeric'}); } catch(e){ return ''; } }
+  function personTitle(pid){ var p = (window.FAMILY_PEOPLE || {})[pid]; return p ? ((p.sur ? p.sur + ' ' : '') + p.name).trim() : 'Без привязки к человеку'; }
+
+  // запрос к API: русские ошибки, таймаут 20 секунд, проверка «нет сети»
+  function call(method, query, body){
+    if (navigator.onLine === false) return Promise.reject(new Error('Нет интернета. Текст сохранён на телефоне — отправьте, когда появится связь'));
+    var ctl = window.AbortController ? new AbortController() : null, tm = setTimeout(function(){ if (ctl) ctl.abort(); }, 20000);
+    return fetch(API + (query ? (API.indexOf('?') < 0 ? '?' : '&') + query : ''), {method:method, headers:{'Content-Type':'application/json'}, body: body ? JSON.stringify(body) : undefined, signal: ctl ? ctl.signal : undefined})
+      .catch(function(e){ throw new Error(e && e.name === 'AbortError' ? 'Сеть очень медленная, сервер не ответил за 20 секунд' : 'Нет связи с сайтом. Проверьте интернет'); })
+      .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(j){ if (!r.ok) throw new Error(j.error || (r.status >= 500 ? 'Сайт временно не отвечает' : 'Ошибка ' + r.status)); return j; }); })
+      .finally(function(){ clearTimeout(tm); });
+  }
+
+  function entryNode(e, showWho){
+    var li = el('li', 'entry');
+    var head = el('div', 'e-head');
+    head.appendChild(el('span', 'e-kind k-' + e.kind, KIND[e.kind] || e.kind));
+    head.appendChild(el('span', e.verified ? 'e-ok' : 'e-unv', e.verified ? 'проверено' : 'не проверено'));
+    if (showWho) {
+      var who = el('button', 'e-who', personTitle(e.person));
+      who.type = 'button';
+      who.onclick = function(){ openPanel(e.person); };
+      head.appendChild(who);
+    }
+    li.appendChild(head);
+    if (e.kind === 'person') {
+      var line = [e.relation, e.name].filter(Boolean).join(': ');
+      li.appendChild(el('div', 'e-name', line));
+      var meta = [e.dates, e.place, e.occupation].filter(Boolean).join(' · ');
+      if (meta) li.appendChild(el('div', 'e-meta', meta));
+    }
+    if (e.text) {
+      var tx = el('p', 'e-text', e.text);
+      if (showWho) { tx.title = 'Нажмите, чтобы развернуть'; tx.onclick = function(){ tx.classList.toggle('open'); }; }
+      li.appendChild(tx);
+    }
+    var foot = el('div', 'e-foot', (e.author || 'Без подписи') + ' · ' + fmt(e.created));
+    li.appendChild(foot);
+    return li;
+  }
+
+  function renderFeed(){
+    if (!feed) return;
+    feed.textContent = '';
+    if (!entries.length) {
+      if (ro) { feed.appendChild(el('li', 'empty', 'Дополнения от родных видны на семейном сайте.')); return; }
+      var li = el('li', 'empty-cta');
+      li.appendChild(el('p', 'ei-title', 'Станьте первым, кто допишет историю семьи'));
+      li.appendChild(el('p', 'ei-text', 'Например: где работал дедушка, как познакомились бабушка с дедушкой, чья это фотография.'));
+      var b = el('button', 'cta'); b.type = 'button'; b.innerHTML = '<span class="cta-plus" aria-hidden="true">+</span>Добавить воспоминание'; b.onclick = function(){ openPanel(''); };
+      li.appendChild(b); feed.appendChild(li); return;
+    }
+    var rev = entries.slice().reverse();
+    rev.slice(0, feedShown).forEach(function(e){ feed.appendChild(entryNode(e, true)); });
+    var rest = rev.length - feedShown;
+    if (rest > 0) {
+      var more = el('li', 'more'), mb = el('button', '', 'Показать ещё ' + Math.min(FEED_STEP, rest) + ' из ' + rest);
+      mb.type = 'button'; mb.onclick = function(){ feedShown += FEED_STEP; renderFeed(); };
+      more.appendChild(mb); feed.appendChild(more);
+    }
+  }
+
+  function badge(svg){
+    if (!svg) return;
+    svg.querySelectorAll('.badge').forEach(function(b){ b.remove(); });
+    var counts = {};
+    entries.forEach(function(e){ if (e.person) counts[e.person] = (counts[e.person] || 0) + 1; });
+    Object.keys(counts).forEach(function(pid){
+      var g = svg.querySelector('.node[data-pid="' + pid + '"]'); if (!g) return;
+      var r = g.querySelector('.card'); var x = +r.getAttribute('x') + +r.getAttribute('width') - 6, y = +r.getAttribute('y') + 6;
+      var ns = 'http://www.w3.org/2000/svg', b = document.createElementNS(ns, 'g'); b.setAttribute('class', 'badge'); b.setAttribute('aria-hidden', 'true');
+      var label = counts[pid] > 99 ? '99+' : '+' + counts[pid];
+      var c = document.createElementNS(ns, 'circle'); c.setAttribute('cx', x); c.setAttribute('cy', y); c.setAttribute('r', label.length > 3 ? 28 : 22);
+      var t = document.createElementNS(ns, 'text'); t.setAttribute('x', x); t.setAttribute('y', y + 9); t.textContent = label;
+      b.appendChild(c); b.appendChild(t); g.appendChild(b);
+    });
+  }
+
+  function renderPanel(){
+    if (panel.hidden) return;
+    list.textContent = '';
+    var mine = entries.filter(function(e){ return (e.person || '') === current; });
+    if (!mine.length) list.appendChild(el('li', 'empty', current ? 'Дополнений к этому человеку пока нет.' : 'Общих дополнений пока нет.'));
+    mine.forEach(function(e){ list.appendChild(entryNode(e, false)); });
+  }
+
+  // extra — только что сохранённая запись: ответ GET может прийти из кэша (до 30 с) без неё
+  function load(extra){
+    if (ro) { renderFeed(); return Promise.resolve(); }
+    return call('GET', extra ? 't=' + Date.now() : '').then(function(j){
+      entries = j.entries || [];
+      if (extra && extra.id && !entries.some(function(e){ return e.id === extra.id; })) entries.push(extra);
+      redraw();
+      renderFeed(); renderPanel();
+    }).catch(function(err){
+      if (!feed) return;
+      var old = feed.querySelector('.load-err'); if (old) old.remove();
+      var li = el('li', 'empty load-err', 'Свежие дополнения не загрузились (' + err.message + '). Показаны сохранённые ранее.');
+      feed.insertBefore(li, feed.firstChild);
+    });
+  }
+
+  var drawnKey = null;
+  function redraw(){
+    var key = entries.filter(function(e){ return e.kind === 'person'; }).map(function(e){ return e.id; }).join(',');
+    var canvas = $('canvas');
+    if (key !== drawnKey && window.FamilyTree) {
+      // повторная перерисовка — без вступительной анимации
+      if (drawnKey !== null) { var ts = $('tree'); ts.classList.remove('tree-play'); ts.classList.add('tree-done'); }
+      FamilyTree.draw(canvas, entries);
+      hook(canvas.querySelector('svg'));
+      drawnKey = key;
+    }
+    badge(canvas.querySelector('svg'));
+    if (window.refreshLens) window.refreshLens();
+  }
+
+  // панель человека: плавный вход/выход, фокус внутри, «Назад» на Android закрывает панель
+  var lastFocus = null, closeT;
+  function siblings(){ return document.querySelectorAll('#page > :not(#panel)'); }
+  function openPanel(pid){
+    clearTimeout(closeT);
+    if (panel.hidden) lastFocus = document.activeElement;
+    current = pid || '';
+    var p = (window.FAMILY_PEOPLE || {})[current];
+    $('pSur').textContent = p ? (p.sur || '') : 'Общие сведения';
+    $('pName').textContent = p ? p.name : 'Дополнение к древу';
+    $('pMeta').textContent = p ? [p.dates, p.note].filter(Boolean).join(' · ') : 'Добавьте человека, историю или документ, который не относится к одной карточке.';
+    panel.hidden = false; void panel.offsetWidth; panel.classList.add('open');
+    [].forEach.call(siblings(), function(n){ n.inert = true; });
+    document.body.classList.add('panel-open');
+    if (!history.state || history.state.panel === undefined) { try { history.pushState({panel: current}, ''); } catch(e) {} }
+    msg.textContent = ''; msg.className = 'form-msg';
+    loadDraft();
+    renderPanel();
+    setTimeout(function(){ $('panelClose').focus(); }, 30);
+  }
+  function hidePanel(){
+    panel.classList.remove('open'); document.body.classList.remove('panel-open');
+    [].forEach.call(siblings(), function(n){ n.inert = false; });
+    clearTimeout(closeT);
+    closeT = setTimeout(function(){ if (!panel.classList.contains('open')) panel.hidden = true; }, 220);
+    var back = lastFocus && lastFocus !== document.body && document.contains(lastFocus) ? lastFocus : document.querySelector('#canvas .node[data-pid="' + current + '"]');
+    if (back && back.focus) back.focus({preventScroll: true});
+  }
+  function closePanel(){ if (history.state && history.state.panel !== undefined) history.back(); else hidePanel(); }
+  window.addEventListener('popstate', function(){ if (panel.classList.contains('open')) hidePanel(); });
+  // после перезагрузки страницы с открытой панелью в истории — начинаем с чистого состояния
+  try { if (history.state && history.state.panel !== undefined) history.replaceState(null, ''); } catch(e) {}
+
+  // черновик формы: на случай обрыва связи текст остаётся на устройстве
+  var DRAFT = ['kind','relation','name','dates','place','occupation','text'];
+  function draftKey(){ return 'draft:' + (current || '_'); }
+  function saveDraft(){
+    var d = {}; DRAFT.forEach(function(f){ d[f] = form.elements[f].value; });
+    var has = d.text || d.name;
+    try { if (has) localStorage.setItem(draftKey(), JSON.stringify(d)); else localStorage.removeItem(draftKey()); } catch(e) {}
+    $('draftNote').hidden = !has;
+  }
+  function loadDraft(){
+    var d = null; try { d = JSON.parse(localStorage.getItem(draftKey()) || 'null'); } catch(e) {}
+    DRAFT.forEach(function(f){ if (f !== 'kind' && f !== 'relation') form.elements[f].value = d ? (d[f] || '') : ''; });
+    if (d) { form.elements.kind.value = d.kind || 'story'; form.elements.relation.value = d.relation || 'сын'; }
+    form.querySelectorAll('[aria-invalid]').forEach(function(f){ f.removeAttribute('aria-invalid'); });
+    $('draftNote').hidden = !d; syncKind();
+  }
+  form.addEventListener('input', function(e){ if (e.target.removeAttribute) e.target.removeAttribute('aria-invalid'); saveDraft(); });
+  // поле в фокусе не прячется под клавиатурой телефона
+  form.addEventListener('focusin', function(e){ if (/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)) setTimeout(function(){ e.target.scrollIntoView({block: 'center', behavior: 'smooth'}); }, 300); });
+  window.familyOpen = function(pid){ openPanel(pid); };
+
+  $('panelClose').onclick = closePanel;
+  $('panelBack').onclick = closePanel;
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && panel.classList.contains('open')) closePanel(); });
+  var addAny = $('addAny'); if (addAny) addAny.onclick = function(){ openPanel(''); };
+
+  function hook(svg){
+    if (!svg) return;
+    svg.querySelectorAll('.node[data-pid]').forEach(function(g){
+      g.setAttribute('tabindex', '0'); g.setAttribute('role', 'button');
+      var P = (window.FAMILY_PEOPLE || {})[g.dataset.pid] || {};
+      g.setAttribute('aria-label', personTitle(g.dataset.pid) + (P.dates ? ', ' + P.dates : '') + '. Открыть карточку');
+      g.addEventListener('click', function(){ openPanel(g.dataset.pid); });
+      g.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openPanel(g.dataset.pid); } });
+    });
+  }
+  drawnKey = (window.FAMILY_ENTRIES || []).filter(function(e){ return e.kind === 'person'; }).map(function(e){ return e.id; }).join(',');
+  entries = window.FAMILY_ENTRIES || [];
+  hook(document.querySelector('#canvas svg'));
+  badge(document.querySelector('#canvas svg'));
+  if (document.fonts) document.fonts.ready.then(function(){ drawnKey = null; redraw(); });
+  // Chrome не перекладывает текст SVG, когда шрифт догрузился позже, — перерисовываем схему целиком
+  window.redrawTree = function(){ drawnKey = null; redraw(); };
+  if (document.fonts && document.fonts.addEventListener) {
+    var fontT = 0;
+    document.fonts.addEventListener('loadingdone', function(){ clearTimeout(fontT); fontT = setTimeout(window.redrawTree, 80); });
+  }
+
+  var kindSel = $('fKind');
+  function syncKind(){ form.classList.toggle('is-person', kindSel.value === 'person'); }
+  kindSel.onchange = syncKind; syncKind();
+  try { $('fAuthor').value = localStorage.getItem('author') || ''; } catch(e) {}
+
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    if (ro) return;
+    var data = {person: current, personName: current ? personTitle(current) : ''};
+    ['kind','relation','name','dates','place','occupation','text','author','website'].forEach(function(f){
+      var i = form.elements[f]; data[f] = i ? i.value : '';
+    });
+    if (data.kind !== 'person') { data.relation = ''; data.name = ''; data.dates = ''; data.place = ''; data.occupation = ''; }
+    var btn = $('fSend');
+    var bad = data.kind === 'person' ? (!data.name.trim() && 'fName') : (!data.text.trim() && 'fText');
+    if (bad) {
+      var f = $(bad); f.setAttribute('aria-invalid', 'true'); msg.className = 'form-msg err';
+      msg.textContent = bad === 'fName' ? 'Впишите хотя бы имя родственника.' : 'Напишите пару слов — что вы знаете.';
+      f.focus(); return;
+    }
+    try { localStorage.setItem('author', data.author); } catch(e) {}
+    var sentFor = current, sentKey = draftKey(), before = {};
+    entries.forEach(function(e){ before[e.id] = 1; });
+    // одна и та же отправка после таймаута не создаёт дубль
+    var cidKey = 'cid:' + sentKey, cid = null;
+    try { cid = localStorage.getItem(cidKey); } catch(e) {}
+    if (!cid && window.crypto && crypto.getRandomValues) {
+      cid = Array.from(crypto.getRandomValues(new Uint8Array(8)), function(b){ return ('0' + b.toString(16)).slice(-2); }).join('');
+      try { localStorage.setItem(cidKey, cid); } catch(e) {}
+    }
+    if (cid) data.cid = cid;
+    btn.disabled = true; btn.setAttribute('aria-busy', 'true'); btn.classList.remove('done'); btn.textContent = 'Сохраняю';
+    msg.className = 'form-msg'; msg.textContent = '';
+    call('POST', '', data).then(function(res){
+      try { localStorage.removeItem(sentKey); localStorage.removeItem(cidKey); } catch(e) {}
+      var mine = current === sentFor && panel.classList.contains('open');
+      if (mine) {
+        msg.className = 'form-msg ok'; msg.textContent = data.kind === 'person' ? '✓ Сохранено. Человек уже стоит в общем древе, его видят все родные.' : '✓ Сохранено. Дополнение уже видят все родные.';
+        $('draftNote').hidden = true;
+        msg.scrollIntoView({block: 'nearest', behavior: 'smooth'});
+        ['name','dates','place','occupation','text'].forEach(function(f){ form.elements[f].value = ''; });
+        btn.classList.add('done'); btn.textContent = '✓ Сохранено';
+        setTimeout(function(){ btn.classList.remove('done'); btn.textContent = 'Сохранить'; }, 2200);
+      }
+      return load(res && res.entry).then(function(){
+        if (data.kind !== 'person') return;
+        var fresh = entries.filter(function(e){ return e.kind === 'person' && !before[e.id]; })[0]; if (!fresh) return;
+        setTimeout(function(){
+          if (mine && current === sentFor && panel.classList.contains('open')) closePanel();
+          var pid = 'e:' + fresh.id, g = document.querySelector('#canvas .node[data-pid="' + pid + '"]');
+          if (g) g.classList.add('just-added');
+          if (window.familyFocus) window.familyFocus(pid, {noOpen: true});
+        }, 1200);
+      });
+    }).catch(function(err){
+      if (current === sentFor) { msg.className = 'form-msg err'; msg.textContent = 'Не сохранилось: ' + err.message + '. Текст остался в черновике — попробуйте ещё раз.'; }
+    }).then(function(){
+      btn.disabled = false; btn.removeAttribute('aria-busy'); if (!btn.classList.contains('done')) btn.textContent = 'Сохранить';
+    });
+  });
+
+  window.familyRehook = function(svg){ badge(svg); };
+  renderFeed(); // сначала показать снимок, сделанный при сборке
+  addEventListener('online', function(){ load(); });
+  load();
+})();
+</script>
+</body></html>
